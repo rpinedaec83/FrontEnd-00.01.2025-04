@@ -17,11 +17,6 @@ git merge fuentes/main main
 ### Roberto Pineda
 
 
-<<<<<<< HEAD
-VICTOR CHIPANA
-=======
-
-
 
 ## Alumnos
 
@@ -33,6 +28,5 @@ Abdiel
 
 KATTY ROMERO
 
-VICTOR CHIPANA
+VICTOR
 
->>>>>>> fuentes/main
