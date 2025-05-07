@@ -1,0 +1,52 @@
+/* @font-face {
+    font-family: 'Stag Sans Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Stag Sans Regular'), url('../fonts/StagSansRegular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Stag Sans Light';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Stag Sans Light'), url('../fonts/StagSansLight.woff') format('woff');
+} */
+
+@import url('https://fonts.cdnfonts.com/css/stack-ssi');
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
+
+h1 {
+    font-family: 'Stag Sans', sans-serif;
+
+    font-weight: 400;
+    font-style: normal;
+}
+
+h2 {
+    font-family: 'Stag Sans Light';
+    font-weight: normal;
+    font-size: 36px
+}
+
+h3 {
+    font-family: "Cedarville Cursive", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.fondo-obscuro{
+    background-color: rgb(255, 255, 255);
+}
+
+h1,h2,h3{
+    text-shadow: 2px 2px 4px rgb(0, 0, 0, 0.3);
+}
+
+.otro-div{
+    box-shadow: 0 8px 12px rgba(0,0,0,0.5);
+}
+
+.div-border{
+    border: 2px solid #333;
+    border-radius: 10px;
+}
