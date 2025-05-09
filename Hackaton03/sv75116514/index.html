@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Una taza de café</title>
+</head>
+<body>
+    <!-- MENU DE NAVEGACION -->
+    <nav class="menu">
+        <ul>
+            <li><a href="inicio.html">Inicio</a></li>
+            <li><a href="tienda.html">Tienda</a></li>
+            <li><a href="cafeteria.html">Cafetería</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+    <!-- FIN DEL MENU DE NAVEGACION -->
+
+    
+    <!-- CABEZERA Y TITULO -->
+     <div id="head">
+         <h1>Una taza de café</h1> 
+         <br> 
+         <p>El café nace cuando unos granos mágicos crecen en plantas soleadas, se recogen con mimo, se tuestan hasta oler a cielo y luego se muelen como si fueran polvo de energía pura. Solo falta agua caliente, un poco de amor… ¡y boom! Nace la poción oficial de los madrugones y las buenas ideas.</p>
+         <br><br>
+         <a class="boton" href="https://www.google.com" target="_blank" class="boton">Saber más</a>   
+     </div>
+     <!-- FIN DE CABEZERA Y TITULO -->
+   
+
+     <!-- IMAGEN-->
+    <div class="seccion">
+        <img class="img1" src="https://images.pexels.com/photos/14704656/pexels-photo-14704656.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Taza de café">
+    </div>
+     <!-- FIN DE IMAGEN -->
+
+
+     <!-- CUADRO DE FRASE -->
+     <div class="frase">
+        <p>"La vida es como una <strong>taza de café</strong>. Todo está en como lo preparas, pero sobretodo <em>en cómo la tomas</em>"</p>
+      </div>
+    <!-- FIN DE CUADRO DE FRASE   -->
+
+    <!-- LISTA NO ORDENADA -->
+    <div class="lista-des">
+        <div class="conten">
+            <div>
+                <h2 class="sub1">Formas de preparar café</h2>
+                <ul class="tipos">
+                    <li class="tipo-general">Espresso – Intenso y concentrado, la base de muchas bebidas.</li>
+                    <li class="tipo-general">French Press – Método clásico con cuerpo y sabor completo.</li>
+                    <li class="tipo-general">Aeropress – Versátil y rápido, ideal para viajes.</li>
+                    <li class="tipo-general">Latte – Espresso con leche al vapor y un toque de espuma. Cremoso y suave.</li>
+                </ul>
+            </div>
+               
+            <div>
+                <!-- LISTA ORDENADA -->
+            <h2 class="sub1">Pasos para preparar un Espresso</h2>
+            <ol>
+                <li class="tipo-general">Muele los granos de café hasta obtener una molienda fina, similar al azúcar.</li>
+                <li class="tipo-general">Coloca 18-20 gramos de café molido en el portafiltro.</li>
+                <li class="tipo-general">Prensa el café con un tamper de forma firme y nivelada.</li>
+                <li class="tipo-general">Inserta el portafiltro en la máquina de espresso.</li>
+                <li class="tipo-general">Inicia la extracción y déjala correr entre 25 y 30 segundos.</li>
+                <li class="tipo-general">Sirve el espresso y disfruta de su sabor intenso.</li>
+            </ol>
+            </div>        
+        </div>
+      </div> 
+
+    <!-- FORMULARIO CON CHECKBOX Y RADIO BUTTONS -->
+       <h2 class="sub2">Queremos conocer tus gustos</h2>
+       <form class="form1">
+            <!-- Input de texto -->
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre"><br><br>
+
+            <!-- RADIO BUTTONS -->
+            <p><strong>¿Cómo te gusta el café?</strong></p>
+            <input type="radio" id="fuerte" name="tipo" value="fuerte">
+            <label for="fuerte">Fuerte</label><br>
+            <input type="radio" id="suave" name="tipo" value="suave">
+            <label for="suave">Suave</label><br><br>
+
+            <!-- CHECKBOX-->
+            <p><strong>Ingredientes extra:</strong></p>
+            <input type="checkbox" id="leche" name="extras" value="leche">
+            <label for="leche">Leche</label><br>
+            <input type="checkbox" id="azucar" name="extras" value="azucar">
+            <label for="azucar">Azúcar</label><br>
+            <input type="checkbox" id="canela" name="extras" value="canela">
+            <label for="canela">Canela</label><br><br>
+
+            <!-- BOTON DE ENVIO -->
+            <button type="submit">Enviar</button>
+       </form>
+       
+    <!--FIN DEL FORMULARIO CON CHECKBOX Y RADIO BUTTONS -->
+
+
+    <!-- TABLA CON FILAS Y COLUMNAS -->
+     <div class="conten1">
+        <div class="conten-tabla">
+            <h2 class="sub3">Tipos de café</h2>
+            <table class="tabla-cafe">
+                <tr>
+                    <td>Tipos</td>
+                    <td>Descripción</td>
+                </tr>
+                <tr>
+                    <td>Espresso</td>
+                    <td>Fuerte y concentrado</td>
+                </tr>
+                <tr>
+                    <td>Cold Brew</td>
+                    <td>Suave y frío, infusionado por horas</td>
+                </tr>
+                <tr>
+                    <td>Frappé</td>
+                    <td>Café frío batido con hielo y a veces crema o leche.</td>
+                </tr>
+                <tr>
+                    <td>Flat White</td>
+                    <td>Similar al latte, pero con más espresso y menos espuma.</td>
+                </tr>
+            </table> 
+        </div>      
+        <img class="img2" src="../sv75116514/img/cup.jpg" alt="Taza de café Espresso">
+     </div>
+     <!-- FIN DE TABLAS CON FILAS Y COLUMNAS -->
+     
+
+    <!-- FORMULARIO CON INFORMACIÓN-->
+     <div class="form2">
+        <h2 class="sub4">Registrate</h2>
+        <form action="">
+        <label class="label1" for="nombre">Nombre:</label>
+        <input class="input1" type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre">
+        
+        <label class="label1" for="email">Email:</label>
+        <input class="input1" type="email" id="email" name="email" placeholder="ejemplo@email.com">
+        
+        <label class="label1" for="password">Contraseña:</label>
+        <input class="input1" type="password" id="password" name="password" placeholder="Ingrese su Contraseña">
+        
+        <button class="button1" type="submit">Enviar</button>
+        </form>
+     </div>
+
+     <!-- FIN DEL FORMULARIO CON INFORMACIÓN -->
+    </body> 
+</html>

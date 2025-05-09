@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hackaton03 Raul Quispe SV71240438</title>
+    <script src="https://kit.fontawesome.com/e59191e4cc.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <!-- Barra de navegación con links a otras páginas-->
+  <div>
+    <nav>
+      <ul class="menu">
+        <li><a href="https://google.com" target="_blank">Google</a></li>
+        <li>
+          <a href="https://raulmartin25.github.io" target="_blank">Mi cv</a>
+        </li>
+        <li>
+          <a href="https://es.wikipedia.org/wiki/Internet" target="_blank"
+            >Qué es el Internet</a
+          >
+        </li>
+        <li>
+          <a href="https://www.w3schools.com/" target="_blank"
+            >Necesitas ayuda</a
+          >
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <!-- inicio de la Hackaton03 -->
+  <body>
+    <div>
+      <h1>Bienvenidos a la Hackaton03</h1>
+    </div>
+    <hr />
+    <div class="test1">
+    <p>
+      En esta página web voy a realizar el ejercicio encargado de la semana 03
+      para poder demostrar el dominio de las etiquetas html y css.
+    </p>
+    </div>
+    </body>
+    <!-- Link de redirección a Google mediante botón -->
+    <div>
+      <p>Para ingresar a Google haz clikc en el boton</p>
+      <button id="btb">Google</button>
+    </div>
+    <br />
+    <div>
+      <p class="test2">
+        Ahora les comparto una imagen insertada de una url, la cual nos va a
+        dirigir a una página donde se explica que es el Internet.
+      </p>
+      <a href="https://es.wikipedia.org/wiki/Internet" target="_blank">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Internet_map_1024.jpg"
+          alt="Mapa de Internet"
+          style="width: 300px; height: auto"
+        />
+      </a>
+    </div>
+    <br />
+    <!--uso de etiquetas strong y em-->
+    <div>
+      <h3>Uso de etiquetas strong y em dentro de dos párrafos.</h3>
+      <p class="test2">
+        <strong
+          >Es importante siempre prácticar los conceptos que vamos aprediendo en
+          el día a día, es nuestra responsabilidad mantenernos
+          calificados.</strong
+        >
+      </p>
+      <p class="test2">
+        <em
+          >No debemos olvidar que: Los lenguajes de frontend más importantes
+          para el desarrollo web son HTML, CSS y JavaScript. HTML define la
+          estructura y el contenido de una página web, CSS se encarga de la
+          presentación visual (diseño y estilos), y JavaScript añade
+          interactividad y lógica al sitio.</em
+        >
+      </p>
+    </div>
+    <div>
+      <h3>Listas no ordenada de mis gaseosas favoritas:</h3>
+      <ul>
+        <li>CocaCola</li>
+        <li>Fanta</li>
+        <li>Inkacola</li>
+      </ul>
+      <h3>Listas ordenada sobre hacer un huevo frito :)</h3>
+      <ol>
+        <li>Prender la cocina y poner la sarten</li>
+        <li>Agregar aceite hasta que caliente</li>
+        <li>Agregar el huevo frito y poner sal</li>
+        <li>Voltear el huevito</li>
+        <li>Servir y disfrutar</li>
+      </ol>
+    </div>
+    <div>
+      <h3>
+        Los invito a poder ver mi CV, el cual fue desarrollado dentro del curso
+        en el primer hackaton.
+      </h3>
+      <a href="https://raulmartin25.github.io/" target="_blank"
+        >Raul Quispe Medina</a
+      >
+    </div>
+    <!-- Imagen con texto alternativo-->
+    <div>
+      <h3>
+        La misma imagen anterior con un texto alternativo en caso de que falle
+      </h3>
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Internet_map_1024.jpg"
+        alt="Mapa de Internet"
+        style="width: 300px; height: auto"
+      />
+    </div>
+    <br />
+    <div>
+      <h3>
+        Tabla de 2 columnas sobre mis superheroes favoritos de DC y Marvel
+      </h3>
+      <table>
+        <tr>
+          <th>Marvel</th>
+          <th>DC comics</th>
+        </tr>
+        <tr>
+          <td>IronMan</td>
+          <td>Batman</td>
+        </tr>
+        <tr>
+          <td>Thor</td>
+          <td>Superman</td>
+        </tr>
+      </table>
+    </div>
+    <br />
+    <!-- Creación de un formulario-->
+    <div>
+      <h3>Creación de un formulario</h3>
+      <form>
+        <label for="pnombre">Primer nombre:</label><br />
+        <input type="text" id="pnombre" name="pnombre" /><br />
+        <label for="pwd">Contraseña:</label><br />
+        <input type="password" id="pwd" name="pwd" /><br />
+        <label for="email">Ingresa tu email:</label><br />
+        <input type="email" name="email" id="email" /><br /><br />
+        <label>Deporte favorito:</label><br />
+        <input type="radio" id="Voley" name="fav_sport" value="voley" />
+        <label for="Voley">Voley</label><br />
+        <input type="radio" id="Futbol" name="fav_sport" value="futbol" />
+        <label for="Futbol">Futbol</label><br />
+        <input type="radio" id="Basquet" name="fav_sport" value="basquet" />
+        <label for="Basquet">Basquet</label><br /><br />
+        <label>Idiomas que hablas:</label><br />
+        <input type="checkbox" id="idioma1" name="idioma1" value="Español" />
+        <label for="idioma1">Español</label><br />
+        <input type="checkbox" id="idioma2" name="idioma2" value="Inglés" />
+        <label for="idioma2">Inglés</label><br />
+        <input type="checkbox" id="idioma3" name="idioma3" value="Francés" />
+        <label for="idioma3">Francés</label><br /><br />
+        <input type="submit" value="Enviar" />
+      </form>
+    </div>
+    <div>
+        <p class="test2"> Imagen de prueba con bordes</p>
+        <img id="imgtest1" src="img/img1.jpg" alt="Guacamayo de colores" style="width: 320px; height: auto">
+    </div>
+    <br>
+    <!--texto centrado y cambio de tamaño de fuente de un encabezado-->
+    <div>
+        <p class="test3">Este texto va a ser centrado para poder cumplir con los pasos de la guía</p>
+        <h4>Ahora vamos cambiar el tamaño de este encabezado h4 para poder cumplir con los requerimientos</h4>
+    </div>
+    <div class="padding">
+        Hola, soy un div al cual le están aplicando padding para poder practicar y poder verme mejor
+    </div>
+    <div class="margin">
+        Hola, soy otro div al cual le están aplicando margin para poder practicar.
+    </div>
+    <br>
+    <div>
+        <h3>Listas no ordenada para quitarle los bullets:</h3>
+        <ul class="test4">
+          <li>CocaCola</li>
+          <li>Fanta</li>
+          <li>Inkacola</li>
+          <li>Pepsi</li>
+          <li>Guarana</li>
+        </ul>
+    </div>
+    <h3><strong>Uso de display in line-block y flex</strong></h3>
+    <div class="caja">Caja 1</div>
+    <div class="caja">Caja 2</div>
+    <br>
+    <br>
+    <br>
+    <div class="caja1">Caja 3</div>
+    <div class="caja1">Caja 4</div>
+    <br>
+    <br>
+    <!--Boton de prubeba-->
+    <div>
+        <button id= boton class="boton">Haz clic aquí</button>
+    </div>
+    <div>
+        <p class="derecha">Este parrafo va a ser usado de ejemplo para ser alineado al derecho para poder cumplir con la lista de ejercicios recomendados</p>
+    </div>
+    <br><br>
+    <div id="cambios">
+        parrafo en el cual se van a aplicar diversos estilos para que pueda ser más vistoso o interesante.
+    </div>
+    <br><br>
+    <div>
+        <p class="esquina">Este parrafo va a ser usado de ejemplo para ser mandado a una esquina para poder cumplir con la lista de ejercicios recomendados</p>
+    </div>
+    <br><br><br>
+    <div class="contenedor-flex">
+        <div class="columna-flex">Columna Izquierda</div>
+        <div class="columna-flex">Columna Derecha</div>
+      </div>
+    <script src="js/script.js"></script>
+
+  </body>
+</html>

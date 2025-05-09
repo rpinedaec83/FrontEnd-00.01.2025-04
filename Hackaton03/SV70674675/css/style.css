@@ -1,0 +1,81 @@
+body{
+    background-color:antiquewhite;
+    font-family: "Cal Sans", sans-serif;
+    
+}
+#parrafo1{
+    color: brown;
+    text-align: right;
+}
+.frutas{
+    color: chocolate;
+}
+.imagen1{
+    border: 5px solid #F07B6C ;
+}
+.parrafo2{
+    text-align: center;
+}
+h1{
+    font-size: 80px;
+}
+.tablas{
+    padding: 0 0 0 450px;
+    margin: 20px 0 0 150px;
+}
+a:hover{
+    color: crimson;
+}
+ul{
+    list-style: none;
+}
+p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.formularios{
+    background-image: url(../img/fondo.jpg);
+}
+.display1{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+}
+.display2{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+}
+.flex{
+    display: flex;
+}
+.boton{
+    padding: 10px 30px;
+    color: blue;
+    border-radius: 5px;
+    background-color: chocolate;
+    cursor: pointer;    
+}
+
+.boton:hover{
+    background-color: cadetblue;
+    color: white;
+}
+
+#menus{
+    color: blueviolet;
+    font-size: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.adrien{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.lorem{
+    display: flex;
+    gap: 250px;
+}

@@ -1,0 +1,111 @@
+.menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  background-color: #333;
+  padding: 10px;
+  margin: 0;
+}
+
+.menu li {
+  margin: 0 15px;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  font-family: Arial, sans-serif;
+  transition: color 0.3s;
+}
+
+.menu li a:hover {
+  color: lightblue;
+}
+
+body {
+  background-color: lightblue;
+}
+
+div.test1 {
+  color: red;
+}
+
+p.test2 {
+  color: rebeccapurple;
+}
+
+#imgtest1 {
+  border: 3px solid red;
+}
+
+p.test3 {
+  text-align: center;
+}
+
+h4 {
+  font-size: 60px;
+}
+
+div.padding {
+  padding: 30px;
+  background-image: url("https://blog.jumboprinters.com/wp-content/uploads/2021/09/consejos-imagenes.jpg");
+}
+
+div.margin {
+  margin: 30px;
+  background-color: bisque;
+}
+
+a:hover {
+  color: red;
+}
+
+ul.test4 {
+  list-style: none;
+}
+
+.caja {
+  display: inline-block;
+}
+
+.caja1 {
+  display: flex;
+}
+
+.boton {
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+p.derecha {
+  text-align: right;
+}
+
+p.esquina {
+  position: absolute;
+}
+
+.contenedor-flex {
+  display: flex;
+}
+
+.columna-flex {
+  flex: 1;
+  padding: 20px;
+  background-color: lightgreen;
+  margin: 10px;
+}
+
+#cambios {
+  color: blue;
+  padding: 30px;
+  background-color: white;
+  margin: 10px;
+  text-align: center;
+}

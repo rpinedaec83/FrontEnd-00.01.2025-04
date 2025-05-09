@@ -1,0 +1,81 @@
+body {
+    background-color: rgb(202, 198, 198);
+    color: rgb(0, 0, 0);
+    font-family: "Sansation", sans-serif;
+    
+}
+
+.padded {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 120px;
+    padding-right: 120px;
+}
+
+.menu li a{
+    text-decoration: none;
+}
+.menu {
+    list-style: none;
+}
+
+.row {
+    display: flex;
+}
+
+.col {
+    flex-basis: 0;
+    flex-grow: 1;
+    padding-left: 250px;
+    padding-right: 15px;
+    box-sizing: border-box;
+}
+
+.col-50 {
+    flex-basis: 30%;
+    max-width: 40%;
+}
+
+.padding-g {
+    padding-top: 40px;
+}
+
+.img{
+    margin-left: 280px;
+    border: 5px solid;
+}
+
+.boton {
+    padding: 5px;
+    background-color: rgb(16, 16, 71);
+    color: white;
+    border-radius: 10px;
+    border-color: rgb(16, 16, 71);
+    cursor: pointer;
+}
+
+.tabla {
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    font-size: 50px;
+}
+
+a:hover {
+    color: red;
+}
+
+#biografia .row p {
+    text-align: right;
+    background-color: rgb(30, 24, 109);
+    padding: 15px;
+    border-radius: 10px;
+    color: white;
+}
+
+#biografia img {
+    border-radius: 5px;
+}
+

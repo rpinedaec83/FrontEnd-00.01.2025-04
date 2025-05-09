@@ -1,0 +1,151 @@
+
+/* 	21.	Cambia el color de fondo de una página. */
+body {
+    background-color: beige;
+}
+
+
+
+
+/* 22.	Cambia el color del texto de un párrafo. */
+.parrafo { 
+    color: rgb(22, 65, 65);
+}
+
+
+/* 23.	Usa una clase para cambiar el color de varios elementos. */
+.br-red{
+    background-color: red;
+}
+
+
+
+/* 24.	Aplica un borde a una imagen.  */
+img{
+    border: 12px solid red;
+}
+
+/* 25.	Centra un texto usando CSS. */
+.centrat-text{
+    text-align: center;
+
+}
+
+
+	/* 26.	Cambia el tamaño de fuente de un encabezado. */
+
+.tm-tex{
+    font-size: 50px;
+}
+
+
+
+/* 27.	Aplica padding a un div. */
+
+.pd{
+    padding: 25px;
+}
+
+
+/* 28.	Aplica margin a un div. */
+
+.mg{
+    margin: 25px;
+}
+
+/* 29.	Usa una regla CSS para cambiar el color de los enlaces al pasar el mouse (hover). */
+
+.br-red:hover{
+    background-color: aqua;
+}
+
+/* 30.	Cambia el estilo de una lista (quitar bullets). */
+
+ul{
+list-style: none;
+}
+
+
+/* 31.	Usa una fuente de Google Fonts en tu HTML. */
+.font-famy{
+    font-family: "Cascadia Code", sans-serif;
+}
+
+
+/* 32.	Cambia el fondo de un div con una imagen.  ffffff */
+.fondo-img{
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTctFv9-Ty-q48QaBInXjWWpDOwWOXtQ7bNyQ&s);
+    width: 500px;
+    height: 500px;
+    
+}
+
+
+/* <!-- 33.	Usa display: inline-block en dos cajas. --> */
+
+.cj-primaria-block{
+    display: inline-block;
+}
+
+
+/*  	<!-- 34.	Usa display: flex para alinear elementos. -->
+ */
+
+.cj-primaria-alinear{
+    display: flex;
+
+}
+
+
+
+/* 35.	Crea una clase .boton que tenga padding, color, y borde redondeado. */
+
+.btn button{
+    padding: 10px;
+    color: red;
+    border-radius: 20px;
+}
+
+
+
+/* 36.	Aplica estilos distintos a un div con id. */
+
+
+
+#p-div{
+    background-color: aqua;
+    padding: 10px;
+}
+
+
+
+
+/* 37.	Usa text-align: right en un párrafo. */
+
+.texto-right{
+    text-align: right;
+}
+
+
+/* 38.	Cambia el cursor a pointer al pasar sobre un botón. */
+
+
+.btn-poiter button{
+cursor: pointer;}
+
+
+/* 39.	Usa position: absolute para colocar un elemento en una esquina. */
+.ps-ab{
+    position: absolute;
+    top: 0;
+    right:  0;
+}
+
+
+
+/* 40.	Crea un layout simple de 2 columnas usando float o flexbox. */
+.display {
+    display: flex;
+    flex-direction: row;
+}
+

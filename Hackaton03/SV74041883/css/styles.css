@@ -1,0 +1,155 @@
+body {
+    background-color: rgb(144, 69, 8);
+}
+
+/** Esta clase manipula los div añadidos en la etiqueta form. **/
+.formulario {
+    width: min(60rem,100%); /**Usa el valor más pequeño **/
+    margin: 0 auto;
+    text-align: center;
+    background-image: url('https://cdn.wallpapersafari.com/20/23/PZkWUE.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 1px; /* opcional, ajusta según necesites */
+    
+}
+/** Aquí se utiliza la clase formulario creada con anterioridad para que manipule su elemento**/
+.formulario legend {
+    text-align: center;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin-bottom:0.5rem;
+}
+
+
+.boton-cursor{
+    cursor: pointer;
+}
+
+.flex {
+    display:flex;
+}
+
+.right {
+    text-align: right;
+}
+
+.alinear-derecha {
+    justify-content: flex-end;
+}
+
+.boton {
+    color:rgb(148, 42, 3);
+    padding: 0rem 2rem;
+    margin-top: 3rem;
+    font-size: 1.7rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: .5rem;
+    width:50%;
+    text-align: center;
+    border:none;
+    cursor: pointer;
+}
+
+
+a:hover {
+  background-color: rgb(147, 138, 11);
+  font-size: 18px;
+}
+
+
+.campo {
+    margin-bottom: 1rem;
+}
+
+.style-input{
+    width: 45%;
+    border: none;
+    padding: 1%;
+    border-radius: .4rem;
+}
+
+.campo label {
+    font-weight: bold;
+    margin-bottom: .5rem;
+    display:block;
+}
+
+.titulo {
+    text-align: center;
+    font-size: 3.8rem;
+}
+
+.ComandoCentrar {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.titulo span {
+    font-size: 2rem;
+}
+
+table, th, td {
+    border: 1px solid white;
+    border-collapse: collapse;
+  }
+
+th{
+    background-color: #9f521e;
+}
+
+.Description{
+    color: white;
+}
+
+.bordeimagen {
+    border: 10px solid ;
+    padding: 5px;
+}
+
+
+
+.FuenteEspecial-1 {
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-weight: bold;
+  }
+
+  .nav-item {
+    display: inline-block; /* o usa flex si prefieres */
+    margin-right: 15px; /* ajusta el espacio entre elementos */
+    vertical-align: middle; /* alinea verticalmente si es necesario */
+}
+
+/* Quitar las viñetas predeterminadas */
+ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  /* Crear triángulos como viñetas */
+  ul li {
+    position: relative;
+    padding-left: 20px; /* espacio para el triángulo */
+    margin-bottom: 8px; /* opcional, para separación entre elementos */
+  }
+  
+  /* Añadir el triángulo usando ::before */
+  ul li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent; /* ancho del triángulo */
+    border-right: 10px solid transparent;
+    border-bottom: 15px solid #000; 
+  }
