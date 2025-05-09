@@ -1,0 +1,176 @@
+/* @font-face {
+    font-family: 'Stag Sans Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Stag Sans Regular'), url('../fonts/StagSansRegular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Stag Sans Light';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Stag Sans Light'), url('../fonts/StagSansLight.woff') format('woff');
+} */
+
+@import url('https://fonts.cdnfonts.com/css/stack-ssi');
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
+@import "https://unpkg.com/transition-style/transition.hackpack.min.css";
+
+h1 {
+    font-family: 'Stag Sans', sans-serif;
+
+    font-weight: 400;
+    font-style: normal;
+}
+
+h2 {
+    font-family: 'Stag Sans Light';
+    font-weight: normal;
+    font-size: 36px
+}
+
+h3 {
+    font-family: "Cedarville Cursive", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.fondo-obscuro{
+    background-color: rgb(255, 255, 255);
+}
+
+h1,h2,h3{
+    text-shadow: 2px 2px 4px rgb(0, 0, 0, 0.3);
+}
+
+.otro-div{
+    box-shadow: 0 8px 12px rgba(0,0,0,0.5);
+}
+
+.div-border{
+    border: 2px solid #333;
+    border-radius: 10px;
+}
+
+.btn-backg{
+    background-color: blue;
+    color: white;
+    padding: 10px;
+    transition: background-color 0.3s ease-out;
+}
+
+.btn-backg:hover{
+    background-color: darkblue;
+}
+
+.btn-grow{
+    width: 50px;
+    height: 50px;
+    transition-property: width height background-color;
+    transition-duration: 0.3s ;
+    transition-timing-function: ease-out;
+}
+
+.btn-grow:hover{
+    width: 100px;
+    height: 100px;
+    background-color: cornflowerblue;
+}
+
+@keyframes mover{
+    0% { transform: translateX(0);}
+    100% { transform: translateX(100px);}
+}
+
+.box{
+    width: 100px;
+    height: 100px;
+    background: red;
+
+    animation: mover 2s infinite alternate;
+}
+
+.custom-button {
+    background-color: red !important;
+    border-radius: 10px !important;
+    height: 70px !important;
+    width: 190px !important;
+    font-size: 1.5rem !important;
+  }
+
+
+
+
+@keyframes swoopy {
+  from {
+    clip-path: var(--circle-top-right-out);
+  }
+  to {
+    clip-path: var(--circle-bottom-right-in);
+  }
+}
+
+[transition-style="in:custom:swoopy"] {
+  --transition__duration: 5s;
+  animation-name: swoopy;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+div {
+  width: 100%;
+  background: hsl(200 50% 80%);
+  padding: 2ch;
+  display: grid;
+  place-content: center;
+}
+
+h1 {
+  font-size: 15vmin;
+  font-weight: lighter;
+  margin: 0;
+}
+
+a {
+  color: deeppink;
+}
+
+html {
+  block-size: 100%;
+  inline-size: 100%;
+}
+
+body {
+  min-block-size: 100%;
+  min-inline-size: 100%;
+  margin: 0;
+  box-sizing: border-box;
+  display: flex;
+  text-align: end;
+  font-family: system-ui, sans-serif;
+}
