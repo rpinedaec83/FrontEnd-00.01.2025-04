@@ -18,18 +18,19 @@ Diseñar y desarrollar una landing page completamente responsive aplicando técn
 
 ### 🔧 Estructura mínima:
 
-<!-- 1. **Header** con logo y menú de navegación   -->
-   <!-- 👉 Usar `display: flex` -->
-<!-- 2. **Hero principal** con una imagen/banner + texto + CTA  
-   👉 Usar `display: grid` o `flex` -->
-<!-- 3. **Sección de servicios** con al menos 3 tarjetas  
-   👉 Usar `flex-wrap` o `grid` para diseño en columnas -->
-<!-- 4. **Testimonios** o clientes destacados  
-   👉 Tarjetas con `grid` o `flex`, según el diseño -->
-<!-- 5. **Formulario de contacto** (no funcional)  
-   👉 Campos ordenados con Grid o Flexbox -->
-<!-- 6. **Footer** con redes sociales y navegación secundaria  
-   👉 Usar `display: flex` -->
+
+1. **Header** con logo y menú de navegación  
+   👉 Usar `display: flex`   ok
+2. **Hero principal** con una imagen/banner + texto + CTA  
+   👉 Usar `display: grid` o `flex` ok
+3. **Sección de servicios** con al menos 3 tarjetas  
+   👉 Usar `flex-wrap` o `grid` para diseño en columnas ok
+4. **Testimonios** o clientes destacados  
+   👉 Tarjetas con `grid` o `flex`, según el diseño ok
+5. **Formulario de contacto** (no funcional)  
+   👉 Campos ordenados con Grid o Flexbox ok
+6. **Footer** con redes sociales y navegación secundaria  
+   👉 Usar `display: flex` ok
 
 ---
 
