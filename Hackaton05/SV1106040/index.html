@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mayorista en Tecnología en Perù</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+    <!-----------------------Menu y logo--------------------->
+<header class="header">
+  <h1 class="logo">KR Accessories</h1>
+  <input type="checkbox" id="menu-toggle" class="menu-toggle">
+  <label for="menu-toggle" class="menu-icon">☰</label>
+  <nav class="nav">
+    <ul class="nav-list">
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#productos">Productos</a></li>
+      <li><a href="#recomendaciones">Opiniones</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
+   <!-----------------------Hero--------------------->
+  <section class="hero">
+    <div class="hero-contenido">
+     <h2>La mejor tecnología al por mayor</h2>
+     <p>Portátiles y accesorios de celular al mejor precio para tu negocio</p>
+     <div class="boton-centro">
+     <a href="#productos" class="btn-catalogo">Nuestro Catálogo</a>
+    </div>
+    </div>
+     
+    <div class="contacto-hero-inferior">
+    <p>
+      <a href="mailto:katty1523@gmail.com">📧 katty1523@gmail.com</a> ||
+      <a href="tel:+51929252782">📞 929 252 782</a> ||
+      <a href="https://1990-katty.github.io/">🌐 https://1990-katty.github.io/</a>
+    </p>
+    </div>
+  </section>
+
+
+     <!-----------------------Servicios--------------------->
+  <section id="servicios" class="servicios">
+     <h2>¿Qué ofrecemos?</h2>
+       <div class="cards">
+       <div class="card" tabindex="0"><img src="https://img.icons8.com/ios-filled/50/laptop.png" alt="Portátiles de última generación"/><p>Portátiles de última generación</p></div>
+       <div class="card" tabindex="0"><img src="https://img.icons8.com/ios-filled/50/phone.png" alt="Ícono de accesorios móviles"/> <p>Accesorios móviles</p></div>
+       <div class="card" tabindex="0"><img src="https://img.icons8.com/ios-filled/50/delivery.png"alt="Envío rápido"/><p>Envío rápido</p></div>
+       <div class="card" tabindex="0"><img src="https://img.icons8.com/ios-filled/50/warranty.png" alt="Garantía extendida"/><p>Garantía extendida</p></div>
+       <div class="card" tabindex="0"><img src="https://img.icons8.com/ios-filled/50/support.png" alt="Soporte técnico"/><p>Soporte técnico</p></div>
+       <div class="card" tabindex="0"><img src="https://img.icons8.com/ios-filled/50/discount.png" alt="Precios mayoristas"/><p>Precios mayoristas</p></div>
+      </div>
+  </section>
+      <!-----------------------Productos--------------------->
+  <section id="productos" class="productos">
+    <h2>Nuestros Productos</h2>
+      <div class="cards">
+        <div class="card-producto" tabindex="0">
+        <img src="images/fundas_Celul.jpg" alt="fundas Celulares" />  <p>Funda Celulares</p>
+        </div>
+        <div class="card-producto" tabindex="0">
+        <img src="images/Fundas_Compu.jpg" alt="Fundas Computadoras" /><p>Funda Computadoras</p>
+        </div>
+        <div class="card-producto" tabindex="0">
+        <img src="images/laptop-hp.jpg" alt="Laptop HP Ryzen" /> <p>Laptop HP Ryzen</p>
+        </div>
+        <div class="card-producto" tabindex="0">
+        <img src="images/Accesorios_Compu.webp" alt="Accesorios de moóviles y Computadoras" /><p>Accesorios móviles y Computadoras</p>
+        </div>
+      </div>
+   </section>
+ <!-----------------------Recomendaciones--------------------->
+    <section id="recomendaciones" class="recomendaciones">
+      <h2>Opiniones de Clientes</h2>
+      <div class="grid-opiniones">
+       <div class="opinion" tabindex="0">📦 <strong>Carlos G. (Distribuidor en Guadalajara)</strong><br>
+       "Llevo más de un año comprando con ellos y siempre me entregan puntualmente. La calidad de las fundas es excelente y tienen modelos actualizados todo el tiempo."
+       </div>
+        <div class="opinion" tabindex="0">📱 <strong>Andrea M. (Tienda de accesorios en CDMX)</strong><br>
+        "Gracias a su variedad de productos, he podido aumentar mis ventas. Siempre me ofrecen promociones especiales por volumen, lo cual agradezco muchísimo."
+        </div>
+        <div class="opinion" tabindex="0">💼 <strong>Jorge T. (Compras corporativas para e-commerce)</strong><br>
+        "Tienen un catálogo muy bien organizado y atención personalizada. Me encanta que cuenten con envío express y buen stock."
+        </div>
+        </div>
+    </section>
+
+    <!-----------------------Contactos--------------------->
+    <section id="contacto" class="contacto">
+  <h2>Contacto</h2>
+  <form class="formulario">
+    <div>
+      <label for="nombre">Nombres y Apellidos</label>
+      <input id="nombre" type="text" placeholder="Tu nombre" required />
+    </div>
+    <div>
+      <label for="telefono">Teléfono</label>
+      <input id="telefono" type="tel" placeholder="Tu número de celular" required />
+    </div>
+    <div>
+      <label for="correo">Correo Electrónico</label>
+      <input id="correo" type="email" placeholder="correo@ejemplo.com" required />
+    </div>
+    <div class="mensaje">
+      <label for="mensaje">Mensaje</label>
+      <textarea id="mensaje" rows="4" placeholder="Solicite su pedido" required></textarea>
+    </div>
+    <button type="submit" class="btn">Enviar</button>
+  </form>
+</section>
+<!-----------------------Footer--------------------->
+    <footer class="footer">
+    <p>&copy; KR Accesorios. Todos los derechos reservados.</p>
+    <div class="footer-links">
+      <a href="#">Aviso legal</a>
+      <a href="#">Privacidad</a>
+    </div>
+    </footer>
+</body>
+  
+</html>
