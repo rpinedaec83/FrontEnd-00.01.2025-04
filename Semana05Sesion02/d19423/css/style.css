@@ -1,0 +1,21 @@
+body {
+    font-size: 16px;
+    background-color: aqua;
+}
+
+
+@media (min-width: 768px) {
+
+    body{
+        font-size: 18px;
+        background-color: lightgreen;
+    }
+}
+
+@media ( min-width: 1024px) {
+    body {
+        font-size: 20px;
+        background-color: greenyellow;
+    }
+}
+
