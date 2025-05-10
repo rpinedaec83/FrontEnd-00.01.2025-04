@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../sv75116514_/css1/style1.css">
+    <title>Restaurante Italiano</title>
+</head>
+<body>
+    <main>
+      <!-- Menù de navegaciòn con logo -->
+    <header>
+        <div class="logo">
+          <img src="img1/logotipo.png" alt="Logo" />
+        </div>
+    
+        <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+        <label for="menu-toggle" class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+    
+        <nav>
+          <a href="#">Inicio</a>
+          <a href="#">Servicios</a>
+          <a href="#">Contacto</a>
+        </nav>
+      </header>
+    
+        <!-- Sección con la imagen de fondo -->
+        <section class="hero">
+          <div class="hero-img">
+            <img src="https://images.pexels.com/photos/17906500/pexels-photo-17906500/free-photo-of-vegetales-verduras-cena-almuerzo.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Pasta" />
+          </div>
+          <div class="degradado"></div>
+        </section>
+        <!-- Secciòn CTA y formulario -->
+        <section class="hero-section">
+            <div class="hero-content">
+              <h1>Descubre el sabor auténtico de Italia</h1>
+              <p>Platos tradicionales, ingredientes frescos y una experiencia inolvidable.</p>
+              <a href="#reserva" class="hero-boton">
+                <!-- Ícono de calendario SVG -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+                Reservar Mesa
+              </a>
+            </div>
+          </section>
+          <!-- Secciòn tarjetas -->
+           <section class="tarjetas">
+            <div class="tarj-info">
+              <div class="icono">
+                <img src="svg1/recipe_book_5tv7jjtk5kpp.svg" alt="">              </div>
+              <h2>Recetas Autènticas</h2>
+              <p>Disfruta de platos italianos tradicionales preparados con pasión y sabor casero.</p>
+            </div>
+
+            <div class="tarj-info">
+              <div class="icono">
+                <img src="svg1/carrot_ic34hguxp0xc.svg"></img>
+              </div>
+              <h2>Ingredientes Frescos</h2>
+              <p>Seleccionamos ingredientes locales y de origen italiano para garantizar calidad.</p>
+            </div>
+
+            <div class="tarj-info">
+              <div class="icono">
+                <img src="svg1/wine_glasses_ns7nldibs94o.svg" alt="">
+              </div>
+              <h2>Ambiente Acogedor</h2>
+              <p>Una experiencia gastronómica completa en un ambiente cálido y elegante.</p>
+            </div>
+           </section>
+          <!-- Secciòn contacto -->
+          <section class="contacto">
+
+            <div class="contacto-cont">
+              <div class="cont-text">
+                <h3>Reserva tu mesa</h3>
+                <div class="icono-cont">
+                  <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/icons/geo-alt-fill.svg" width="18" alt="Ubicación">
+                  <p>Av. César Vallejo 1109, Villa EL Salvador LIMA 42</p>
+               </div>
+               <div class="icono-cont">
+                <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/icons/telephone-fill.svg" alt="Teléfono" width="18">
+                <p>901 324 123</p>
+               </div>
+           </div>
+
+                <form action="">
+                  <input type="text" name="nombre" placeholder="Ingrese su nombre" required>
+                  <input type="email" name="Email" placeholder="Ingrese su Email" required>
+                  <input type="tel" name="Telefono" placeholder="Ingrese su Telefono" required>
+                  <input type="date" name="fecha" required>
+                  <textarea name="mensaje" id="" placeholder="Mensaje o solicitud especial" rows="4"></textarea>
+                  <button type="submit">Enviar reserva</button>
+                </form> 
+              </div>
+          </section>
+
+          <footer class="footer">
+            <p>Síguenos en nuestras redes</p>
+            <div class="redes">
+              <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+                <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/icons/facebook.svg" alt="Facebook">
+              </a>
+              <a href="https://youtube.com" target="_blank" aria-label="YouTube">
+                <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/icons/youtube.svg" alt="YouTube">
+              </a>
+              <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+                <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/icons/instagram.svg" alt="Instagram">
+              </a>
+            </div>
+            <p class="copyright">© 2025 Todos los derechos reservados</p>
+          </footer>
+
+
+      </main>
+</body>
+</html>
