@@ -1,0 +1,461 @@
+/* Import Google Font */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background: #a895a7e1; /* color de fondo*/
+  color: #0e0d0d; /* color de letra*/
+}
+/* ----------menu--------------- */
+a {
+  text-decoration: none;
+  color: #cc4b00;
+  transition: color 0.3s ease;
+}
+a:hover {
+  color: #723d12;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: #ffffff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+ /* .......LOGO ...........*/
+@font-face {
+  font-family: 'Amorlate';
+  src: url('font/Amorlate.ttf') format('truetype');
+}
+.logo {
+    font-size: 2rem;      
+    font-weight: 200;       
+    font-family: 'Amorlate', sans-serif;  
+    color: #551239ce;            /* Color de logo */
+    
+  }
+/* .......menu ...........*/
+/* Estilos base */
+.nav-list {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+.nav-list li a {
+  font-weight: 600;
+  text-decoration: none;
+  color: rgb(216, 132, 37);
+  padding: 0.5rem 1rem;
+  display: block;
+}
+
+/* Checkbox oculto */
+.menu-toggle {
+  display: none;
+}
+
+/* Botón visible solo en móviles */
+.menu-icon {
+  display: inline-block;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Ocultar nav inicialmente en móviles */
+.nav {
+  display: none;
+}
+
+/* MOSTRAR menú  */
+#menu-toggle:checked + .menu-icon + .nav {
+  display: block;
+  position: absolute;
+  top: 60px;
+  right: 4px;
+  box-shadow: 0 4px 12px rgb(248, 248, 248); /* SOMBRA */
+  border-radius: 10px; /* esquinas redondeadas */
+  padding: 1rem;
+  z-index: 1000;
+  width: max-content;
+}
+
+/* Menú en columna cuando está abierto */
+#menu-toggle:checked + .menu-icon + .nav .nav-list {
+ flex-direction: row;
+  gap: 0.5rem;
+}
+
+/* Estilo para pantallas grandes */
+@media (min-width: 768px) {
+  .menu-icon {
+    display: none;
+  }
+
+  .nav {
+    display: block;
+    position: static;
+    background: none;
+    box-shadow: none;
+    border: none;
+    padding: 0;
+  }
+
+  .nav-list {
+    flex-direction: row;
+    gap: 1rem;
+  }
+}
+
+/* ...............Hero..............*/
+.hero {
+  position: relative;
+  height: 60vh;
+  background-image: url('images/banner.PNG');
+  background-repeat: no-repeat;
+  background-size: cover;           /* 🔧 Abarca todo el contenedor sin perder proporción */
+  background-position: center;      /* Centrado horizontal y vertical */
+  background-attachment: scroll;    /* Se comporta bien en scroll móvil */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+/* Animación de aparición */
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.hero-contenido {
+  animation: fadeInLeft 1s ease-out;
+  max-width: 600px;
+}
+
+.hero h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.hero .btn {
+  display: inline-block;       /* Mantiene tamaño compacto */
+  margin: 1rem auto;           /* Centrado horizontal */
+  padding: 0.75rem 1.5rem;
+  background: #d66c25;
+  color: #fcfdfd;
+  border-radius: 25px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  text-align: center;
+  text-decoration: none;
+}
+
+.hero .btn:hover {
+  transform: scale(1.05);
+}
+
+.contacto-hero-inferior {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem; /* 📍 Lo coloca a la izquierda */
+  border-radius: 8px;       /* Bordes redondeados */
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+  color: rgb(16, 201, 41); /* Separaciones // */
+  max-width: 90%;
+  backdrop-filter: blur(5px); /* Efecto glassmorphism opcional */
+}
+
+.contacto-hero-inferior a {
+  color: white;
+  text-decoration: underline;
+  margin: 0 0.25rem;
+}
+ /* .................btn catalogo....................... */
+.boton-centro {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  position: relative;
+  left: 50%; /* Ajusta este valor según lo que necesites */
+}
+@media (min-width: 768px) {
+  .boton-centro {
+    left: 0; /* En pantallas grandes lo centramos normal */
+    justify-content: center;
+  }
+}
+.btn-catalogo {
+  background-color: #00ffff;
+  color: #000;
+  padding: 1rem 2rem;
+  border-radius: 999px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.btn-catalogo:hover {
+  background-color: #00cccc;
+}
+
+/*...........................titulos.......................*/
+.servicios, .productos, .recomendaciones, .contacto {
+  padding: 2rem 1rem;
+  text-align: center;
+}
+/*...........................Producto- servicios.......................*/
+
+/* Agrega este CSS para aplicar el resaltado al hacer clic (foco)*/
+.card-producto:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px #7c0d5b, 0 4px 15px rgba(0, 0, 0, 0.3);
+  transform: scale(1.02);
+  transition: all 0.2s ease-in-out;
+  background-color: #edf04d;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.card {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  animation: fadeIn 1s ease-in-out;
+}
+.card img {
+  width: 40px;
+  margin-bottom: 0.5rem;
+}
+
+.card-producto {
+  background: #6d5a67;
+  padding: 1rem;
+  border-radius: 10px;
+  margin: 0.5rem auto;
+  max-width: 250px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+.card-producto img {
+  width: 100%;
+  max-width: 200px;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+/* Agrega este CSS para aplicar el resaltado al hacer clic (foco)*/
+.card:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px #7c0d5b, 0 4px 15px rgba(0, 0, 0, 0.3); /* Borde azul y sombra más fuerte */
+  transform: scale(1.02);
+  transition: all 0.2s ease-in-out;
+  background-color: #edf04d; /* Fondo azul claro opcional */
+}
+/*...........................Recomendaciones.......................*/
+/* Agrega este CSS para aplicar el resaltado al hacer clic (foco)*/
+.opinion:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px #7c0d5b, 0 4px 15px rgba(0, 0, 0, 0.3);
+  transform: scale(1.02);
+  transition: all 0.2s ease-in-out;
+  background-color: #edf04d; /* Azul muy claro */
+}
+.recomendaciones {
+  background: #f0f8ff;
+}
+.grid-opiniones {
+  display: grid;
+  gap: 1rem;
+}
+.opinion {
+  background: #daa6c881;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  animation: floatUp 1.5s ease-in-out;
+}
+/*...........................Contactos.......................*/
+.contacto {
+  background-color: #dad8d8;
+  padding: 1.5rem;
+}
+
+.formulario {
+  display: grid;
+  gap: 1rem;
+  max-width: 400px; /* Reducir el ancho */
+  margin: auto;
+  background-color: #a58c9f;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgb(247, 243, 243);
+}
+
+.formulario div {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 0.9rem; /* Tamaño de fuente más pequeño */
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+input, textarea {
+  padding: 0.8rem; /* Reducir el padding */
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 0.9rem; /* Reducir el tamaño de la fuente */
+  transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus {
+  border-color: #a55397;
+  box-shadow: 0 0 5px rgba(165, 83, 151, 0.6);
+}
+
+textarea {
+  resize: vertical;
+}
+
+button.btn {
+  background-color: #a55397;
+  color: white;
+  padding: 0.8rem; /* Reducir el padding del botón */
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem; /* Reducir el tamaño de la fuente */
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button.btn:hover {
+  background-color: #7c2a6b;
+}
+
+button.btn:active {
+  transform: scale(0.98);
+}
+
+.btn:hover {
+  background-color: #a94e1c;
+  transform: scale(1.05);
+}
+
+@media (max-width: 600px) {
+  .formulario {
+    padding: 1rem; /* Reducir el padding para pantallas pequeñas */
+  }
+}
+/*...........................Footer.......................*/
+.footer {
+  background: #222;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+.footer-links a {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 0 0.5rem;
+  color: #ccc;
+}
+.footer-links a:hover {
+  color: #fff;
+}
+
+
+/* .................Animaciones....................... */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes floatUp {
+  0% { transform: translateY(20px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.card {
+  animation: bounceIn 0.8s ease-in-out;
+}
+
+/* ...........................Media Queries.............................. */
+@media (min-width: 600px) {
+  .cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .card, .card-producto {
+    width: 45%;
+  }
+  .grid-opiniones {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .nav-list {
+    gap: 2rem;
+  }
+  .grid-opiniones {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .formulario {
+    grid-template-columns: 1fr 1fr;
+  }
+  .formulario .mensaje {
+    grid-column: span 2;
+  }
+}
+@media (min-width: 1024px) {
+  .cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .card, .card-producto {
+    flex: 1 1 30%;
+    max-width: 300px;
+  }
+}
