@@ -98,8 +98,15 @@ h1,h2,h3{
     font-size: 1.5rem !important;
   }
 
-
-
+#btnPop{
+    width: 80px;
+    height: 80px;
+}
+#btnPop:hover{
+    width: 100px;
+    height: 100px;
+    background-color: cornflowerblue;
+}
 
 @keyframes swoopy {
   from {
@@ -140,7 +147,7 @@ h1,h2,h3{
 
 
 
-
+/* 
 
 div {
   width: 100%;
@@ -173,4 +180,4 @@ body {
   display: flex;
   text-align: end;
   font-family: system-ui, sans-serif;
-}
+} */
