@@ -38,6 +38,8 @@ Desarrolla una **landing page promocional para una app ficticia**. Tú defines e
 - Botón con animación o transición
 - Imagen o ícono decorativo
 
+ 
+
 ### 3. Servicios / Funcionalidades
 - 3 tarjetas informativas con íconos
 - Sombras, bordes redondeados y animación de entrada
