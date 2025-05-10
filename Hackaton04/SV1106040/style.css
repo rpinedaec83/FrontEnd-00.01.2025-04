@@ -1,0 +1,326 @@
+    /* Reset básico ------------------------*/
+  * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+  /**/
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+    opacity: 0;
+    animation: fadeInBody 1s ease-in forwards;
+  }
+  
+  /*----------- Animaciones de header ---------- */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  /**/
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  /**/
+  @keyframes fadeInBody {
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* ----------------------------------------Header---------------------- */
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Distribuye logo a la izquierda, nav a la derecha */
+    padding: 1rem 2rem;
+  }
+  
+  /* para el logo de la empresa o trabajo*/
+  .logo {
+    font-size: 2.5rem;      /* Tamaño más grande */
+    font-weight: 200;       /* Más grueso que 'bold' (valores entre 100 y 900) */
+    font-family: 'Anton', sans-serif;  
+    color: #c22781;            /* Color de logo */
+    
+  }
+  
+  /**/
+  .nav ul {
+    display: flex;
+    gap: 3rem;
+    list-style: none;
+  }
+/*SE LOGRO REALIZAR CUADRADAS EL MENU CUANDO DAS CLIC*/
+  .nav a {
+    text-decoration: none;
+    color: #070707;
+    font-weight: bold;
+    font-size: 1rem;             /* Tamaño base */
+    padding: 0.5rem 1rem;        /* Igual al hover para evitar "salto" */
+    transition: all 0.3s ease;   /* Suaviza todos los cambios */
+    display: inline-block;       /* Permite aplicar padding y borde correctamente */
+  }
+  
+ /*SE LOGRO REALIZAR CUADRADAS EL MENU CUANDO DAS CLIC*/
+  .nav a:hover {
+    color: #e61f93;             /* Cambia el color del texto */
+    font-size: 1.1rem;          /* Aumenta el tamaño de letra */
+    border: 2px solid #e4187e41;  /* Borde de color al pasar el mouse */
+    padding: 0.5rem 1rem;       /* Espaciado interno para que el borde se vea bien */
+    border-radius: 0;           /* Esquinas cuadradas */
+    transition: all 0.3s ease;  /* Suaviza todos los cambios */
+  }
+ 
+  /* ----------Hero------------------------------ */
+  .hero {
+    position: relative;
+    height: 60vh; /* Pantalla completa */
+    background-image: url('img/banner.PNG');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: left;/* Se encuentra en la parte izquierda el texto */
+    color: white;
+    text-align: center;
+  }
+  
+  .hero-overlay {
+    background-color: rgba(0, 0, 0, 0.5); /* Oscurece la imagen para mejor legibilidad */
+    padding: 2rem;
+    border-radius: 10px;
+  }
+  
+  .cta {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #e61f93;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+/* ---------------Here en la parte inferior--------------------------------- */
+.contacto-hero-inferior {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem; /* <-- Cambiado de 50% a 1rem para alinearlo a la izquierda */
+  background-color: rgba(22, 21, 21, 0.85);
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.contacto-hero-inferior a {
+  color: #faf6f6;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contacto-hero-inferior a:hover {
+  color: #e61f93;
+}
+  /* ---------------Nuestro Servicios--------------------------------- */
+ 
+  .servicio {
+    padding: 1.5rem;
+    background-color: #f4d03f; /* Fondo más llamativo */
+    border-radius: 10px;
+    border: 2px solid #c0a0af; /* Borde para resaltado */
+    box-shadow: 0 4px 8px rgb(249, 253, 253); /* Sombra ligera para profundidad */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-size: 1.3rem; /* Tamaño grande */
+    font-weight: bold; /* Negrita */
+    font-family: 'Georgia', serif; /* Tipografía formal */
+    color: #333; /* Color de texto oscuro para mejor contraste */
+    text-transform: uppercase; /* Opcional: para que se vea más institucional */
+    text-align: center; /* las letras colocar en el centro */
+  }
+  
+  /**/
+  .servicios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+ 
+  .servicio:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(233, 44, 154, 0.89);/* Color de fondo */
+  }
+  
+    /* -----------------------------Testimonio ------------------------------------*/
+  .testimonios {
+    padding: 40px 20px;
+    background-color: #fce5f3;/*color de fondo */
+    text-align: center;/* el titulo en la parte izquierda */
+  }
+  
+  .testimonios h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: #030303;
+  }
+  
+  /* Carrusel base */
+  .testimonios-contenedor {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    height: 80px; /*Es para colocar altura */
+  }
+  
+  .testimonio {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 20px;
+    background: #c0a0af;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    font-style: italic;
+    color: #0f0f0f;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: absolute;
+    opacity: 0;
+    animation: rotarTestimonios 12s infinite;
+  }
+  
+  .testimonio:hover {
+    transform: scale(1.02);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Tiempos individuales */
+  .testimonio:nth-child(1) { animation-delay: 0s; }
+  .testimonio:nth-child(2) { animation-delay: 4s; }
+  .testimonio:nth-child(3) { animation-delay: 8s; }
+  
+  @keyframes rotarTestimonios {
+    0%   { opacity: 0; transform: scale(0.95); }
+    5%   { opacity: 1; transform: scale(1); }
+    30%  { opacity: 1; transform: scale(1); }
+    35%  { opacity: 0; transform: scale(0.95); }
+    100% { opacity: 0; }
+  }
+  
+  /* Responsivo */
+  @media (max-width: 600px) {
+    .testimonios-contenedor {
+      height: auto;
+    }
+  
+    .testimonio {
+      position: relative;
+    }
+  }
+
+
+  /* -----------------------------Contacto ------------------------------------*/
+  /**/
+  .contacto {
+    padding: 2rem;
+    background-color: #ccc7c9;/*color de fondo*/
+    animation: fadeInUp 1s ease-out;
+  }
+  /**/
+  .formulario {
+    display: grid;
+    gap: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  /**/
+  .formulario input,
+  .formulario textarea {
+    padding: 0.75rem;
+    border: 1px solid #d4a9bd; /*borte de formulario*/
+    border-radius: 5px;
+    width: 100%;
+    transition: border-color 0.3s;
+  }
+  /**/
+  .formulario input:focus,
+  .formulario textarea:focus {
+    border-color: #371f91;/*cambio de color del boton*/
+    outline: none;
+  }
+  /**/
+  button[type="submit"] {
+    background-color: #c22781; /*borte del boton*/
+    color: #fff;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #df4609;
+  }
+  
+  /* ------------Footer -------------------------------------------*/
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1rem 2rem;
+    background-color: #333;
+    color: #fff;
+    animation: fadeIn 1s ease-in-out;
+  }
+  /**/
+  .footer a {
+    color: #fff;
+    margin-right: 1rem;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  /**/
+  .footer a:hover {
+    color: #90caf9;
+  }
+  /**/
+  /* Responsive */
+  @media (max-width: 768px) 
+  {
+    .header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .nav ul {
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+  
+    .footer {
+      flex-direction: column;
+      text-align: center;
+      gap: 1rem;
+    }
+  }

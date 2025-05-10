@@ -1,0 +1,95 @@
+body{
+    background-color: black;
+    font-family: 'Roboto', sans-serif;
+p{
+    color: white;
+    text-align: right;
+}
+h1{
+    color: white;
+    text-align: center;
+    font-size: 56 px;
+}
+.lista li a{
+    color: yellow;
+}
+.lista2{
+    color:orange;
+    list-style: none;
+    padding-left: 0;
+}
+.imagen1{
+    border: 2px solid blue;
+}
+
+.Inicio{
+    padding: 80px 15px;
+    margin: 0 auto 40px;
+    width: 100%;
+}
+a {
+    color: #2c3e50;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #e74c3c; 
+    text-decoration: underline;
+    transition: all 0.3s ease-in-out;
+}
+.Formulario2{
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    width: 600px;
+    height: 400px;
+    margin: 20px auto;
+    background-image: url("img/fondo.jpg");
+    background-size: cover;
+    background-color: center;
+    background-repeat: no-repeat;/* Evita que se repita */
+    background-attachment: fixed; /* Fondo fijo */
+}
+.caja{
+    display: inline-block;
+    vertical-align: top; /* Alinea las cajas en la parte superior */
+    margin: 10px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: black;
+    border: 2px solid #ddd;
+    font-size: 16px; /* Restaura tamaño de fuente */
+    min-width: 150px; /* Ancho mínimo opcional */
+    white-space: nowrap; /* Evita salto de línea del texto */
+    }
+.caja1{
+    border: 3px solid;
+    border-color: red;
+}
+.caja2{
+    border: 3px solid;
+    border-color: red;
+}
+.boton{
+    cursor: pointer;
+}
+label{
+    color: white;
+}
+table{
+    color: white;
+}
+.Final{
+    position: absolute;
+    bottom: auto;
+    right: 0;
+}
+.ejemplo-float {
+    overflow: auto;
+}
+.columna-float{
+    float:left;
+}
+h2{
+    color:white;
+}

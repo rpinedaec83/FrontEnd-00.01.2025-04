@@ -1,0 +1,249 @@
+/* Estilo general para toda la página */
+body {
+    background-color: black;
+    color: white;
+    padding: 0;
+    margin: 0 auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Encabezado fijo en la parte superior */
+header {
+    position: fixed; /* Permite que el header quede siempre visible */
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex; /* Distribuye el logo y menú en fila */
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: black;
+    z-index: 1000; /* Se asegura de que quede por encima de otros elementos */
+}
+
+/* Tamaño del logo */
+.logo img {
+    width: 150px;
+}
+
+/* Menú de navegación horizontal */
+.menu ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 2.5rem;
+    padding: 0;
+    margin: 0;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Añade espacio para evitar que el contenido quede detrás del header */
+.banner,
+.banner-2,
+.contenedor {
+    margin-top: 100px;
+}
+
+/* Sección principal con fondo y centrado del contenido */
+.banner {
+    background-image: url('https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=cover,format=auto,quality=85,width=1920/keyart/GRMG8ZQZR-backdrop_wide');
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+/* Segunda sección destacada (evento) con misma lógica que .banner */
+.banner-2 {
+    background-image: url('https://crunchyroll.com/animeawards/fbbanner_25.png');
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+/* Fondo semitransparente para hacer el texto legible sobre la imagen */
+.banner-texto {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 1rem;
+    margin-left: 40px;
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+/* Contenedor general de las tarjetas */
+.contenedor {
+    padding: 2rem;
+    text-align: center;
+}
+
+/* Grid flexible para tarjetas */
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+/* Tarjeta individual de anime */
+.card {
+    background-color: #1e1e1e;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(53, 49, 49);
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+}
+
+/* Imagen de la tarjeta con tamaño fijo */
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card h3 {
+    margin: 0.5rem 0;
+}
+
+.card p {
+    padding: 0 1rem 1rem;
+    font-size: 0.95rem;
+}
+
+/* Estilo del formulario de sugerencias */
+.conte-form {
+    padding: 2rem 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Formulario con campos en columna */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Campo individual del formulario */
+.entrada {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* Campos de entrada y textarea */
+input,
+textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+/* Botón de enviar del formulario */
+input {
+    background-color: orange;
+    color: black;
+    font-weight: bold;
+}
+
+/* Botón tipo enlace con estilos */
+a.boton {
+    display: inline-block;
+    background-color: orange;
+    color: black;
+    font-weight: bold;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    width: 100%;
+    text-align: center;
+    max-width: 300px;
+    margin-top: 1rem;
+    transition: background-color 0.3s;
+}
+
+/* Efecto hover en botón */
+a.boton:hover {
+    background-color: darkorange;
+}
+
+/* Pie de página con redes y derechos */
+footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    border-top: 1px solid #333;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0;
+    margin-bottom: 1rem;
+}
+
+footer li {
+    color: white;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+/* --- Responsive para móviles y tablets --- */
+@media (max-width: 768px) {
+
+    /* Ajustes visuales del banner en pantallas pequeñas */
+    .banner,
+    .banner-2 {
+        flex-direction: column;
+        height: auto;
+        padding: 2rem 1rem;
+        text-align: center;
+    }
+
+    .banner-texto {
+        margin-left: 0;
+        max-width: 100%;
+        padding: 1rem;
+    }
+
+    /* Ajustes de formulario en móvil */
+    .conte-form {
+        padding: 1rem;
+        box-sizing: border-box;
+    }
+
+    form {
+        gap: 0.75rem;
+        width: 100%;
+    }
+
+    input,
+    textarea {
+        width: 100%;
+        font-size: 1rem;
+        box-sizing: border-box;
+    }
+
+    /* Oculta el menú en pantallas pequeñas (podría usarse un botón tipo hamburguesa) */
+    .menu {
+        display: none;
+    }
+}

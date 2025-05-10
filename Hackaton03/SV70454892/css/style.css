@@ -1,0 +1,126 @@
+/* Pregunta 21: Cambiar el color de fondo de una página */
+body {
+    background-color: #f0f8ff;
+    font-family: 'Roboto', sans-serif; /* Pregunta 31: Usar una fuente de Google Fonts en tu HTML */
+    padding: 50px;
+    text-align: center;
+  }
+  
+  /* Pregunta 22: Cambiar el color del texto de un párrafo */
+  p {
+    color: #333333;
+  }
+
+  img {
+    width: 400px;
+  }
+  
+  /* Pregunta 23: Usar una clase para cambiar el color de varios elementos */
+  .texto-destacado {
+    color: #ff5733; /* naranja fuerte */
+  }
+  
+  /* Pregunta 24: Aplicar un borde a una imagen */
+  img {
+    border: 2px solid #000000;
+  }
+  
+  /* Pregunta 25: Centrar un texto usando CSS */
+  h1, h2 {
+    text-align: center;
+  }
+  
+  /* Pregunta 26: Cambiar el tamaño de fuente de un encabezado */
+  h1 {
+    font-size: 40px;
+  }
+  
+  /* Pregunta 27: Aplicar padding a un div */
+  div {
+    padding: 20px;
+  }
+  
+  /* Pregunta 28: Aplicar margin a un div */
+  div {
+    margin: 20px;
+  }
+  
+  /* Pregunta 29: Cambiar el color de los enlaces al pasar el mouse (hover) */
+  a:hover {
+    color: red;
+  }
+  
+  /* Pregunta 30: Cambiar el estilo de una lista (quitar bullets) */
+  ul {
+    list-style-type: none;
+  }
+  ol {
+    list-style-position: inside;
+  }
+  
+  /* Pregunta 32: Cambiar el fondo de un div con una imagen */
+  
+  #divfondo {
+    background-image: url('https://images.unsplash.com/photo-1745330612709-74ad3afdfe00?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-position: center;
+  }
+  
+  /* Pregunta 33: Usar display: inline-block en dos cajas */
+  
+  .caja {
+    display: inline-block;
+    width: 200px;
+    height: 100px;
+    background-color: #359ae7;
+    margin: 10px;
+  }
+  
+  /* Pregunta 34: Usar display: flex para alinear elementos */
+  .P34 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  /* Pregunta 35: Crear una clase .boton con padding, color y borde redondeado */
+  .boton {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    text-decoration: none;
+  }
+  
+  /* Pregunta 36: Aplicar estilos distintos a un div con id */
+  #especial {
+    background-color: yellow;
+    border: 3px dashed green;
+  }
+  
+  /* Pregunta 37: Usar text-align: right en un párrafo */
+  .derecha {
+    text-align: right;
+  }
+  
+  /* Pregunta 38: Cambiar el cursor a pointer al pasar sobre un botón */
+  button:hover {
+    cursor: pointer;
+  }
+  
+  /* Pregunta 39: Usar position: absolute para colocar un elemento en una esquina */
+  .esquina {
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    background-color: lightcoral;
+    padding: 2px;
+  }
+  
+  /* Pregunta 40: Crear un layout simple de 2 columnas usando flexbox */
+  .p40 {
+    display: flex;
+  }
+  
+ 

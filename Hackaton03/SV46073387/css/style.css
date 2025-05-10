@@ -1,0 +1,122 @@
+/* Cambiar el color de fondo de toda la página */
+body {
+  background-color: #f0f8ff; /* Color de fondo (en este caso, azul claro) */
+  font-family: 'Dancing Script', sans-serif;  /* Aplicar la fuente 'Roboto' a todo el documento */
+}
+p {
+    color: #ff6347; /* Color de texto (en este caso, tomate) */
+  }
+
+ .texto-rojo {
+    color: red; /* Cambia el color del texto a rojo */
+  }
+  .texto-verde {
+    color: green; /* Cambia el color del texto a verde */
+  }
+  .imagen-peru {
+    border: 3px solid blue;
+  }
+  .centrado {
+    text-align: center; /* Centra el texto horizontalmente */
+  }
+  h1 {
+    font-size: 36px; /* Cambia el tamaño de la fuente a 36 píxeles */
+  }
+  .mi-div {
+    padding: 30px; /* Aplica 20 píxeles de padding en todos los lados */
+    margin: 10px; /* Aplica 20 píxeles de margin en todos los lados */
+   
+}
+.mi-div2 {
+    background-image: url('../img/paisaje.jpg'); /* Ruta de la imagen */
+    background-size: cover; /* Asegura que la imagen cubra todo el espacio del div */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    height: 100px; 
+}
+
+   a {
+    color: blue; /* Color del enlace por defecto */
+    text-decoration: none; /* Eliminar subrayado */
+  }
+
+  /* Estilo cuando el mouse pasa sobre el enlace */
+  a:hover {
+    color: lightcoral; 
+  }
+  ul {
+    list-style-type: none; /* Quita los puntos (bullets) de la lista */
+    }
+
+    .caja {
+        display: inline-block;
+     }
+    
+    .caja1 {
+        background-color: #3498db;
+    }
+    
+    .caja2 {
+        background-color: #e74c3c;
+    }
+    .contenedor-flex {
+        display: flex;
+        justify-content: center; /* centra horizontalmente */
+        align-items: center;     /* centra verticalmente (si hay altura) */
+        gap: 10px;               /* espacio entre elementos */
+        height: 100px;           /* opcional, para ver el centrado vertical */
+        background-color: #f1f1f1;
+    }
+    
+    .item {
+        background-color: #4CAF50;
+        color: white;
+        padding: 20px;
+        font-size: 18px;
+        border-radius: 8px;
+    }
+    .boton {
+        padding: 10px 20px;
+        background-color: #007bff; /* color de fondo azul */
+        color: white;              /* texto blanco */
+        border: none;              /* sin borde */
+        border-radius: 8px;        /* bordes redondeados */
+        cursor: pointer;           /* cambia el cursor al pasar */
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+        cursor: pointer; /* 👈 Esto hace el cambio de cursor */
+    }
+    
+    .boton:hover {
+        background-color: #0056b3; /* efecto al pasar el mouse */
+    }
+    #especial {
+        background-color: #f39c12;
+        color: white;
+        padding: 20px;
+        border-radius: 10px;
+        font-weight: bold;
+        text-align: center;
+    }
+    .derecha {
+        text-align: right;
+    }
+    .elemento {
+        position: absolute;
+        top: 0;   /* O puedes usar bottom: 0; para la esquina inferior */
+        left: 0;  /* O puedes usar right: 0; para la esquina derecha */
+      }
+      
+    .container {
+      display: flex;
+      width: 100%;
+    }
+    .left-column, .right-column {
+      width: 50%;
+      padding: 20px;
+    }
+    .left-column {
+      background-color: #f0f0f0;
+    }
+    .right-column {
+      background-color: #e0e0e0;
+    }

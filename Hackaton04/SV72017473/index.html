@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi sitio web</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Borel&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="img/glob2.png" alt="Logo Carmin" class="logo">
+        <h1 id="Titulo">Carmín</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">Conócenos</a></li>
+                <li><a href="#services">Servicios</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+<section class="hero">
+    <div class="hero-content">
+        <h2 id="titulohero">Transformamos tus eventos en momentos inolvidables!!!</h2>
+        <p>Bienvenido a Carmín, donde cada celebración se convierte en una obra de arte. Especializados en decoraciones de globos, 
+            creamos ambientes mágicos que harán que tus eventos sean únicos y memorables.
+            ¡Contáctanos hoy! Deja que nuestros expertos en decoración transformen tu próxima fiesta en una experiencia inolvidable.
+        </p>
+        <a href="#" class="cta-button" onclick="toggleForm()">Contáctanos</a>
+    </div>
+</section>
+    
+
+<div id="form-container" class="form-container" style="display: none;">
+    <form>
+        <h2>Formulario de Contacto</h2>
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="message">Mensaje:</label>
+        <textarea id="message" name="message" required></textarea>
+        <button type="submit">Enviar</button>
+    </form>
+    </div>
+    <h2 class="segment-title">Te ofrecemos</h2>
+
+<div class="services">
+    <div class="card">
+    <h2>Decoración para Eventos</h2>
+    <p>Descripción: Ofrece servicios de decoración con globos para todo tipo de eventos, como bodas, cumpleaños, aniversarios, y eventos corporativos. Incluye arcos de globos, columnas, centros de mesa y fondos decorativos.
+        Beneficios: Personalización según el tema del evento, uso de globos de alta calidad y montaje profesional.</p>
+    </div>
+    <div class="card">
+        <h2>Paquetes de Fiesta Temáticos:</h2>
+        <p>Descripción: Crea paquetes de decoración de globos temáticos para fiestas infantiles, fiestas de adultos, y celebraciones especiales. Cada paquete puede incluir globos personalizados, guirnaldas y accesorios decorativos.
+        Beneficios: Ahorro de tiempo para los clientes, opciones de personalización y entrega a domicilio.</p>
+    </div>
+    <div class="card">
+        <h2>Decoración de Espacios Comerciales:</h2>
+        <p>Descripción: Ofrece servicios de decoración con globos para tiendas, restaurantes, y oficinas. Incluye decoraciones para inauguraciones, promociones especiales, y decoraciones estacionales.
+        Beneficios: Atrae la atención de los clientes, mejora la apariencia del espacio y crea un ambiente festivo</p>
+    </div>
+    </div>
+
+
+<h2 class="segment-title">Nuestros clientes nos respaldan</h2>
+    <div class="testimonials">
+    <div class="testimonial-card">
+    <h3>María Gómez</h3>
+        <p>"¡Increíble servicio! Contraté la decoración de globos para el cumpleaños de mi hija y fue un éxito total. Los globos eran hermosos y la atención al detalle fue impecable. ¡Definitivamente los recomendaré a todos mis amigos!"</p>
+    </div>
+    <div class="testimonial-card">
+        <h3>Carlos Ricardi</h3>
+        <p>"La decoración con globos para nuestra fiesta de aniversario fue espectacular. El equipo fue muy profesional y capturó exactamente lo que queríamos. Nuestros invitados quedaron maravillados. ¡Gracias por hacer nuestro día tan especial!"</p>
+    </div>
+    <div class="testimonial-card">
+        <h3>Mario Rebatta</h3>
+        <p>"Contratamos sus servicios para la inauguración de nuestra tienda y no podríamos estar más contentos. Los globos atrajeron a muchos clientes y realmente hicieron que nuestro evento destacara. ¡Excelente trabajo!"</p>
+    </div>
+    </div>
+
+
+
+
+    <footer>
+        <div class="footer-content">
+    <div class="social-media">
+            <a href="https://www.facebook.com" target="_blank">Facebook</a>
+            <a href="https://www.twitter.com" target="_blank">Twitter</a>
+            <a href="https://www.instagram.com" target="_blank">Instagram</a>
+            <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+    </div>
+    <div class="secondary-menu">
+            <a href="/about">Sobre Nosotros</a>
+            <a href="/services">Servicios</a>
+            <a href="/contact">Contacto</a>
+            <a href="/privacy">Política de Privacidad</a>
+    </div>
+        </div>
+        <div class="footer-bottom">
+        <p>&copy; 2025 Carmin. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+

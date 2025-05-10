@@ -1,0 +1,664 @@
+* {
+    margin: 0;               /* Elimina el margen por defecto de todos los elementos */
+    padding: 0;              /* Elimina el padding por defecto de todos los elementos */
+    box-sizing: border-box; /* Hace que el ancho y alto incluyan padding y border (mejor para maquetar) */
+  }
+  
+  body {
+    margin: 0;                          /* Elimina el margen por defecto del <body> */
+    font-family: 'Arial', sans-serif;  /* Define la fuente principal como Arial, y una genérica sans-serif como respaldo */
+    background-color: #fff;            /* Establece el fondo del body en blanco */
+    color: #333;                       /* Define el color del texto como gris oscuro */
+  }
+  
+  .header {
+    background-color: #004080;         /* Fondo azul oscuro para el encabezado */
+    color: white;                      /* Texto en color blanco */
+    display: flex;                     /* Usa flexbox para organizar los elementos dentro del header */
+    align-items: center;              /* Centra verticalmente los elementos hijos del header */
+    justify-content: space-between;   /* Espacia los elementos hijos al máximo: uno a la izquierda y otro a la derecha */
+    padding: 1rem 2rem;                /* Añade espacio interno: 1rem arriba/abajo, 2rem a los lados */
+    position: relative;               /* Define posición relativa para que elementos hijos posicionados (absolute) se ubiquen respecto a este */
+  }
+
+  .logo-img {
+    height: 50px;       /* Establece la altura fija de la imagen del logo en 50 píxeles */
+    width: auto;        /* La anchura se ajusta automáticamente para mantener la proporción original */
+  }
+  .nav ul {
+    list-style: none;   /* Elimina los puntos por defecto de la lista */
+    display: flex;      /* Muestra los elementos de la lista en línea horizontalmente usando Flexbox */
+    gap: 2rem;          /* Deja un espacio de 2rem entre cada elemento del menú */
+  }
+  
+  .nav a {
+    color: white;                   /* Establece el color del texto de los enlaces como blanco */
+    text-decoration: none;         /* Quita el subrayado por defecto de los enlaces */
+    transition: color 0.3s;        /* Aplica una transición suave al color cuando se hace hover */
+  }
+  
+  .nav a:hover {
+    color: #ffcc00;                /* Cambia el color del enlace a amarillo al pasar el mouse encima */
+  }
+  
+  .menu-toggle {
+    display: none;                 /* Oculta el botón de menú por defecto (se muestra con media queries) */
+    font-size: 2rem;               /* Tamaño grande para el ícono del menú */
+    background: none;             /* Sin fondo */
+    border: none;                 /* Sin bordes */
+    color: white;                 /* Color blanco del ícono */
+    cursor: pointer;              /* Cambia el cursor a una mano al pasar por encima */
+  }
+  .sasp-container {
+    display: flex;                /* Usa flexbox para colocar los elementos lado a lado */
+    flex-wrap: wrap;             /* Permite que los elementos se acomoden en varias líneas si no caben */
+    align-items: flex-start;     /* Alinea los elementos al inicio verticalmente */
+    gap: 30px;                   /* Espacio de 30px entre los elementos */
+    max-width: 1200px;           /* Ancho máximo del contenedor */
+    margin: auto;                /* Centra el contenedor horizontalmente */
+  }
+  
+  .sasp-texto {
+    flex: 1 1 500px;             /* El bloque ocupa al menos 500px, pero puede crecer y encogerse según el espacio */
+    line-height: 1.8;            /* Altura de línea para facilitar la lectura del texto */
+  }
+  
+  .sasp-texto h1 {
+    font-size: 2.5rem;           /* Tamaño grande para el título principal dentro del bloque de texto */
+  }
+  
+  
+  .azul {
+    color: #1a3eb1;           /* Texto en un tono azul fuerte */
+    font-weight: bold;        /* Texto en negrita */
+  }
+    
+  .sasp-imagen {
+    flex: 1 1 400px;          /* Ocupa 400px como mínimo y puede crecer o reducirse */
+    display: flex;            /* Flexbox para alinear contenido */
+    justify-content: center;  /* Centrado horizontal del contenido */
+    align-items: center;      /* Centrado vertical */
+  }
+  
+  .sasp-imagen img {
+    max-width: 600px;         /* Máximo ancho de 600px */
+    width: 100%;              /* Ocupa todo el ancho posible del contenedor */
+    height: auto;             /* Mantiene proporción de la imagen */
+  }
+  
+
+/* === Servicios === */
+.servicios {
+    padding: 2rem;            /* Relleno interno de 2rem */
+    background-color: #f4f4f4; /* Fondo gris claro */
+  }
+  .servicios h2 {
+    text-align: center;       /* Centra el título */
+    margin-bottom: 1.5rem;    /* Espacio debajo del título */
+  }
+  .tarjetas-container {
+    display: grid;                                      /* Usa grid para las tarjetas */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Columnas adaptables */
+    gap: 1.5rem;                                        /* Espacio entre tarjetas */
+  }
+  
+  .tarjeta {
+    background: white;        /* Fondo blanco */
+    padding: 1.5rem;          /* Relleno interno */
+    border-radius: 8px;       /* Bordes redondeados */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* Sombra sutil */
+  }
+  
+  .tarjeta-img {
+    width: 100%;              /* Imagen ocupa todo el ancho de la tarjeta */
+    height: 200px;            /* Altura fija */
+    object-fit: cover;        /* Ajusta la imagen sin deformarla */
+  }
+  
+  .tarjeta h3 {
+    margin: 10px 0;           /* Márgenes arriba y abajo */
+    font-size: 1.2rem;        /* Tamaño del título de la tarjeta */
+  }
+  
+  .tarjeta p {
+    padding: 0 15px 15px;     /* Espaciado interno (abajo y a los lados) */
+    font-size: 0.95rem;       /* Tamaño de letra más pequeño */
+    text-align: justify;      /* Justifica el texto */
+  }
+  
+  
+  /* === Testimonios === */
+  .testimonios {
+    text-align: center;       /* Centra todo el contenido */
+    padding: 60px 20px;       /* Relleno interno grande */
+    background-color: #f5f5f5; /* Fondo gris claro */
+  }
+  .titulo-testimonios {
+    font-size: 2.5rem;        /* Título grande */
+    font-weight: bold;        /* En negrita */
+    margin-bottom: 50px;      /* Espacio inferior */
+    color: #333;              /* Color gris oscuro */
+  }
+  .cards-container {
+    display: flex;            /* Flexbox para mostrar las tarjetas en fila */
+    gap: 30px;                /* Espacio entre ellas */
+    flex-wrap: wrap;          /* Permite que se bajen a otra línea si no caben */
+    justify-content: center;  /* Centra horizontalmente */
+  }
+  .card {
+    background-color: #5a7ebc;    /* Fondo azul intermedio */
+    width: 280px;                 /* Ancho fijo */
+    border-radius: 15px;          /* Bordes redondeados */
+    padding: 70px 20px 30px;      /* Más espacio arriba por la imagen flotante */
+    position: relative;           /* Posicionamiento para la imagen */
+    text-align: center;           /* Centra todo el contenido */
+    color: white;                 /* Texto blanco */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15); /* Sombra sutil */
+    transition: transform 0.3s ease;            /* Efecto al hacer hover */
+  }
+  
+  .card:hover {
+    transform: translateY(-10px); /* Levanta la tarjeta al pasar el mouse */
+  }
+  
+  
+  /* Diferentes colores por posición */
+  .card:nth-child(2) {
+    background-color: #68b4b0;    /* Segundo testimonio en color turquesa */
+  }
+  
+  .card:nth-child(3) {
+    background-color: #c8405a;    /* Tercer testimonio en rojo vino */
+  }
+  
+  
+  /* Imagen circular */
+  .card img {
+    width: 100px;                 /* Tamaño fijo de imagen */
+    height: 100px;
+    border-radius: 50%;          /* Redonda */
+    object-fit: cover;           /* Imagen centrada y recortada */
+    border: 5px solid white;     /* Borde blanco */
+    position: absolute;          /* Posicionada sobre la tarjeta */
+    top: -50px;                  /* Sale por arriba */
+    left: 50%;                   /* Centrada horizontalmente */
+    transform: translateX(-50%); /* Ajuste fino al centro */
+    background-color: white;     /* Fondo blanco detrás de la imagen */
+  }
+  
+  
+  /* Nombre */
+  .card h3 {
+    margin-top: 20px;            /* Espacio arriba del nombre */
+    font-size: 1.1rem;           /* Tamaño de texto del nombre */
+    font-weight: bold;           /* En negrita */
+    letter-spacing: 1px;         /* Espacio entre letras */
+  }
+  
+  
+  /* Texto */
+  .card p {
+    font-size: 0.95rem;          /* Texto del testimonio */
+    margin-top: 10px;
+    line-height: 1.4;            /* Altura de línea */
+  }
+  
+  /* ---- Formulario de contacto ---- */
+  .contacto {
+    padding: 2rem;               /* Relleno general */
+    background-color: #f4f4f4;   /* Fondo gris claro */
+  }
+  .contacto h2 {
+    text-align: center;          /* Título centrado */
+    margin-bottom: 1.5rem;       /* Espacio inferior */
+  }
+  
+  .formulario-contacto {
+    max-width: 800px;            /* Ancho máximo */
+    margin: 0 auto;              /* Centrado */
+    display: grid;               /* Usa grid */
+    grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
+    gap: 1rem;                   /* Espacio entre columnas */
+  }  
+  
+  .formulario-contacto input,
+  .formulario-contacto textarea {
+    width: 100%;                 /* Ocupan todo el ancho disponible */
+    padding: 0.5rem;             /* Espacio interno */
+    border: 1px solid #ccc;      /* Borde gris */
+    border-radius: 4px;          /* Bordes redondeados */
+  }
+  
+  .formulario-contacto label {
+    display: block;              /* Cada etiqueta en línea propia */
+    margin-bottom: 0.3rem;       /* Espacio inferior */
+  }
+  
+  .full-width {
+    grid-column: span 2;         /* Ocupa ambas columnas del grid */
+  }
+  
+  .boton-container {
+    text-align: center;          /* Centra el botón */
+  }
+  
+  .boton-container button {
+    padding: 0.75rem 2rem;       /* Tamaño del botón */
+    background-color: #0077cc;   /* Fondo azul */
+    color: white;                /* Texto blanco */
+    border: none;                /* Sin borde */
+    border-radius: 4px;          /* Bordes redondeados */
+    cursor: pointer;             /* Cursor tipo mano */
+  }
+   /*---Footer---*/
+  .footer {
+    background-color: #004080;   /* Fondo azul oscuro */
+    color: white;                /* Texto blanco */
+    padding: 2rem 1rem;          /* Relleno interno */
+  }
+  
+  .footer-contenido {
+    display: flex;               /* Usa Flexbox */
+    flex-wrap: wrap;             /* Permite que los elementos bajen de línea */
+    justify-content: space-between; /* Espacio entre bloques */
+    gap: 2rem;                   /* Espacio entre elementos */
+    max-width: 1200px;           /* Ancho máximo del contenedor */
+    margin: 0 auto;              /* Centrado */
+  }
+  
+  .footer-logo h3 {
+    font-size: 1.5rem;           /* Tamaño del título del logo */
+    margin-bottom: 0.5rem;       /* Espacio inferior */
+  }
+  
+  .footer-logo li {
+    list-style: none;            /* Sin viñetas */
+    margin: 0.3rem 0;            /* Espacio vertical entre ítems */
+  }
+  .footer-navegacion ul {
+    list-style: none;            /* Sin viñetas */
+    padding: 0;                  /* Sin espacio interno */
+  }
+  
+  .footer-navegacion a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin: 0.3rem 0;
+  }
+  
+  .footer-redes .iconos-redes a {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    color: white;
+    text-decoration: none;
+  }
+  
+  .footer-copy {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    padding-top: 1rem;
+  }
+
+ /* Responsive */
+  @media (max-width: 768px) {
+    .sasp-container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .sasp-texto {
+      padding: 0 10px;
+    }
+  
+    .sasp-imagen {
+      margin-top: 20px;
+    }
+    /* === Servicios === */
+    .servicios {
+        padding: 2rem;
+        background-color: #f4f4f4;
+      }
+      
+      .servicios h2 {
+        text-align: center;
+        margin-bottom: 1.5rem;
+      }
+      
+      .tarjetas-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+      }
+      
+      .tarjeta {
+        background: white;
+        padding: 1.5rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      }
+      
+      /* === Testimonios === */
+      .cards-container {
+        display: flex;
+        gap: 30px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+  
+      .card {
+        background-color: #5a7ebc;
+        width: 250px;
+        border-radius: 15px;
+        padding: 60px 20px 20px;
+        position: relative;
+        text-align: center;
+        color: white;
+      }
+  
+      .card:nth-child(2) {
+        background-color: #68b4b0;
+      }
+  
+      .card:nth-child(3) {
+        background-color: #c8405a;
+      }
+  
+      .card img {
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 5px solid white;
+        position: absolute;
+        top: -45px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: white;
+      }
+  
+      .card h3 {
+        margin-top: 10px;
+        font-size: 1rem;
+        letter-spacing: 1px;
+        font-weight: bold;
+      }
+  
+      .card p {
+        font-size: 0.9rem;
+        margin-top: 10px;
+      }
+      
+      /* === Formulario de contacto === */
+      .contacto {
+        padding: 2rem;
+        background-color: #f4f4f4;
+      }
+      
+      .contacto h2 {
+        text-align: center;
+        margin-bottom: 1.5rem;
+      }
+      
+      .formulario-contacto {
+        max-width: 800px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+      
+      .formulario-contacto input,
+      .formulario-contacto textarea {
+        width: 100%;
+        padding: 0.5rem;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      
+      .formulario-contacto label {
+        display: block;
+        margin-bottom: 0.3rem;
+      }
+      
+      .full-width {
+        grid-column: span 2;
+      }
+      
+      .boton-container {
+        text-align: center;
+      }
+      
+      .boton-container button {
+        padding: 0.75rem 2rem;
+        background-color: #0077cc;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      } 
+      .footer {
+        background-color: #004080;
+        color: white;
+        padding: 2rem 1rem;
+      }
+      
+      .footer-contenido {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      
+      .footer-logo h3 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+      }
+      
+      .footer-navegacion ul {
+        list-style: none;
+        padding: 0;
+      }
+      
+      .footer-navegacion a {
+        color: white;
+        text-decoration: none;
+        display: block;
+        margin: 0.3rem 0;
+      }
+      
+      .footer-redes .iconos-redes a {
+        font-size: 1.5rem;
+        margin-right: 1rem;
+        color: white;
+        text-decoration: none;
+      }
+      
+      .footer-copy {
+        text-align: center;
+        margin-top: 1.5rem;
+        font-size: 0.9rem;
+        border-top: 1px solid rgba(255,255,255,0.2);
+        padding-top: 1rem;
+      }      
+  }
+ 
+  /* ------ Responsive ------ */
+  @media (max-width: 768px) {
+    .nav {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #004080;
+      width: 100%;
+      display: none;
+      flex-direction: column;
+    }
+  
+    .nav.activo {
+      display: flex;
+    }
+  
+    .nav ul {
+      flex-direction: column;
+      gap: 1rem;
+      padding: 1rem 0;
+      align-items: center;
+    }
+  
+    .menu-toggle {
+      display: block;
+    }
+
+         .sasp-container {
+          flex-direction: column;
+          text-align: center;
+        }
+      
+        .sasp-texto {
+          padding: 0 10px;
+        }
+      
+        .sasp-imagen {
+          margin-top: 20px;
+        }
+      
+        .nav {
+          position: absolute;
+          top: 100%;
+          left: 0;
+          background-color: #004080;
+          width: 100%;
+          display: none;
+          flex-direction: column;
+        }
+      
+        .nav.activo {
+          display: flex;
+        }
+      
+        .nav ul {
+          flex-direction: column;
+          gap: 1rem;
+          padding: 1rem 0;
+          align-items: center;
+        }
+      
+        .menu-toggle {
+          display: block;
+        }
+
+        .cards-container {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+          }
+      
+          .card {
+            background-color: #5a7ebc;
+            width: 250px;
+            border-radius: 15px;
+            padding: 60px 20px 20px;
+            position: relative;
+            text-align: center;
+            color: white;
+          }
+      
+          .card:nth-child(2) {
+            background-color: #68b4b0;
+          }
+      
+          .card:nth-child(3) {
+            background-color: #c8405a;
+          }
+      
+          .card img {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid white;
+            position: absolute;
+            top: -45px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: white;
+          }
+      
+          .card h3 {
+            margin-top: 10px;
+            font-size: 1rem;
+            letter-spacing: 1px;
+            font-weight: bold;
+          }
+      
+          .card p {
+            font-size: 0.9rem;
+            margin-top: 10px;
+          }
+ /* --- Servicios --- */
+ .servicios {
+    padding: 2rem;            /* Relleno interno de 2rem */
+    background-color: #f4f4f4; /* Fondo gris claro */
+  }
+  .servicios h2 {
+    text-align: center;       /* Centra el título */
+    margin-bottom: 1.5rem;    /* Espacio debajo del título */
+  }
+
+    /*--- Footer ---*/
+    .footer {
+        background-color: #004080;
+        color: white;
+        padding: 2rem 1rem;
+    }
+    
+    .footer-contenido {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .footer-logo h3 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .footer-navegacion ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .footer-navegacion a {
+        color: white;
+        text-decoration: none;
+        display: block;
+        margin: 0.3rem 0;
+    }
+    
+    .footer-redes .iconos-redes a {
+        font-size: 1.5rem;
+        margin-right: 1rem;
+        color: white;
+        text-decoration: none;
+    }
+    
+    .footer-copy {
+        text-align: center;
+        margin-top: 1.5rem;
+        font-size: 0.9rem;
+        border-top: 1px solid rgba(255,255,255,0.2);
+        padding-top: 1rem;
+    }
+}
+      
+     
+  

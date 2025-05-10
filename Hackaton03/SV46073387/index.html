@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="especial" class="centrado">
+    <h1 class="texto-rojo">Ejercicio 01-Hackaton 3</h1>
+    </div>
+    <div class="mi-div2">
+    <p>Ejercicio 02 - El campo estaba en un valle rodeado de montañas nevadas. 
+       Era muy colorido porque había plantaciones de muchos tipos de flores y, por eso, olía muy bien. 
+       A la izquierda del camino que cruzaba este extenso lugar había una cabaña que tenía una chimenea 
+       que echaba humo. </p></div>
+    <a href="https://www.google.com" target="_blank">Ejercicio 03-Ir a Google</a><br><br>
+    <img src="img/peru.png"  width="200px" class="imagen-peru">
+    <p class="derecha"><strong>La tecnología ha transformado radicalmente la forma en que vivimos</strong>, trabajamos y nos comunicamos. 
+       Con avances como la inteligencia artificial, el internet de las cosas y el 5G, el mundo se está
+       volviendo más interconectado que nunca. Las <em>empresas adoptan soluciones digitales para optimizar 
+       procesos</em> y mejorar la experiencia del cliente. Al mismo tiempo, surgen nuevos desafíos relacionados 
+       con la ciberseguridad y la privacidad de los datos. La innovación continúa siendo clave para el desarrollo 
+       de una sociedad más eficiente y sostenible.</p>
+       <ul >
+        <li>Computadora</li>
+        <li>Tablet</li>
+        <li>Smartphone</li>
+      </ul>
+      <a href="https://www.w3schools.com/html/html_urlencode.asp" target="_blank">Visitar Tutorial</a>
+      <br><br>
+      <img src="img/tecnologia.jpg" alt="Bienvenido a la nueva era" width="200px">
+      <br><br>
+      <table  border="2">
+        <tr>
+          <td>Fila 1, Columna 1</td>
+          <td>Fila 1, Columna 2</td>
+        </tr>
+        <tr>
+          <td>Fila 2, Columna 1</td>
+          <td>Fila 2, Columna 2</td>
+        </tr>
+      </table>
+      <br><br>
+      <form action="/enviar" method="post">
+        <label for="Correo">Correo:</label>
+        <input type="text" id="nombre" name="nombre">
+        <button class="boton" type="submit">Enviar</button>
+      </form>
+      <br><br>
+      <form action="/login" method="post">
+    
+        <label for="clave">Contraseña:</label>
+        <input type="password" id="clave" name="clave">      
+        <button class="boton" type="submit">Iniciar sesión</button>
+      </form>
+      <br><br>
+      <form action="/suscribirse" method="post">          
+        <label for="correo">Correo electrónico:</label>
+        <input type="email" id="correo" name="correo" required>      
+        <button class="boton" type="submit">Suscribirse</button>
+      </form>
+      <br><br>
+<!-- Sección de navegación principal -->
+<nav>
+    <ul>
+      <!-- Enlace al inicio -->
+      <li><a href="index.html">Inicio</a></li>
+  
+      <!-- Enlace a la página de nosotros -->
+      <li><a href="nosotros.html">Nosotros</a></li>
+  
+      <!-- Enlace a la página de servicios -->
+      <li><a href="servicios.html">Servicios</a></li>
+  
+      <!-- Enlace a la página de contacto -->
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+  <br><br>
+  <form action="/registro" method="post">
+    <h3>Selecciona tus intereses:</h3>
+    <!-- Checkboxes -->
+    <label><input type="checkbox" name="intereses" value="tecnologia"> Tecnología</label><br>
+    <label><input type="checkbox" name="intereses" value="musica"> Música</label><br>
+    <label><input type="checkbox" name="intereses" value="deportes"> Deportes</label><br><br>
+  
+    <h3>Selecciona tu género:</h3>
+    <!-- Radio buttons -->
+    <label><input type="radio" name="genero" value="masculino"> Masculino</label><br>
+    <label><input type="radio" name="genero" value="femenino"> Femenino</label><br>
+    <label><input type="radio" name="genero" value="otro"> Otro</label><br><br>
+      <button type="submit">Enviar</button>
+  </form>
+    <br><br>
+    <form action="/registro" method="post" class="mi-div" >
+        <div class="texto-verde">
+            <!-- El color del texto de este label será verde -->
+            <label for="nombre">Nombre:</label><br>
+            <input type="text" id="nombre" name="nombre"><br>
+            </div>     
+      
+        <div class="texto-verde">
+          <label for="email">Correo electrónico:</label><br>
+          <input type="email" id="email" name="email"><br>
+        </div>
+      
+        <div class="texto-verde">
+          <label for="mensaje">Mensaje:</label><br>
+          <textarea id="mensaje" name="mensaje"></textarea><br>
+        </div>      
+        <div >
+          <button type="submit">Enviar</button>
+        </div>
+      </form>  
+      <div class="caja caja1">Caja 1</div>
+      <div class="caja caja2">Caja 2</div>
+      <br><br>
+      <div class="contenedor-flex">
+        <div class="item">Elemento 1</div>
+        <div class="item">Elemento 2</div>
+        <div class="item">Elemento 3</div>
+    </div>
+    <button class="elemento" type="submit">ABSOLUTE</button>
+    <br><br>
+    
+    <div class="container">
+        <div class="left-column">
+          <h2>Columna Izquierda</h2>
+          <p>Teoria</p>
+        </div>
+        <div class="right-column">
+          <h2>Columna Derecha</h2>
+          <p>Aplicación</p>
+        </div>
+      </div>
+</body>
+</html>

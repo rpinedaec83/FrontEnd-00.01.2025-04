@@ -1,0 +1,127 @@
+/* 21. Cambia el color de fondo de la página a negro y el color de texto a blanco */
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* 22. Cambia el color del texto de los párrafos a gris claro */
+p {
+    color: lightgray;
+}
+
+/* 23. Crea una clase que cambia el color de los elementos a azul */
+.color-azul {
+    color: deepskyblue;
+}
+
+/* 24. Aplica un borde blanco a todas las imágenes y ajusta su tamaño */
+img {
+    border: 2px solid white;
+    width: 300px;
+}
+
+/* 25. Centra el texto de los títulos h1 */
+h1 {
+    text-align: center;
+}
+
+/* 26. Cambia el tamaño de fuente de los encabezados h4 */
+h4 {
+    font-size: 24px;
+}
+
+/* 27. Agrega padding a un div con la clase "div-con-padding" */
+.div-con-padding {
+    padding: 20px;
+}
+
+/* 28. Agrega margen a un div con la clase "div-con-margin" */
+.div-con-margin {
+    margin: 20px;
+}
+
+/* 29. Cambia el color de los enlaces al pasar el mouse (hover) */
+a:hover {
+    color: yellow;
+}
+
+/* 30. Quita los bullets de las listas no ordenadas */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* 31. Usa la fuente 'Roboto' importada desde Google Fonts */
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* 32. Establece una imagen de fondo para un div */
+.fondo-imagen {
+    background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+}
+
+/* 33. Usa display: inline-block para crear cajas una al lado de la otra */
+.caja-inline {
+    display: inline-block;
+    width: 45%;
+    background-color: #222;
+    margin: 10px;
+    color: white;
+    padding: 10px;
+}
+
+/* 34. Usa display: flex para alinear elementos en el centro */
+.flex-contenedor {
+    display: flex;
+    justify-content: center;
+}
+
+/* 35. Crea una clase .boton con padding, fondo naranja y borde redondeado */
+.boton {
+    padding: 10px 20px;
+    background-color: orange;
+    color: black;
+    border-radius: 5px;
+    border: none;
+}
+
+/* 36. Aplica estilos especiales a un div con id "especial" */
+#especial {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+}
+
+/* 37. Alinea el texto de un párrafo a la derecha */
+.p-derecha {
+    text-align: right;
+}
+
+/* 38. Cambia el cursor a pointer cuando pasa sobre un botón */
+button:hover {
+    cursor: pointer;
+}
+
+/* 39. Usa position: absolute para colocar un elemento en la esquina superior derecha */
+.esquina {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: red;
+    color: white;
+    padding: 5px 10px;
+}
+
+/* 40. Crea un layout de dos columnas usando flexbox */
+.layout-dos-columnas {
+    display: flex;
+}
+.columna {
+    flex: 1;
+    padding: 20px;
+}

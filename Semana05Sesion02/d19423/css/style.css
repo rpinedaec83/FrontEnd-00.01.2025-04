@@ -1,0 +1,94 @@
+/* Estilo Base Mobile */
+body {
+    font-size: 16px;
+    background-color: lightblue;
+}
+
+/* Tablet */
+
+@media ( min-width: 768px){
+    body {
+        font-size: 18px;
+        background-color: lightgreen;
+    }
+}
+
+/* Escritorio */
+
+@media ( min-width: 1024px) {
+    body {
+        font-size:  20px;
+        background-color: coral;
+    }
+}
+.mobile-only{
+    display: block;
+}
+
+@media (min-width:768px){
+    .mobile-only{
+        display: none;
+    }
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+@media (min-width:768px){
+    .container{
+        flex-direction: row;
+    }
+}
+
+.box{
+    flex: 1;
+    padding: 10px;
+    background: #ddd;
+    margin: 5px;
+}
+
+nav{
+    display: flex;
+    flex-direction: column;
+}
+
+nav a {
+    padding: 10ps;
+    text-decoration: none;
+    color: white;
+    background-color: #333;
+    margin: 2px;
+}
+
+@media (min-width:768px){
+    nav {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+.item {
+    background: #eee;
+    padding: 20px;
+    text-align: center;
+}
+
+@media(min-width:768px){
+    .grid{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media (min-width:1024px) {
+    .grid{
+        grid-template-columns: repeat(4,1fr);
+    }
+    
+}

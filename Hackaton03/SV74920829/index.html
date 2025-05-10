@@ -1,0 +1,143 @@
+<!DOCTYPE html> <!-- 20. Estructura básica HTML -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hackaton 03 - Raúl Emanuel Comun Unocc</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 1. Título principal usando <h1> -->
+    <header>
+        <h1>Mi Top de Animes</h1>
+        <!-- 15. Menú de navegación con enlaces usando <ul> -->
+        <nav>
+            <ul>
+                <li><a href="#animes">Animes</a></li>
+                <li><a href="#personajes">Personajes</a></li>
+                <li><a href="#tabla">Tabla</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 19. Agrupar contenido usando <div> -->
+    <div>
+        <!-- 2. Párrafo usando <p> -->
+        <p>En este sitio voy a mencionar algunos de mis animes favoritos, normalmente recomiendo la plataforma 
+            <!-- 5. Usar etiquetas <strong> y <em> dentro del párrafo -->
+            <strong>Crunchyroll</strong> ya que cuenta con un buen catálogo de animes variados. 
+            Aun así, hay muchas <em>plataformas no oficiales</em> donde podremos ver un amplio catálogo de animes incluso los más antiguos.
+        </p>
+        <!-- 3. Agregar un enlace que vaya a Google -->
+        <a href="https://www.google.com" target="_blank">Visita Google</a> 
+        <br><br> <!-- 18. Usar <br> para saltos de línea -->
+
+        <!-- 8. Enlace que se abra en una nueva pestaña -->
+        <a href="https://www.crunchyroll.com/es/?srsltid=AfmBOort9cIj3ty_ixrE0WkMkiv2HWt6Dxm-JX7B2r3Ag-6J00wwBwt7" target="_blank">
+            Los mejores Animes lo encontrarás en Crunchyroll
+        </a>
+        <br><br>
+
+        <!-- 4. Insertar una imagen desde una URL con texto alternativo -->
+        <img src="https://www.industriaanimacion.com/wp-content/uploads/2023/04/mejores_anime_en_crunchyroll_png.png" 
+             alt="Imagen de mejores animes en Crunchyroll">
+    </div>
+
+    <!-- 19. Agrupar contenido usando <div> -->
+    <div id="animes">
+        <h4>Mejores animes (Mi opinión personal)</h4>
+        <!-- 6. Lista no ordenada <ul> con tres elementos -->
+        <ul>
+            <li>One Piece</li>
+            <li>Black Clover</li>
+            <li>Fire Force</li>
+        </ul>
+        <!-- 8. Enlace que se abre en nueva pestaña -->
+        <a href="https://www.youtube.com/watch?v=qss9EIItPjs" target="_blank">Lista de mejores animes del 2024</a>
+        <br><br>
+    </div>
+
+    <!-- 19. Agrupar contenido usando <div> -->
+    <div id="personajes">
+        <h4>Mejores personajes (Mi opinión personal)</h4>
+        <!-- 7. Lista ordenada <ol> con cinco pasos -->
+        <ol>
+            <li>Eren Jeager</li>
+            <li>Naruto</li>
+            <li>Itachi</li>
+            <li>Roronoa Zoro</li>
+            <li>Asta</li>
+        </ol>
+        <!-- 8. Enlace que se abre en nueva pestaña -->
+        <a href="https://www.youtube.com/watch?v=LFRCwm-srSM" target="_blank">Los personajes más amados</a>
+    </div>
+
+    <!-- 19. Agrupar contenido usando <div> -->
+    <div>
+        <!-- 4 y 9. Insertar imagen con texto alternativo -->
+        <img src="https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=1200,height=675/catalog/crunchyroll/a249096c7812deb8c3c2c907173f3774.jpg" 
+             alt="One Piece - Arco EggHead">
+    </div>
+
+    <!-- 19. Agrupar contenido usando <div> -->
+    <div id="tabla">
+        <h2>Tabla de Animes</h2>
+        <!-- 10. Crear una tabla con dos filas y dos columnas -->
+        <table border="1">
+            <tr>
+              <th>Anime</th>
+              <th>Personaje Principal</th>
+            </tr>
+            <tr>
+                <td>One Piece</td>
+                <td>Luffy</td>
+            </tr>
+            <tr>
+                <td>Black Clover</td>
+                <td>Asta</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- 19. Agrupar contenido usando <div> -->
+    <div id="contacto">
+        <h2>Contáctame</h2>
+        <!-- 11. Formulario con input de texto y botón de envío -->
+        <form action="#">
+            <!-- 12. Agregar etiquetas <label> a los inputs -->
+            <label for="nombre">Nombre:</label><br>
+            <input type="text" id="nombre" name="nombre"><br><br>
+
+            <label for="email">Correo Electrónico:</label><br>
+            <!-- 14. Usar un input tipo email -->
+            <input type="email" id="email" name="email"><br><br>
+
+            <label for="password">Contraseña:</label><br>
+            <!-- 13. Usar un input tipo password -->
+            <input type="password" id="password" name="password"><br><br>
+
+            <!-- 17. Crear formulario con radio buttons -->
+            <label>¿Qué tipo de anime prefieres?</label><br>
+            <input type="radio" id="accion" name="genero" value="accion">
+            <label for="accion">Acción</label><br>
+
+            <input type="radio" id="romance" name="genero" value="romance">
+            <label for="romance">Romance</label><br><br>
+
+            <!-- 17. Crear formulario con checkbox -->
+            <label>Plataformas que utilizas:</label><br>
+            <input type="checkbox" id="crunchyroll" name="plataforma" value="crunchyroll">
+            <label for="crunchyroll">Crunchyroll</label><br>
+
+            <input type="checkbox" id="netflix" name="plataforma" value="netflix">
+            <label for="netflix">Netflix</label><br><br>
+
+            <!-- Botón de envío -->
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
+
+</body>
+</html>

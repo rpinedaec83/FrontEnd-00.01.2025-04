@@ -1,0 +1,145 @@
+body{ 
+    background-color: #D2B48C;
+    font-family: 'Pixelify Sans', sans-serif;
+}
+
+p {
+    color: azure;
+    
+}
+
+.grupo-h4{
+    color: green;
+    display: inline-block; 
+    width: 150px;
+    height: 100px;
+    margin: 10px;
+    background-color: lightcoral;
+    text-align: center;
+    vertical-align: center; 
+    line-height: normal;
+    font-weight: lighter;
+        
+}
+
+.capuccino-asesino {
+    border: 5px solid aqua;
+    position: absolute; /* Posicionamiento absoluto */
+      /*top: 10px; /* 10 píxeles desde arriba */
+      right: 10px; /* 10 píxeles desde la derecha */
+       bottom: 10px;
+}
+
+.centrado {
+    text-align: center
+    }
+
+h1 { 
+    font-size: 40px;
+}
+
+.padding {
+    padding: 20px;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPL1wU6oDvzG2FaLM9X9x_mTG-hyzYwIwqmQ&s);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100px;   
+    color: azure;
+    }
+
+.margin {
+    margin: 5px;
+}
+
+a:hover {
+    color: darkslateblue;
+}
+
+ul{
+    list-style-type: none;
+}
+
+img{
+    display: flex;
+    ;
+}
+nav ul{
+    list-style-type: none;
+    display: flex;
+    }
+    nav ul li {
+        margin-right: 20px; /* Espacio entre los ítems del menú */
+      }
+      
+      nav ul li a {
+        text-decoration: none; /* Quita el subrayado de los enlaces */
+        color: #333; /* Color de los enlaces */
+        font-size: 16px; /* Tamaño de la fuente */
+      }
+      
+      nav ul li a:hover {
+        color: #ff6347; /* Cambia el color al pasar el ratón */
+      }
+
+.boton {
+    padding: 10px 20px; /* Espaciado interno (vertical y horizontal) */
+      background-color: #4CAF50; /* Color de fondo (verde) */
+      color: white; /* Color del texto */
+      border: none; /* Sin borde tradicional */
+      border-radius: 20px; /* Bordes redondeados */
+      width: 200px;
+      
+    }
+
+button{
+    cursor: pointer;    
+}
+
+.p-google{
+    text-align: right;
+}
+
+.columna {
+    width: 48%;
+    float: left;
+    margin: 1%;
+    background-color: lightblue;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .contenedor {
+    display: flex;
+    gap: 20px; /* Espacio entre columnas */
+  }
+  
+  .flexb {
+    flex: 1; /* Que cada columna ocupe el mismo espacio */
+    background-color: lightgreen;
+    padding: 20px;
+  }
+
+  #estilo1 {
+    
+      background-color: peachpuff; /* Color de fondo */
+      color: darkred; /* Color del texto */
+      border: 3px dashed darkred; /* Borde punteado */
+      text-align: center; /* Centrar el texto horizontalmente */
+      line-height: 200px; /* Centrar el texto verticalmente */
+      font-size: 20px; /* Tamaño de fuente */
+      border-radius: 15px; /* Bordes redondeados */
+  }
+  #estilo2{
+    color: blueviolet;
+    border: 3px double blueviolet;
+    text-align: center;
+    line-height: 200px;
+    font-size: 20px;
+}

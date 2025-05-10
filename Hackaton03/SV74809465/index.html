@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hackaton03</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <h1> Ejercicio 01 </h1>
+    <div class="p-google"><p> El siguiente link lleva a google:</p>
+    <a href="https://www.google.com.pe/"> Navegador web</a></div>
+    <br>
+    <br>
+    <img class="capuccino-asesino" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShVagEYiKl1bKS02wqgS_NTuSmHJxF4HtTXw&s" alt="capuccino Asesino" width="250"></img>
+    <br>
+    <div class="centrado"><p>¿Por qué el <Strong>café</Strong> no conseguía trabajo?
+        Porque es un <em>expreso</em>.</p></div>
+
+<div class="grupo-h4"><h4>Tipos de café:</h4></div>
+   <ul>
+    <div class="padding caja"> <li>Moccino</li>
+    <li>Capuccino</li>
+    <li>Latte</li></div>
+    </ul>
+
+<div class="grupo-h4"><h4>Preparacion de café:</h4></div>
+    <ol>
+       <div class="margin"></div><li>Calienta agua</li> </div>
+        <div class="margin"></div><li>Muele café</li></div>
+        <div class="margin"></div><li>Prepara el filtro o cafetera</li></div>
+        <div class="margin"></div><li>Agrega el café y vierte el agua</li></div>
+        <div class="margin"></div><li>Deja infusionar y sirve</li></div>
+    </ol>
+<a href="https://www.nescafe.com/cam/cultura-cafe/cafe-estilo-de-vida/como-preparar-mejor-mi-cafe" target="_blank" rel="">(Guia detallada)</a>
+<br>
+<br>
+<img src="https://cafeselcriollo.com/wp-content/uploads/2021/08/tipos-de-cafe-segun-su-elaboracion.jpg" alt="dos tazas de cafe" width="250">
+<br>
+
+<div class="grupo-h4"><h4>Paises latinos productores de Café:</h4></div>
+<table border="1">
+    <tr>
+      <td>Brasil</td>
+      <td>Colombia</td>
+    </tr>
+    <tr>
+      <td>Perú</td>
+      <td>Honduras</td>
+    </tr>
+  </table>
+  <br>
+  <br>
+  
+  <!--FORMULARIO/!--> 
+  <div class="boton"><form action="procesar.php" method="post">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre">
+    <br>
+    <br>
+    <label for="fecha de nacimiento">Fecha de nacimiento:</label>
+    <input type="text" id="fecha de nacimiento" name="fecha de nacimiento" placeholder="dd/mm/aaaa">
+    <br>
+    <br>
+    <!-- Radio buttons -->
+    <legend>Selecciona tu género:</legend>
+      <label for="masculino">Masculino</label>
+      <input type="radio" id="masculino" name="genero" value="masculino">
+      
+      <label for="femenino">Femenino</label>
+      <input type="radio" id="femenino" name="genero" value="femenino">
+      
+      <label for="otro">Otro</label>
+      <input type="radio" id="otro" name="genero" value="otro">
+    <br>
+    <br>
+    <label for="nacionalidad">Selecciona tu nacionalidad:</label>
+    <select id="nacionalidad" name="nacionalidad" placeholder="nacionalidad">
+      <option value="argentina">Argentina</option>
+      <option value="bolivia">Bolivia</option>
+      <option value="brasil">Brasil</option>
+      <option value="chile">Chile</option>
+      <option value="colombia">Colombia</option>
+      <option value="costa_rica">Costa Rica</option>
+      <option value="cuba">Cuba</option>
+      <option value="dominicana">República Dominicana</option>
+      <option value="ecuador">Ecuador</option>
+      <option value="el_salvador">El Salvador</option>
+      <option value="guatemala">Guatemala</option>
+      <option value="honduras">Honduras</option>
+      <option value="mexico">México</option>
+      <option value="nicaragua">Nicaragua</option>
+      <option value="panama">Panamá</option>
+      <option value="paraguay">Paraguay</option>
+      <option value="peru">Perú</option>
+      <option value="puerto_rico">Puerto Rico</option>
+      <option value="uruguay">Uruguay</option>
+      <option value="venezuela">Venezuela</option>
+    </select>
+    <br>
+    <br>
+    <label for="email">E-mail:</label>
+    <input type="email" name="correo" id="correo" placeholder="Correo Electronico">
+    <br>
+    <br>
+    <label for="password">Contraseña:</label>
+    <input type="password" name="password" id="password" placeholder="Contraseña">
+    <br>
+    <br>
+    <!-- Checkbox -->
+    <label for="acepto terminos y condiciones">Acepto terminos y condiciones</label>
+    <input type="checkbox" id="acepto terminos y condiciones" name="acepto terminos y condiciones" value="si">
+    <br>
+    <br>
+    <button type="submit">Enviar</button>
+
+  </form></div>
+
+  <br>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="nosotros.html">Nosotros</a></li>
+      <li><a href="servicios.html">Servicios</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <br>
+
+  <div class="clearfix">
+    <div id="estilo1" class="columna">Float 1</div>
+    <div id="estilo2"class="columna">Float 2</div>
+  </div>
+
+<br>
+
+<div class="contenedor">
+    <div id="estilo1" class="flexb">Flexbox 1</div>
+    <div id="estilo2" class="flexb">Flexbox 2</div>
+
+</body>
+</html>

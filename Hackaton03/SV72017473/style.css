@@ -1,0 +1,108 @@
+body {
+    background-color: rgb(169, 244, 244);
+}
+
+p{
+    color:brown;
+}
+
+.clase_01{
+    color:blue;
+}
+
+.borde{
+    border: 6px solid black;
+}
+
+.parrafo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+}
+
+h1 {
+    font-size: 30px
+}
+
+#div01{
+    padding: 30px;
+    margin: 30px;
+    font-family: pacifico;
+}
+
+.enlace{
+    text-decoration: none;
+}
+
+.enlace:hover{
+    color:yellowgreen;
+}
+
+ul.estilos_lista {
+    list-style-type: none;
+}
+
+.imagen12{
+    width: 100%;
+    height: 40px;
+    background-image: url("src/img01.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.clase_01{
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    background-color: lightcoral; 
+    margin: 10px; 
+    text-align: center;
+    vertical-align: top; 
+    border: 2px solid black; 
+}
+
+.general{
+    display: flex; 
+    justify-content: space-around; 
+}
+
+.boton{
+    background-color: rgb(107, 198, 233);
+    padding: 15px 20px;
+    color:rgb(12, 7, 7);
+    border: 21px;
+    border-radius: 5px; 
+    font-size: 16px; 
+    text-align: center; 
+    cursor: pointer; 
+}
+
+.parrafo22 {
+    text-align: right;
+}
+
+.borde{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.ejercicio_layaout{
+    width: 100%;
+    overflow: hidden; 
+}
+.c{
+    width: 50%;
+    float: left; 
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.columna1{
+    background-color: #f0f0f0
+}
+.columna2{
+    background-color: #a00d0d
+}

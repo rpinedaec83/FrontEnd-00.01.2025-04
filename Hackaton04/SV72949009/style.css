@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+ body {
+    font-family: Arial, sans-serif;
+    line-height: 4;
+  }
+  
+  header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(148, 240, 243);
+    color: white;
+    padding: 1rem 2rem;
+  }
+  nav ul{
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+  }
+  nav a{
+    color: black;
+  }
+  .mensaje {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 2rem;
+    align-items: center;
+  }
+
+  .mensaje img {
+    width: 50%;
+    border-radius: 10px;
+  }
+
+  .mensaje-content {
+    padding: 1rem;
+  }
+
+  .mensaje-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  .Services{
+    display: grid;
+    /*no tenia idea como hacer que los servicios esten uno al lado del otro, al utilizar grid-template-columns me salia
+    uno debajo del otro, consulte a chatgpt por ayuda, me lanzo lo que se presenta,
+    pero no entendi del todo, toca preguntar al profe, si lee esto favor de comentar la expliacion*/
+    grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
+    gap: 1rem;
+    padding: 2rem;
+  }
+  .service-cuadro{
+    background: rgb(11, 80, 185);
+    padding: 1rem;
+    border-radius: 10px;
+  }
+  .testimonios{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 2rem;
+    background-color: bisque;
+  }
+  .testimonio{
+    flex: auto;
+    background: rgb(228, 186, 95);
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow:0 2px 5px rgba(51, 216, 114, 0.1) ;
+  }
+ form{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 2rem;
+  }
+
+  footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #222;
+    color: white;
+  }
+  .redes a{
+    margin-left: 25rem;
+    color: white;
+    text-decoration: none;
+  }
