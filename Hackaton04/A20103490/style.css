@@ -1,0 +1,258 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  line-height: 1.6;
+  font-family: "Archivo", sans-serif;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+#logo {
+  width: 60px;
+  padding-top: 5px;
+  padding-left: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #c50f0f;
+  color: #fff;
+  padding: 1rem;
+  width: 100%;
+}
+
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.contenedor-img {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 350x;
+}
+
+.contenedor-img img {
+  transition: transform 0.4s ease;
+}
+.contenedor-img:hover img {
+  transform: scale(1.2);
+}
+
+.nav a {
+  color: #e7e414c9;
+  margin-left: 1rem;
+  text-decoration: none;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 2rem;
+  align-items: center;
+  background-image: url(img/ly19banner.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  min-height: 80vh;
+}
+
+.hero h1 {
+  color: white;
+  font-size: 40px;
+  text-shadow: 4px 8px 4px black;
+}
+
+.hero p {
+  font-weight: 800;
+  font-size: 20px;
+  color: #ebca12;
+  text-shadow: 4px 8px 4px black;
+}
+
+.hero-text {
+  max-width: 500px;
+}
+
+.hero-img img {
+  width: 100%;
+  height: auto;
+}
+
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.row {
+  display: flex;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+#titulos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 2rem;
+  background: #f9f9f9;
+  padding: 80px;
+}
+
+#titulos .col {
+  background-color: white;
+  border: solid transparent;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: 28px;
+  padding: 0px;
+}
+
+#titulos img {
+  max-height: 850px;
+  border-radius: 10px 0px 10px 0px;
+  border: 2px solid #e7e414;
+}
+
+#titulos h2 {
+  text-align: center;
+  font-size: 40px;
+  padding: 20px;
+}
+
+#titulos h2:hover {
+  text-align: center;
+  color: #c50f0f;
+}
+
+#titulos h3 {
+  text-align: center;
+}
+
+#testimonios {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  padding: 80px;
+}
+
+#testimonios h2 {
+  text-align: center;
+  font-size: 40px;
+  padding: 20px;
+}
+
+#testimonios h2:hover {
+  text-align: center;
+  color: #1a137e;
+}
+
+#testimonios p {
+  font-family: "Dancing Script", cursive;
+  font-size: 30px;
+  margin: 1rem;
+}
+
+#testimonios .col {
+  background-color: #f0f0f0;
+  border: solid transparent;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: 28px;
+  padding: 1rem;
+  border-radius: 3rem;
+}
+
+#testimonios img {
+  max-height: 850px;
+  border-radius: 3rem;
+  object-fit: cover;
+  width: 100%;
+}
+
+#contacto {
+  padding: 2rem;
+  background: #f0f0f0;
+}
+
+#contacto h2{
+  text-align: center;
+  padding: 20px;
+}
+
+#contacto button {
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #c50f0f;
+  color:  white;
+  border-color: #e7e414;
+}
+
+.formulario {
+  display: grid;
+  gap: 1rem;
+  max-width: 500px;
+  margin: auto;
+}
+
+.formulario input,
+.formulario textarea {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  background: #1a137e;
+  color: #fff;
+  padding: 2rem 3rem;
+  flex-wrap: wrap;
+}
+
+.footer a {
+  color: #e7e414;
+  margin-right: 1rem;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.footer p {
+  color: #e7e414;
+  margin-right: 1rem;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .servicio {
+    flex: 1 1 100%;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: center;
+  }
+}
