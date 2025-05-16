@@ -8,4 +8,45 @@
   padding: 16px;
 }
 
+nav ul {
+  list-style: none;
+}
+nav ul li {
+  display: inline-block;
+}
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-doble {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-primary {
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.button-primary {
+  background-color: blue;
+  color: white;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+body {
+  background: #f2f200;
+}
+
 /*# sourceMappingURL=style.css.map */
