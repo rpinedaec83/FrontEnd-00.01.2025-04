@@ -1,0 +1,50 @@
+@import 'variables';
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: $espaciado;
+  background-color: #121212;
+  padding: 100px;
+
+  .campo {
+    display: flex;
+    flex-direction: column;
+
+    label {
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+      color: $color-acento;
+    }
+
+    input,
+    textarea {
+      padding: 0.75rem;
+      border: 1px solid $color-acento;
+      border-radius: $borde-radius;
+      background-color: $color-input-bg;
+      color: $color-texto;
+      font-size: 1rem;
+
+      &:focus {
+        outline: none;
+        // border-color: lighten($color-acento, 10%);
+      }
+    }
+  }
+
+  button {
+    padding: 0.75rem;
+    border: none;
+    background-color: $color-acento;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: $borde-radius;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: darken($color-acento, 10%);
+    }
+  }
+}
