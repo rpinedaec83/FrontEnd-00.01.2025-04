@@ -1,0 +1,27 @@
+.product-card{
+    padding: $padding-base;
+    border: 1px solid #ddd;
+    border-radius: $border-radius;
+    max-width: 300px;
+    background-color: #fff;
+
+    &__image{
+        width: 100%;
+        border-radius: $border-radius;
+    }
+    &__title {
+        font-size: 1.2rem;
+        color: $primary-color;
+        margin: 10px 0;
+    }
+
+    &__description {
+        color: $text-color;
+        font-size: 0.95rem;
+    }
+
+    &__button {
+        margin-top: 10px;
+        @include button-style($primary-color);
+    }
+}
