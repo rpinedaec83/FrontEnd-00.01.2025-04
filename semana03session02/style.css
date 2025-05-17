@@ -1,0 +1,116 @@
+/* Ejercicio 21 -Cambiar color de fondo de página: - TITULO */ 
+body {
+  background-color: #e0ffff;/* Color celeste claro */
+}
+
+/* Ejercicio 22 Usa una clase para cambiar el color de varios elementos-->*/
+p {
+  color: #a46ae6;
+}
+
+
+/*<!---- Ejercicio 23 Clase para cambiar color:-->*/
+.destacado {
+  color: #ff0000;
+}
+
+/*<!---- Ejercicio 24. Aplica un borde a una imagen-->*/
+img {
+  border: 3px solid #000000;
+  padding: 5px;
+}
+
+/*<!---- Ejercicio 25. Centra un texto usando CSS-->*/
+.centrado {
+  text-align: center;
+}
+
+/*<!---- Ejercicio 26. 26. Cambia el tamaño de fuente de un encabezado -->*/
+h1 {
+  font-size: 2.5em;
+}
+/*<!---- Ejercicio 27. Aplica padding a un div -->*/
+.contenedor {
+  padding: 20px;
+}
+
+/*ejercicio 28. Aplica margin a un div.*/
+.seccion {
+  margin: 15px;
+}
+
+/*<!---- Ejercicio 29. Usa una regla CSS para cambiar el color de los enlaces al pasar el mouse (hover) -->*/
+a:hover {
+  color: #00ff00;
+  transition: 0.3s;
+}
+/*<!---- Ejercicio 30. Cambia el estilo de una lista (quitar bullets)-->*/
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+/*<!---- Ejercicio 31. Usa una fuente de Google Fonts en tu HTML:-->*/
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+/*<!---- Ejercicio 32. Cambia el fondo de un div con una imagen-->*/
+.banner {
+  background-image: url("fondo.jpg");
+  background-size: cover;
+}
+/*<!---- Ejercicio 33. Usa display: inline-block en dos cajas.>*/
+.caja {
+  display: inline-block;
+  width: 200px;
+  margin: 10px;
+}
+
+/*<!---- Ejercicio 34. Usa display: flex para alinear elementos-->*/
+.contenedor-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*<!---- Ejercicio 35. Crea una clase .boton que tenga padding, color, y borde redondeado-->*/
+.boton {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  border: none;
+}
+/*<!---- Ejercicio 36. Aplica estilos distintos a un div con id -->*/
+#especial {
+  background-color: gold;
+  border: 2px dashed black;
+}
+
+/*<!---- Ejercicio 37. Usa text-align: right en un párrafo. -->*/
+.derecha {
+  text-align: right;
+}
+
+/*38. Cambia el cursor a pointer al pasar sobre un botón*/
+.boton:hover {
+  cursor: pointer;
+}
+
+/*<!---- Ejercicio 39. Usa position: absolute para colocar un elemento en una esquina -->*/
+.etiqueta {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+/*<!---- Ejercicio 40. Crea un layout simple de 2 columnas usando float o flexbox. -->*/
+.contenedor-columnas {
+  display: flex;
+  gap: 20px;
+}
+
+.columna {
+  flex: 1;
+}

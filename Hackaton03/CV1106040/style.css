@@ -42,7 +42,7 @@ h1 {
 }
 
 /*<!---- Ejercicio 29. Usa una regla CSS para cambiar el color de los enlaces al pasar el mouse (hover) -->*/
-a:hover {
+a:hrove {
   color: #00ff00;
   transition: 0.3s;
 }
@@ -75,7 +75,7 @@ ul {
 }
 
 /*<!---- Ejercicio 35. Crea una clase .boton que tenga padding, color, y borde redondeado-->*/
-.boton {
+.Enviar {
   padding: 10px 20px;
   background-color: #007bff;
   color: white;
