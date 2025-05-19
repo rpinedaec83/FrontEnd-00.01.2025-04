@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StyleFood</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS compilado de SASS -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg shadow-sm py-3">
+    <div class="container d-flex align-items-center justify-content-between">
+      <!-- Logo -->
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="img/logo2.png" alt="Logo LifeStyle" height="40" />
+        <span class="fw-bold text-light">LIFESTYLE</span>
+      </a>
+  
+      <!-- Botón hamburguesa -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <!-- Menú centrado -->
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav gap-4">
+          <li class="nav-item"><a class="nav-link  fw-medium" href="#">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link  fw-medium" href="#">Clases</a></li>
+          <li class="nav-item"><a class="nav-link  fw-medium" href="#">Testimonios</a></li>
+          <li class="nav-item"><a class="nav-link  fw-medium" href="#">Contacto</a></li>
+        </ul>
+      </div>
+  
+    </div>
+  </nav>
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>BIENVENIDO A LIFESTYLE!</h1>
+      <p>Tu espacio para activar cuerpo, mente y espíritu.
+        En Lifestyle creemos que llevar una vida saludable no tiene edad, límite ni excusas. Somos un centro de entrenamiento integral donde el movimiento se convierte en hábito y el bienestar en estilo de vida.</p>
+      <a href="#unete" class="btn-purple">Únete ahora</a>
+    </div>
+  </section>
+
+  <!-- Servicios con cards (BOOTSTRAP) -->
+  <section class="servicios py-5 bg-light">
+    <h2 class="text-center mb-4">Clases</h2>
+    <div class="d-flex flex-wrap justify-content-center gap-4">
+      <div class="card clase-card">
+        <img src="img/aerobico.jpg" class="card-img-top" alt="aerobico">
+        <div class="card-body">
+          <h5 class="card-title">Aeróbico</h5>
+          <p class="card-text">El aeróbico es una de las formas más completas y divertidas de activar tu cuerpo. Mejora tu salud cardiovascular, 
+                               quema grasa de forma eficiente y libera endorfinas que elevan tu estado de ánimo. Con música, ritmo y movimiento,
+                               no solo entrenas: te conectas contigo, con tu energía y con tu bienestar.</p>
+          <a href="#" class="btn btn-primary">Inscríbete</a>
+        </div>
+      </div>
+      
+      <div class="card clase-card">
+        <img src="img/yoga.png" class="card-img-top" alt="yoga">
+        <div class="card-body">
+          <h5 class="card-title">Yoga</h5>
+          <p class="card-text">El yoga es equilibrio entre cuerpo, mente y respiración. Ayuda a reducir el estrés, mejorar la postura, aumentar
+                               la flexibilidad y fortalecer tu centro. Más que ejercicio, es una pausa consciente para reconectar contigo y encontrar 
+                               calma en el movimiento.</p>
+          <a href="#" class="btn btn-primary">Inscríbete</a>
+        </div>
+      </div>
+      <div class="card clase-card">
+        <img src="img/baile.jpg" class="card-img-top" alt="baile">
+        <div class="card-body">
+          <h5 class="card-title">Baile</h5>
+          <p class="card-text">El baile es alegría en movimiento. Mejora tu coordinación, quema calorías y fortalece el corazón, ¡pero también libera
+                               el alma! Bailar reduce el estrés, eleva tu energía y te conecta con el presente. No importa la edad ni el ritmo: cuando
+                               bailas, todo mejora.</p>
+        <a href="#" class="btn btn-primary">Inscríbete</a>
+        </div>
+      </div>
+      <div class="card clase-card">
+        <img src="img/pilates.jpg" class="card-img-top" alt="pilates">
+        <div class="card-body">
+          <h5 class="card-title">Pilates</h5>
+          <p class="card-text">El pilates es fuerza con control. Mejora tu postura, fortalece tu core y alinea tu cuerpo desde adentro hacia afuera.
+                               Ideal para prevenir lesiones, aliviar dolores y ganar flexibilidad, es una práctica suave pero poderosa que te hace
+                               sentir más fuerte, ágil y equilibrado.</p>
+        <a href="#" class="btn btn-primary">Inscríbete</a>
+        </div>
+      </div>
+    </div>
+  </section>
+   <!-- Resumen de lo que Ofrecemos -->
+   <section class="valores text-center text-white py-5">
+    <div class="container">
+      <div class="row g-4 justify-content-center">
+        <div class="col-6 col-md-3">
+          <img src="img/florloto.png" alt="Clases de calidad" class="valores__icon mb-3">
+          <p class="valores__texto">Te ofrecemos clases<br>de calidad</p>
+        </div>
+        <div class="col-6 col-md-3">
+          <img src="img/ojo.png" alt="Seguridad" class="valores__icon mb-3">
+          <p class="valores__texto">Nos preocupamos por<br>tu seguridad</p>
+        </div>
+        <div class="col-6 col-md-3">
+          <img src="img/tira.png" alt="Filosofía de vida" class="valores__icon mb-3">
+          <p class="valores__texto">Compartimos una<br>filosofía de vida</p>
+        </div>
+        <div class="col-6 col-md-3">
+          <img src="img/equipo.png" alt="Comunidad" class="valores__icon mb-3">
+          <p class="valores__texto">Nos acompañamos en<br>comunidad</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- TESTIMONIOS -->
+  <section class="testimonios py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-5">Testimonios</h2>
+  
+      <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+  
+          <!-- Slide 1 -->
+          <div class="carousel-item active">
+            <div class="row justify-content-center">
+              <div class="col-md-4">
+                <div class="card testimonial-card text-center p-4">
+                  <img src="img/persona1.jpg" alt="Maria" class="testimonial-img mx-auto mb-3">
+                  <h5>María Menounos</h5>
+                  <p class="subtitle">Actriz y presentadora de TV</p>
+                  <p class="content">Me siento en la cima del mundo. Estoy increíblemente motivada. Me siento empoderada. Siento que estoy creando mi propio destino.</p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card testimonial-card text-center p-4">
+                  <img src="img/persona2.jpg" alt="Serena" class="testimonial-img mx-auto mb-3">
+                  <h5>Serena Williams</h5>
+                  <p class="subtitle">Tenista profesional</p>
+                  <p class="content">El entrenamiento en LifeStyle me ayudó a descubrir de qué estoy realmente hecha. He fijado nuevos estándares para mí misma y he llevado mi energía a otro nivel.</p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card testimonial-card text-center p-4">
+                  <img src="img/persona3.jpg" alt="Marc" class="testimonial-img mx-auto mb-3">
+                  <h5>Marc Benioff</h5>
+                  <p class="subtitle">CEO y líder empresarial</p>
+                  <p class="content">Los hábitos saludables han transformado mi forma de liderar y vivir. Es una de las claves de mi éxito personal y profesional.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <!-- Slide 2 -->
+          <div class="carousel-item">
+            <div class="row justify-content-center">
+              <div class="col-md-4">
+                <div class="card testimonial-card text-center p-4">
+                  <img src="img/persona1.jpg" alt="Maria" class="testimonial-img mx-auto mb-3">
+                  <h5>María Menounos</h5>
+                  <p class="subtitle">Actriz y presentadora de TV</p>
+                  <p class="content">Me siento en la cima del mundo. Estoy increíblemente motivada. Me siento empoderada. Siento que estoy creando mi propio destino.</p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card testimonial-card text-center p-4">
+                  <img src="img/persona2.jpg" alt="Serena" class="testimonial-img mx-auto mb-3">
+                  <h5>Serena Williams</h5>
+                  <p class="subtitle">Tenista profesional</p>
+                  <p class="content">El entrenamiento en LifeStyle me ayudó a descubrir de qué estoy realmente hecha. He fijado nuevos estándares para mí misma y he llevado mi energía a otro nivel.</p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card testimonial-card text-center p-4">
+                  <img src="img/persona3.jpg" alt="Marc" class="testimonial-img mx-auto mb-3">
+                  <h5>Marc Benioff</h5>
+                  <p class="subtitle">CEO y líder empresarial</p>
+                  <p class="content">Los hábitos saludables han transformado mi forma de liderar y vivir. Es una de las claves de mi éxito personal y profesional.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+        </div>
+  
+        <!-- Controles -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORMULARIO (VALIDACIÓN BOOTSTRAP) -->
+  <section class="contacto py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4">Reserva</h2>
+      <form class="row g-3 needs-validation" novalidate>
+        <div class="col-md-6">
+          <label for="nombre" class="form-label">Nombre</label>
+          <input type="text" class="form-control" id="nombre" required>
+          <div class="invalid-feedback">Por favor, ingresa tu nombre.</div>
+        </div>
+        <div class="col-md-6">
+          <label for="correo" class="form-label">Correo Electrónico</label>
+          <input type="email" class="form-control" id="correo" required>
+          <div class="invalid-feedback">Correo inválido.</div>
+        </div>
+        <div class="col-12">
+          <label for="asunto" class="form-label">Asunto</label>
+          <input type="text" class="form-control" id="asunto" required>
+          <div class="invalid-feedback">Campo obligatorio.</div>
+        </div>
+        <div class="col-12">
+          <label for="mensaje" class="form-label">Mensaje</label>
+          <textarea class="form-control" id="mensaje" rows="5" required></textarea>
+          <div class="invalid-feedback">Escribe un mensaje.</div>
+        </div>
+        <div class="col-12 text-center">
+          <button class="btn btn-primary" type="submit">Enviar</button>
+          <div id="form-success" class="alert alert-success mt-4 d-none" role="alert">
+            ¡Mensaje enviado!
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+  
+
+  <!-- FOOTER -->
+  <footer class="footer text-light py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 footer__section footer__section--contacto">
+          <h5 class="footer__title">Contáctanos</h5>
+          <ul class="footer__list list-unstyled">
+            <li class="footer__item">Lunes a Viernes 08:30 a 16:30</li>
+            <li class="footer__item">Calle Los Albeolos 158, Cercado, Lima</li>
+            <li class="footer__item">comunicaciones@initi.com</li>
+            <li class="footer__item">(51) 308-6300</li>
+          </ul>
+        </div>
+        <div class="col-md-4 footer__section footer__section--enlaces">
+          <h5 class="footer__title">Enlace de Interés</h5>
+          <ul class="footer__list list-unstyled">
+            <li class="footer__item"><a href="#" class="footer__link text-light">Cambios de Rutina</a></li>
+            <li class="footer__item"><a href="#" class="footer__link text-light">Yoga frecuente</a></li>
+            <li class="footer__item"><a href="#" class="footer__link text-light">Lo Mejor para tu salud</a></li>
+            <li class="footer__item"><a href="#" class="footer__link text-light">Cuerpo restablecido</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 footer__section footer__section--social">
+          <h5 class="footer__title">Síguenos</h5>
+          <div class="footer__social d-flex gap-3">
+            <img src="img/facebook.png" height="32" alt="Facebook" class="footer__icon">
+            <img src="img/instagram.png" height="32" alt="Instagram" class="footer__icon">
+            <img src="img/youtube.png" height="32" alt="YouTube" class="footer__icon">
+          </div>
+        </div>
+      </div>
+      <div class="footer__copy text-center mt-4">&copy; 2025 Hackaton 06. Todos los derechos reservados.</div>
+    </div>
+  </footer>
+  <script src="js/validacion.js"></script>
+</body>
+</html>
+
+

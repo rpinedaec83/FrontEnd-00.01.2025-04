@@ -1,0 +1,272 @@
+/* Navegacion Principal */
+.nav-bg {
+    background-color: var(--secundario);
+}
+.navegacion-principal {
+    display: flex;
+    flex-direction: column;
+}
+@media (min-width: 768px) {
+    .navegacion-principal {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+.navegacion-principal a {
+    display: block;
+    text-align: center;
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 1rem;
+    transition: transform 0.3s ease;
+
+}
+.navegacion-principal a:hover {
+    background-color: var(--primario);
+    color: var(--oscuro);
+    transform: scale(1.05);
+}
+
+body {
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.6rem;
+}
+:root {
+    --secundario: #0097A7;
+    --primario: #fffefe;
+    --gris: #e1e1e1;
+
+    --negro: #090909;
+}
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+.contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: min(90%, 120rem);
+   
+}
+/** Servicios **/
+@media (min-width: 768px) {
+    .servicios {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 1rem;
+    }
+}
+
+.servicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.servicio h3 {
+    color: var(--negro);
+    font-weight: bold;
+}
+.servicio p {
+    line-height: 2;
+    text-align: center;
+}
+.servicio .iconos {
+    height: 15rem;
+    width: 15rem;
+    background-color: var(--secundario);
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+ @keyframes girar{
+    0%{transform: rotateZ(0deg);}
+
+    50%{transform:translateX(90px)}
+
+    100%{transform:scale(0.5);}
+} 
+
+.div2{
+    width:500px;
+    height: 300px;
+    background-image: url(../img/DiseñoPropio-01.png);
+    clip-path: circle(100px at 199px 150px);
+    animation:girar 5s linear 0s infinite none;
+}
+
+@media (max-width: 768px) {
+    .div2 {
+        width: 500px;
+        height: 300px;
+        clip-path: circle(100px at 199px 150px);
+    }
+}
+
+.hero {
+    background-image: url(../img/fondo-propio-01.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 450px;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+
+
+@media (max-width: 768px) {
+    .hero {
+        height: 450px; 
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        height: 450px; 
+    }
+}
+
+
+.contenido-hero {
+    position: absolute;
+
+    background-color: rgb( 0 0 0 / 70% );
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.centrar-texto {
+  margin: 0; 
+  font-size: 2.5rem; 
+}
+
+.h2 {
+    color: rgb(244, 244, 244);
+    font-size: 4rem;
+    text-align: center; 
+}
+
+
+@media (max-width: 768px) {
+    .h2 {
+        font-size: 4rem; 
+    }
+}
+
+@media (max-width: 480px) {
+    .h2 {
+        font-size: 2.5rem; 
+    }
+}
+
+.contenido-hero h2, 
+.contenido-hero p {
+    color: var(--primario);
+}
+.contenido-hero .ubicacion {
+    display: flex;
+    align-items: flex-end;
+}
+
+/*CREANDO SOMBREADOS*/
+.listado__elemento {
+    background-color: var(--blanco);
+    box-shadow: 0px 0px 15px 3px rgb(0 0 0 / .35);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    transition-property: transform;
+    transition-duration: 300ms;
+}
+
+@media (min-width: 768px) { 
+    .listado__elemento--2col {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2rem;
+    }
+}
+.listado__heading {
+    font-size: 3rem;
+    color: var(--negro);
+    margin: 0;
+}
+
+.listado__texto {
+    margin: 0;
+    font-size: 2rem;
+}
+
+/*CREANDO TRANSICION EN ICONOS*/
+.iconos {
+    display: flex;
+    gap: 10px; 
+    padding: 20px;
+    transition: stroke 0.10s ease;
+
+}
+
+.icon {
+    transition: stroke 0.10s ease;
+    cursor: pointer; 
+}
+
+.icon:hover {
+    stroke: #ffffff;
+    transform: scale(1.1); 
+}
+
+/* CREANDO EL FOOTER */
+.footer {
+    background-color: #057b7f;
+    padding: 3rem 0;
+    width: 100%;
+    text-align: center; 
+}
+
+@media (min-width: 768px) {
+    .footer__grid {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.footer__logo {
+    margin: 0 auto;
+}
+
+.footer__logo img {
+    width: 100%;
+    transition: transform 1.5s ease; 
+}
+
+
+.footer__logo img:hover {
+    transform: scale(1.3);
+}
+
+
+@media (max-width: 767px) {
+    .footer__logo {
+        max-width: 150px; 
+    }
+}
+
+
+@media (min-width: 768px) {
+    .footer__logo {
+        max-width: 195px; 
+    }
+}

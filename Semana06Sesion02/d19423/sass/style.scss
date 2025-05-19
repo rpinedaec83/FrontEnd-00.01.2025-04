@@ -1,0 +1,72 @@
+// Variables
+$main-color: #3498;
+$padding: 16px;
+
+.card {
+    background-color: $main-color;
+    padding: $padding;
+}
+.footer{
+    background-color: $main-color;
+    padding: $padding;
+}
+
+
+// Nesting
+
+nav {
+    ul{
+        list-style: none;
+        li{
+            display: inline-block;
+            a{
+                color: white;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+
+// mixins
+
+@mixin flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    @include flex-center;
+}
+
+.container-doble{
+    @include flex-center;
+}
+
+// Herencia
+%button-base{
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.button-primary{
+    @extend %button-base;
+    background-color: blue;
+    color: white;
+}
+
+// operaciones
+$base-font: 16px;
+
+h1{
+    font-size: $base-font * 2;
+}
+
+// importar
+
+@import 'variables';
+
+body{
+    background: $bg;
+}

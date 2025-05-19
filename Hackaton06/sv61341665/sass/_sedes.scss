@@ -1,0 +1,63 @@
+@import 'variables';
+
+
+.seccion-sedes {
+  background-color: #121212;
+  color: #f1f1f1;
+  padding: 3rem 1rem;
+  text-align: center;
+
+  h2 {
+    font-size: 2.5rem;
+    color: #e50914;
+    margin-bottom: 2rem;
+  }
+
+  .contenedor-sedes {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .sede {
+    background-color: #1a1a1a;
+    border: 1px solid #e50914;
+    border-radius: 10px;
+    padding: 1rem;
+    max-width: 300px;
+    box-shadow: 0 0 10px rgba(229, 9, 20, 0.3);
+    transition: transform 0.3s;
+
+    &:hover {
+      transform: scale(1.03);
+    }
+
+    img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+
+    h3 {
+      margin: 0.5rem 0;
+      font-size: 1.2rem;
+      color: #e50914;
+    }
+
+    p {
+      font-size: 0.95rem;
+      color: #ccc;
+    }
+  }
+}
+
+// Responsividad
+@media (max-width: 768px) {
+  .contenedor-sedes {
+    flex-direction: column;
+    align-items: center;
+  }
+}
