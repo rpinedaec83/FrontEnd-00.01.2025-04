@@ -1,0 +1,25 @@
+@use '../bases/variables' as vars;
+@use '../bases/mixins' as mixins;
+
+.productos{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    padding: 2rem;
+}
+.producto-card{
+    @include mixins.tarjeta-producto;
+}
+@media (min-width: 768px) {
+    .productos{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0;
+    }
+}
+@media (min-width: 1024px){
+    .productos{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        padding: 0;
+    }
+}

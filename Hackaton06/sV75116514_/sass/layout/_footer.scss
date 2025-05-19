@@ -1,0 +1,61 @@
+@use '../bases/variables' as vars;
+
+
+.footer1 {
+    background-color: vars.$color-dark;
+    color: vars.$color-letter;
+    margin-top: 3rem;
+    padding: 2rem 1rem;
+    font-size: 0.9rem;
+  
+    .footer_cont {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+  
+      @media (min-width: 768px) {
+        flex-direction: row;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+    }
+  
+    .footer-nave {
+      display: flex;
+      gap: 1.5rem;
+  
+      a {
+        color: vars.$color-letter;
+        text-decoration: none;
+  
+        &:hover {
+          text-decoration: underline;
+          color: vars.$color-secondary;
+        }
+      }
+    }
+  
+    .footer__social {
+      display: flex;
+      gap: 1rem;
+  
+      a {
+        color: vars.$color-letter;
+        font-size: 1.5rem;
+  
+        &:hover {
+          color: vars.$color-secondary;
+        }
+      }
+    }
+  
+    .footer__copy {
+      text-align: center;
+      margin-top: 1.5rem;
+      font-size: 0.8rem;
+      color: #bbb;
+    }
+  }
+  

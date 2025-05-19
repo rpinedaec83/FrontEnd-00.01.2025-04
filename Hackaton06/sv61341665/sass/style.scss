@@ -1,0 +1,70 @@
+//Importaciones 
+@import 'variables';
+// @import 'galeria-img';
+@import 'mixins';
+@import 'formulario';
+@import 'productos';
+@import 'testimonios';
+@import 'footer';
+@import 'sedes';
+
+
+
+body {
+   margin: 0;
+  padding: 0;
+  background-color: $color-primario;
+}
+
+  .navbar-custom {
+    background-color: #000; /* Negro */
+  }
+
+  .navbar-brand,
+  .nav-link,
+  .dropdown-item {
+    color: #fff !important; /* Blanco para legibilidad */
+  }
+
+  .nav-link.active,
+  .nav-link:hover,
+  .dropdown-item:hover {
+    color: #e50914 !important; /* Rojo estilo Redragon */
+  }
+
+  .btn-outline-success {
+    border-color: #e50914;
+    color: #e50914;
+  }
+
+  .btn-outline-success:hover {
+    background-color: #e50914;
+    color: #fff;
+  }
+
+  .dropdown-menu {
+    background-color: #111; /* Negro suave */
+  }
+
+  .navbar-toggler {
+    border-color: #e50914;
+  }
+
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23e50914' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  }
+
+.img-banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+
+
+
+
+
+
+
