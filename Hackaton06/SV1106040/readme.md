@@ -1,3 +1,14 @@
+
+# 🚀 El trabajo se terminó  el dia Sabado. Se fue la luz y no pude subir al repositorio.
+Mil disculpas, siempre me ha gustado presentar el trabajo entre los primeros.
+Muchas gracias por la comprension
+
+
+
+
+
+
+
 # 🚀 Hackatón: CSS Pro Master  
 ⏱️ Duración: 6 horas  
 👩‍💻 Modalidad: Individual o por equipos (2-3 personas)  
