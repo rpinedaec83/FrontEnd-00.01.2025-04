@@ -1,0 +1,23 @@
+.hero {
+  &__title {
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 3rem;
+  }
+
+  &__subtitle {
+    font-size: 1.25rem;
+    text-shadow: 2px 4px rgb(199, 14, 14);
+  }
+}
+
+.card--moment {
+  @extend .card !optional;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+
