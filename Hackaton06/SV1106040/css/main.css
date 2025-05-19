@@ -1,0 +1,72 @@
+body {
+  font-family: "Helvetica, sans-serif";
+  background-color: #f8f9fa;
+  color: #212529;
+}
+
+.footer__container {
+  padding: 0;
+}
+.footer__row {
+  padding: 0;
+}
+.footer__col {
+  padding: 0;
+}
+.footer__title {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 18px;
+}
+.footer__text {
+  font-size: 16px;
+  color: #ccc6c6;
+}
+.footer__link {
+  text-decoration: none;
+  color: inherit;
+}
+.footer__link:hover {
+  text-decoration: underline;
+}
+.footer__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.footer__socials {
+  display: flex;
+  gap: 1rem;
+}
+.footer__social-link {
+  font-size: 1.2rem;
+}
+.footer__form, .footer__input, .footer__button, .footer__divider {
+  color: #ec1b1b;
+}
+.footer__bottom {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e71c7b;
+}
+.footer__country small, .footer__copyright small {
+  color: #836f7a;
+}
+
+/* profe explicacion-sabados
+.footer{
+  display:flex ;
+
+  &__datos{
+    text-align: center;
+
+     &__titulo{
+      font-size: 30px;
+      color:red
+     }
+  }
+
+}
+*/
+
+/*# sourceMappingURL=main.css.map */
