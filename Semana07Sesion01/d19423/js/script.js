@@ -17,7 +17,7 @@ let edad = 41;
 }
 
 const PI = 3.1416;
-PI = 3.14; // Esto generará un error porque PI es una constante
+// PI = 3.14; // Esto generará un error porque PI es una constante
 
 let isCasado = false;
 let isSoltero = true;
@@ -62,5 +62,83 @@ let variableNoUsada = "Hola Mundo"; // Variable no utilizada
 console.log(segundoApellido);
 
 console.log("Hola " + nombre);
+
+
+let edad1 = 18;
+let edad2 = "41";
+
+//if
+
+if (edad1 == edad2) {
+    console.log("Son iguales");
+}
+
+if (edad1 === edad2) {
+    console.log("Son iguales");
+}else {
+    console.log("No son iguales");
+}
+
+if (edad1 != edad2 && edad1 > 18) {
+    console.log("Edad 1 es diferente de Edad 2 y mayor a 18");
+}
+
+console.log(typeof edad1);
+
+
+// Switch
+let dia = 1;
+
+switch (dia) {
+    case 1:
+        console.log("Lunes");
+        break;
+    case 2:
+        console.log("Martes");
+        break;
+    case 3:
+        console.log("Miercoles");
+        break;
+    case 4:
+        console.log("Jueves");
+        break;
+    case 5:
+        console.log("Viernes");
+        break;
+    default:
+        console.log("Fin de semana");
+}
+
+
+console.log(arrDatos[0]);
+console.log(arrDatos[1]);
+console.log(arrDatos[2]);
+console.log(arrDatos[3]);
+console.log(arrDatos[4]);
+
+for (let i = 0; i < arrDatos.length; i++) {
+    console.log(arrDatos[i]);
+}
+
+arrDatos.forEach(element => {console.log(element);});
+
+let bandera = true;
+
+
+while (bandera) {
+    alert("Hola adivina el numero que estoy pensando");
+    let numero = prompt("Ingresa un numero entre 1 y 10");
+    if (numero == 5) {
+        alert("Ganaste");
+        bandera = false;
+    } else {
+        alert("Perdiste");
+    }
+
+}
+
+// do {
+    
+// } while (condition);
 
 console.log("Fin");
