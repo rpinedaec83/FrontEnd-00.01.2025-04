@@ -3,7 +3,7 @@ function saludar(){
     alert("Hola desde la funcion Saludar")
 }
 
-saludar();
+//saludar();
 
 function sumar(primerNumero, segundoNumero){
     let resultado = primerNumero + segundoNumero;
