@@ -60,11 +60,8 @@
 25. Hacer un algoritmo en JavaScript para calcular el factorial de un número de una forma distinta.
 26. Hacer un algoritmo en JavaScript para calcular el resto y cociente por medio de restas sucesivas.
 27. Hacer un algoritmo en JavaScript para determinar la media de una lista indefinida de números positivos, se debe acabar el programa al ingresar un número negativo.
-
 28. Hacer un algoritmo en JavaScript para calcular la suma de los primeros cien números con un ciclo repetir.
-
 29. Hacer un algoritmo en JavaScript para calcular la suma de los primeros cien números con un ciclo mientras.
-
 30. Hacer un algoritmo en JavaScript para calcular la suma de los primeros cien números con un ciclo para.
 
 31. Hacer un algoritmo en JavaScript parar calcular la media de los números pares e impares, sólo se ingresará diez números.
