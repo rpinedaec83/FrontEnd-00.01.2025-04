@@ -1,0 +1,13 @@
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin section-padding {
+  padding: 4rem 0;
+}
+
+@mixin transition($props...) {
+  transition: $props;
+}
