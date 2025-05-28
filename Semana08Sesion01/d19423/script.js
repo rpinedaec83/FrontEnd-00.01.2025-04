@@ -39,14 +39,49 @@ const productos = [
     { nombre: "Audifonos", precio: 36, categoria: "tecnologia" },
 ];
 
-const productosConDescuento = productos.map(p=>({
+const productosConDescuento = productos.map(p => ({
     ...p,
     productosConDescuento: +(p.precio * 0.9).toFixed(2)
 }));
 console.log(productosConDescuento);
+
 
 const productosDeTecnologia = productosConDescuento.filter(p=> p.categoria === "tecnologia");
 console.log(productosDeTecnologia);
 
 const totalProductos = productosDeTecnologia.reduce((sum, p)=>sum+p.productosConDescuento,0);
 console.log(totalProductos);
+
+
+//Strings
+
+const mensaje = '    Hola desde Pachaqtec      ';
+
+console.log(mensaje.trim());
+
+if(mensaje.includes("Hola")){
+    console.log("Si incluye")
+}else{
+    console.log("no incluye")
+};
+
+console.log(mensaje.includes("Hola")?"si incluye":"no incluye");
+console.log(mensaje.trim().replace("Pachaqtec","IDAT"));
+
+const ahora = new Date();
+console.log(ahora.toLocaleDateString());
+
+const fechaNacimiento = new Date("1983-08-28");
+const edad = ahora.getFullYear() - fechaNacimiento.getFullYear();
+console.log(edad);
+
+moment.locale('es-mx'); 
+console.log(moment().format())
+console.log(moment("1983-08-28", "YYYY-MM-DD").fromNow());
+console.log(moment().format('LLLL'));
+
+//numeros funciones matematicas
+
+console.log(Math.round(4.3));
+console.log(Math.random());
+console.log(Math.max(6,7,1,4,99))
