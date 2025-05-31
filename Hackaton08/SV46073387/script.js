@@ -1,10 +1,11 @@
+// Creacion de la tarea
 class Tarea {
   constructor(descripcion) {
     this.descripcion = descripcion;
     this.id = Date.now() + Math.random();
   }
 }
-
+//Gestion de la lista de tareas
 class GestorTareas {
   constructor() {
     this.tareas = [];
@@ -12,7 +13,7 @@ class GestorTareas {
 
   agregarTarea(descripcion) {
     if (!descripcion || descripcion.trim() === '') {
-      throw new Error('La descripción no puede estar vacía');
+      throw new Error('Debe ingresar una tarea');
     }
     const tarea = new Tarea(descripcion.trim());
     this.tareas.push(tarea);
