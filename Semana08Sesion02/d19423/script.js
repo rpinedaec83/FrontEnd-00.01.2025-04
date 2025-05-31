@@ -29,6 +29,17 @@ class LineaMarron extends Electrodomestico {
     }
 }
 
+class DVD extends LineaMarron {
+    constructor(serie, marca, color, modelo, voltaje = 220, imagen, audio, entradas, conectividad) {
+        super(serie, marca, color, modelo, voltaje = 220, imagen, audio)
+            this.entradas = entradas,
+            this.conectividad = conectividad
+    }
+    encender(){
+        return "Calentando motores"
+    }
+}
+
 class Televisiones extends LineaMarron {
     constructor(serie, marca, color, modelo, voltaje = 220, imagen, audio, tamañoPantalla, entradas, conectividad, so) {
         super(serie, marca, color, modelo, voltaje = 220, imagen, audio)
@@ -38,16 +49,38 @@ class Televisiones extends LineaMarron {
             this.so = so
     }
     cambiarEntrada(entrada) {
-        return `Se ha cambiado la entrada del dispositivo a ${entrada}`
+        if(this.entradas.indexOf(entrada)>-1){
+            return `Se ha cambiado la entrada del dispositivo a ${entrada}`
+        }
+        return `No se ha encontrado la entrada ${entrada}`
     }
     navegar(url) {
-        //validar conectividad
+        this.conectividad.forEach(e=>{
+           // console.log(e)
+            for (const [key, value] of Object.entries(e)) {
+               // console.log(key)
+                if(key === "lan" || key === "wifi"){
+                    console.log(key)
+                    console.log(value)
+                    return `navegando por ${url}`
+                   // break;
+                }
+            }
+        })
     }
     vincular(cuenta) {
-        //validar
+        if(this.so !== ""){
+            return `Vinculando la cuenta ${cuenta} a ${this.so}`
+        }
     }
     cambiarCanal(canal) {
         //validar
+    }
+    encender() {
+        if (this.voltaje !== 220) {
+            console.log("Verifica tu voltaje antes de encenderlo")
+        }
+        return `La Televiosn ${this.modelo} se esta  encendiendo`
     }
 }
 
@@ -63,8 +96,31 @@ class Persona {
     }
 }
 
+let usr = "jefe"
+
+class Vendedor extends Persona{
+    #sueldo = 5000;
+    constructor(nombre, apellido, numeroIdentificacion, sexo, idEmpeado){
+        super(nombre, apellido, numeroIdentificacion, sexo);
+        this.idEmpeado = idEmpeado;
+    }
+    getSueldo(){
+        if(usr === "admin")
+            return this.#sueldo
+        else
+            return "no tienes los permisos adecuados"
+    }
+    setSueldo(nuevoSueldo){
+        this.#sueldo = nuevoSueldo
+    }
+}
+
 let tv1 = new Televisiones("0001", "JVC", "Negro", "EcoTV 1 Plus", 220, "LG.jpg", "dolbyAtmos", 55, ["HDMI1", "HDMI2", "CATV"], [{ wifi: "192.168.1.20" }, { lan: "192.168.1.21" }, { BT: "BTTVECO" }], "GoogleTV");
 let tv2 = new Televisiones("0002", "Samsung", "Gris", "Crystal", 110, "SG.jpg", "dolbyAtmos2.0", 50, ["HDMI1", "HDMI2", "CATV"], [{ wifi: "192.168.1.22" }, { BT: "BTTVECO" }], "Tizen");
+
+let dvd1 = new DVD("0002", "Samsung", "Gris", "MIDVD", 110, "SG.jpg", "dolbyAtmos2.0", ["HDMI1", "HDMI2", "CATV"], [{ wifi: "192.168.1.22" }, { BT: "BTTVECO" }]);
+
+
 
 console.log(tv1.encender())
 console.log(tv1)
@@ -74,16 +130,34 @@ let arrTV = [];
 arrTV.push(tv1)
 arrTV.push(tv2)
 
-console.log(arrTV)
+
+
+console.log(tv1.cambiarEntrada("HDMI7"))
+console.log(tv1.navegar("www.x-codec.net"))
+console.log(tv1.vincular("rpineda@x-codec.net"))
+
+let vendedor1 = new Vendedor("Roberto", "Pineda", "001575291", "Masculino",123);
+
+console.log(vendedor1.nombre + " " +vendedor1.apellido)
+console.log(vendedor1.getSueldo())
+vendedor1.setSueldo(6000);
+console.log(vendedor1.getSueldo())
+
+//console.log(arrTV)
+
+console.log(tv1.encender())
+console.log(dvd1.encender())
+console.log(tv1.apagar())
+console.log(dvd1.apagar())
 
 $(document).ready(function () {
 
     let strHtml = "";
     arrTV.forEach(e => {
-        console.log(e)
+       // console.log(e)
         let strItems = ``;
         for (const [key, value] of Object.entries(e)) {
-            console.log(key, value);
+          //  console.log(key, value);
             strItems+=`
             <li>
                                 <strong>${key}</strong>  ${value}
@@ -107,7 +181,7 @@ $(document).ready(function () {
             </div>
         `
     })
-    console.log(strHtml)
+   // console.log(strHtml)
 
     $("#products").html(strHtml)
 });
