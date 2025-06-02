@@ -1,3 +1,5 @@
+//inicio//
+
 const formulario = document.querySelector("#formulario");
 const tituloForm = document.querySelector("#titulo-formulario");
 const task = document.querySelector(".tareas");
