@@ -1,0 +1,123 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0eac0; /* Fondo color crema claro */
+  color: #333; /* Texto en gris oscuro */
+}
+
+h1 {
+  text-align: center;
+  color: #4a4a4a; /* Título en gris más oscuro */
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.container {
+  margin: 40px auto;
+  width: 90%;
+  max-width: 500px;
+  background: #fff8dc; /* Fondo tipo pergamino */
+  padding: 25px 30px;
+  border: 2px solid #d1c07c;
+  border-radius: 10px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); /* Sombra externa */
+  position: relative;
+}
+
+.container::before {
+  /* Líneas decorativas horizontales dentro del contenedor */
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  width: calc(100% - 40px);
+  height: 2px;
+  background: #ccc;
+  box-shadow: 0 20px #ccc, 0 40px #ccc, 0 60px #ccc;
+}
+
+.search {
+  width: 100%;
+  margin-top: 40px;
+}
+
+form {
+  display: flex; /* Elementos del formulario alineados en fila */
+  gap: 10px;
+}
+
+input {
+  flex: 1; /* Ocupa el espacio disponible */
+  padding: 12px 10px;
+  border: 2px solid #d1c07c;
+  border-radius: 5px;
+  outline: none;
+  background-color: #fffbe6; /* Fondo más claro */
+  font-size: 1rem;
+}
+
+.btn-add {
+  padding: 5px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ffb347; /* Botón naranja claro */
+  color: #4a4a4a;
+  font-family: fantasy;
+  font-size: 1.4rem;
+  outline: none;
+}
+
+.btn-add:hover {
+  cursor: pointer;
+  background-color: #ffa500; /* Más intenso al pasar el mouse */
+}
+
+.li-container {
+  margin-top: 25px;
+}
+
+ul {
+  padding: 0; /* Elimina sangría predeterminada */
+}
+
+li {
+  list-style: none;
+  background-color: #fffacd; /* Fondo amarillo suave */
+  border: 1px solid #e6d57b;
+  border-radius: 8px;
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+li p {
+  margin: 0;
+  padding: 15px;
+  width: 100%;
+}
+
+.btn-delete {
+  margin-left: auto; /* Lo empuja a la derecha */
+  border: none;
+  background-color: #ff6b6b; /* Rojo claro */
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  font-size: 1.2em;
+}
+
+.btn-delete:hover {
+  cursor: pointer;
+  background-color: #e60023; /* Rojo intenso al pasar el mouse */
+}
+
+.empty {
+  text-align: center;
+  color: #555;
+  font-style: italic;
+  margin-top: 20px;
+}

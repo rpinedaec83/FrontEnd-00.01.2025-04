@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Lista de Tareas</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+
+<body>
+    <div class="container"> <!-- Codntenedor principal -->
+        <h1>Lista de Tareas</h1> <!-- Título visible -->
+
+        <div class="search">
+            <form>
+                <input type="text" placeholder="Agregar tarea..."> <!-- Campo para nueva tarea -->
+                <button class="btn-add">+</button> <!-- Botón para agregar -->
+            </form>
+        </div>
+
+        <div class="li-container">
+            <ul>
+                <!-- Aquí se agregarán las tareas -->
+            </ul>
+        </div>
+
+        <div class="empty">
+            <p>No tienes tareas pendientes.</p> <!-- Mensaje cuando no hay tareas -->
+        </div>
+    </div>
+
+    <script src="./main.js"></script> <!-- Enlace al JavaScript -->
+</body>
+
+</html>
