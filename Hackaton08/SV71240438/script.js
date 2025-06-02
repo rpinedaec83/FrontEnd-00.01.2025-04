@@ -1,4 +1,3 @@
-//variables
 const formulario = document.querySelector("#formulario");
 const tituloForm = document.querySelector("#titulo-formulario");
 const task = document.querySelector(".tareas");
@@ -7,14 +6,13 @@ const completadas = document.querySelector("#completadas");
 2;
 let tareas = [];
 
-//eventos
 function eventos() {
   formulario.addEventListener("submit", validarFormulario);
   task.addEventListener("click", eliminarTarea);
   task.addEventListener("click", tareaCompletada);
 }
 eventos();
-//funciones
+
 function validarFormulario(e) {
   e.preventDefault();
   const tarea = document.querySelector("#tarea").value;
