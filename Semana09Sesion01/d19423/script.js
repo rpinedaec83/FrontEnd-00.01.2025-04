@@ -86,4 +86,35 @@ function getFetch(){
 
 getFetch();
 
+
+
+let frmDatos =document.getElementById("frmDatos");
+
+frmDatos.addEventListener("submit", (e)=>{
+    e.preventDefault();
+
+    let txtUsuario = document.getElementById("txtUsuario").value;
+
+     fetch(`https://api.github.com/users/${txtUsuario}`)
+        .then(res => res.json())
+        .then(data=>{
+            let txtUserName = document.getElementById("txtUserName");
+            txtUserName.innerText = data.login;
+
+            let txtTitle = document.getElementById("txtTitle");
+            txtTitle.innerText = data.bio;
+
+            let imgUser = document.getElementById("imgUser");
+            imgUser.src = data.avatar_url
+
+            let divPersona = document.getElementById("Persona");
+            divPersona.style.display = "block";
+
+        })
+        .catch(err => console.log(err))
+})
+
+
+
+
 console.log("Fin de la aplicacion");
