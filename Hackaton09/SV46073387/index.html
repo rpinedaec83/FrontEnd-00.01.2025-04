@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hackaton09-SV46073387</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <div class="container">
+
+    <!-- 🔹 Sección 1: Reserva de habitación -->
+    <h1>🏨 Reserva de Habitación</h1>
+    <div class="botones">
+      <button id="btnCallbacks">Reservar con Callbacks</button>
+      <button id="btnPromises">Reservar con Promesas</button>
+      <button id="btnAsync">Reservar con Async/Await</button>
+    </div>
+    <div id="log" class="log"></div>
+
+    <hr>
+
+    <!-- 🔹 Sección 2: Buscador y galería de Pokémon -->
+    <h1>🔎 Buscador de Pokémon</h1>
+    <input type="text" id="pokemonInput" placeholder="Escribe un Pokémon" />
+    <button id="buscarBtn">Buscar</button>
+    <div id="pokemonCard"></div>
+
+    <h2>📋 Carga de algunos Pokemon</h2>
+    <button id="mostrarTopBtn">Mostrar los 50 primeros Pokémon</button>
+    <div id="topPokemonList" class="pokemon-grid"></div>
+
+    <hr>
+
+    <!-- 🔹 Sección 3: Rick & Morty -->
+    <h1>🧪 Personajes de Rick & Morty</h1>
+    <div id="personajes" class="grid"></div>
+
+<!-- 🔹 Sección 4: Comparacion de Pokemones -->
+    <h2>⚔️ Comparar dos Pokémon</h2>
+    <input type="text" id="poke1" placeholder="Primer Pokémon" />
+    <input type="text" id="poke2" placeholder="Segundo Pokémon" />
+    <button id="compararBtn">Comparar</button>
+
+    <div id="comparacion" class="comparacion-grid"></div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
