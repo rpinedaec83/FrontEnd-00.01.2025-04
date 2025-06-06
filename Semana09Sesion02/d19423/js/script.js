@@ -77,8 +77,70 @@ const Reserva = function(){
     if(formValues){
       let objResevacion = new Reservacion(formValues.origen, formValues.destino,formValues.fechaIda,formValues.fechaVuelta);
       console.log("Inicio de incluir pasajero");
+      incluirPasajero().then(data=>{
+        console.log("Recien llega la dara de pasajero");
+        objResevacion.asignarAvionIda(new Aviones("JA7701","Airbus 320 Neo",194, 97));
+        objResevacion.asignarAvionVuelta(new Aviones("JA7702", "Airbus 318", 134, 67));
+        objResevacion.avionIda.agregarPasajero(data);
+        objResevacion.avionVuelta.agregarPasajero(data);
+        dibujaReserva(objResevacion);
+      })
     }
 
+  }
+
+  async function incluirPasajero() {
+    console.log("Inicio de incluir pasajero");
+    const {value: formValues} = await Swal.fire({
+      title: "Ingresa tus datos personales",
+      icon: "info",
+      showCloseButton: true,
+      showCancelButton: true,
+      confirmButtonText: "Guardar",
+      cancelButtonText: "Cancelar",
+      html: `
+      <div class="form-group">
+        <input type="text" id="nombres" placeholder="Escribe tus nombres" class="form-control input-md">
+    </div>
+    <div class="form-group">
+        <input type="text" id="apellidos" placeholder="Escribe tus apellidos" class="form-control input-md">
+    </div>
+    <div class="form-group">
+        <input type="text" id="documento" placeholder="Escribe tu documento" class="form-control input-md">
+    </div>
+      `,
+      preConfirm:()=>{
+        return {
+          nombres: $("#nombres").val(),
+          apellidos: $("#apellidos").val(),
+          documento: $("#documento").val()
+        }
+      }
+    });
+    console.log(formValues);
+    if(formValues){
+      let pasajero = new Pasajero(formValues.nombres, formValues.apellidos, formValues.documento)
+      return pasajero;
+    }
+
+  }
+
+  function dibujaReserva(reservacion){
+    console.log(reservacion);
+    
+    $("#idanombre").val(reservacion.avionIda.arrPasajeros[0].nombres);
+    $("#idaapellidos").val(reservacion.avionIda.arrPasajeros[0].apellidos);
+    $("#idafecha").val(reservacion.fechaIda);
+    $("#idaVuelo").val(reservacion.avionIda.matricula);
+    $("#idaOrigen").val(reservacion.origen);
+
+    $("#retnombre").val(reservacion.avionVuelta.arrPasajeros[0].nombres);
+    $("#retapellidos").val(reservacion.avionVuelta.arrPasajeros[0].apellidos);
+    $("#retfecha").val(reservacion.fechaVuelta);
+    $("#retDestino").val(reservacion.destino);
+    $("#retVuelo").val(reservacion.avionVuelta.matricula);
+    
+    $(".reservacion").css('display', 'inline');
   }
 
   return {
@@ -110,7 +172,7 @@ class Aviones {
     if(this.reservado >= this.capacidadMinima){
       this.habilitado = true;
     }
-    this.agregarPasajero.push(pasajero);
+    this.arrPasajeros.push(pasajero);
     this.reservado++;
   }
 }

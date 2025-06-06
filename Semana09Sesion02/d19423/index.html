@@ -28,12 +28,110 @@
                         create something more unique.
                     </p>
                     <p>
-                        <a class="btn btn-primary btn-large" href="https://www.x-codec.net" id="btnReservar">Reservar</a>
+                        <a class="btn btn-primary btn-large" href="https://www.x-codec.net"
+                            id="btnReservar">Reservar</a>
                     </p>
                 </div>
             </div>
         </div>
+
+
+        <div class="container reservacion">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home"
+                        type="button" role="tab" aria-controls="home" aria-selected="true">Vuelo de Ida</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile"
+                        type="button" role="tab" aria-controls="profile" aria-selected="false">Vuelo de Regreso</button>
+                </li>
+            </ul>
+
+            <div class="tab-content mt-3" id="myTabContent">
+                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                    <h2 class="mb-3">Datos</h2>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Dato</th>
+                                <th scope="col">Valor</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row"><label for="">Nombres</label></th>
+                                <td><input type="text" name="" id="idanombre" disabled></td>
+
+                            </tr>
+                            <tr>
+                                <th scope="row"><label for="">Apellidos</label></th>
+                                <td><input type="text" name="" id="idaapellidos" disabled></td>
+
+                            </tr>
+                            <tr>
+                                <th scope="row"><label for="">Fecha de Ida</label></th>
+                                <td><input type="text" name="" id="idafecha" disabled></td>
+
+                            </tr>
+                            <tr>
+                                <th scope="row"><label for="">Vuelo</label></th>
+                                <td><input type="text" name="" id="idaVuelo" disabled></td>
+
+                            </tr>
+                            <tr>
+                                <th scope="row"><label for="">Origen</label></th>
+                                <td><input type="text" name="" id="idaOrigen" disabled></td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                    <h2 class="mb-3">Datos</h2>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Dato</th>
+                                <th scope="col">Valor</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row"><label for="">Nombres</label></th>
+                                <td><input type="text" name="" id="retnombre" disabled></td>
+
+                            </tr>
+                            <tr>
+                                <th scope="row"><label for="">Apellidos</label></th>
+                                <td><input type="text" name="" id="retapellidos" disabled></td>
+
+                            </tr>
+                            <tr>
+                                <th scope="row"><label for="">Fecha de Retorno</label></th>
+                                <td><input type="text" name="" id="retfecha" disabled></td>
+
+                            </tr>
+                            <tr>
+                                <th scope="row"><label for="">Vuelo</label></th>
+                                <td><input type="text" name="" id="retVuelo" disabled></td>
+
+                            </tr>
+                            <tr>
+                                <th scope="row"><label for="">Destino</label></th>
+                                <td><input type="text" name="" id="retDestino" disabled></td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
     </div>
+
+
 
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
@@ -44,7 +142,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.min.js"
         integrity="sha384-RuyvpeZCxMJCqVUGFI0Do1mQrods/hhxYlcVfGPOfQtPJh0JCw12tUAZ/Mv10S7D"
         crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="js/script.js"></script>
     <script>
         let objParametros = {
