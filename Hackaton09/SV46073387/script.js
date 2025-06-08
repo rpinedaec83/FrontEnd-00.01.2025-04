@@ -1,107 +1,160 @@
-// Utilidad para imprimir en pantalla
-function log(mensaje) {
-  const logDiv = document.getElementById('log');
-  logDiv.innerHTML += `➡️ ${mensaje}<br>`;
+$(document).ready(function () {
+  // Función para mostrar el formulario
+  function mostrarFormulario() {
+    $('#log').html('');       // limpiar mensajes previos
+    $('#formularioReserva').slideDown();
+  }
+
+  function mostrarFormulario() {
+  $('#log').html('');       // limpiar mensajes previos
+  // Limpiar campos de entrada
+  $('#nombre').val('');
+  $('#fecha').val('');
+  $('#personas').val('');
+  $('#formularioReserva').slideDown();
 }
+  // --- FUNCIONES CALLBACK ---
+  function pedirDatosCallback(callback) {
+    setTimeout(() => {
+      const datos = {
+        nombre: $('#nombre').val().trim(),
+        fecha: $('#fecha').val(),
+        personas: $('#personas').val()
+      };
+      callback(datos);
+    }, 500);
+  }
 
-// Resetear log
-function resetLog() {
-  document.getElementById('log').innerHTML = '';
-}
+  function validarDatosCallback(datos, callbackError, callbackSuccess) {
+    setTimeout(() => {
+      if (!datos.nombre || !datos.fecha || !datos.personas) {
+        callbackError('Faltan datos para la reserva.');
+      } else {
+        callbackSuccess(datos);
+      }
+    }, 500);
+  }
 
-// ----------------- VERSION CALLBACKS -----------------
+  function confirmarReservaCallback(datos, callback) {
+    setTimeout(() => {
+      const partes = datos.fecha.split('-');
+      const fechaFormateada = `${partes[2]}-${partes[1]}-${partes[0]}`;
+      const mensaje = `
+        <h3>✅ Reserva Confirmada (Callbacks)</h3>
+        <p><strong>Nombre:</strong> ${datos.nombre}</p>
+        <p><strong>Fecha de ingreso:</strong> ${fechaFormateada}</p>
+        <p><strong>Personas:</strong> ${datos.personas}</p>
+      `;
+      callback(mensaje);
+    }, 500);
+  }
 
-function verificarDisponibilidadCallback(cb) {
-  setTimeout(() => {
-    log("✅ Habitación disponible");
-    cb();
-  }, 1000);
-}
+  function reservarConCallbacks() {
+    pedirDatosCallback(function (datos) {
+      validarDatosCallback(datos, 
+        function (error) {
+          alert(error);
+        },
+        function (datosValidos) {
+          confirmarReservaCallback(datosValidos, function (mensaje) {
+            $('#log').html(mensaje);
+          });
+        }
+      );
+    });
+  }
 
-function procesarPagoCallback(cb) {
-  setTimeout(() => {
-    log("💳 Pago procesado");
-    cb();
-  }, 1000);
-}
+  // --- FUNCIONES PROMESAS ---
+  function pedirDatos() {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        const datos = {
+          nombre: $('#nombre').val().trim(),
+          fecha: $('#fecha').val(),
+          personas: $('#personas').val()
+        };
+        resolve(datos);
+      }, 500);
+    });
+  }
 
-function confirmarReservaCallback(cb) {
-  setTimeout(() => {
-    log("📩 Reserva confirmada");
-    cb();
-  }, 1000);
-}
+  function validarDatos(datos) {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        if (!datos.nombre || !datos.fecha || !datos.personas) {
+          reject('Faltan datos para la reserva.');
+        } else {
+          resolve(datos);
+        }
+      }, 500);
+    });
+  }
 
-function reservarConCallbacks() {
-  resetLog();
-  log("🔁 Iniciando reserva con Callbacks...");
-  verificarDisponibilidadCallback(() => {
-    procesarPagoCallback(() => {
-      confirmarReservaCallback(() => {
-        log("🏁 Reserva completada con Callbacks");
+  function confirmarReserva(datos) {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        const partes = datos.fecha.split('-');
+        const fechaFormateada = `${partes[2]}-${partes[1]}-${partes[0]}`;
+        const mensaje = `
+          <h3>✅ Reserva Confirmada (Promesas)</h3>
+          <p><strong>Nombre:</strong> ${datos.nombre}</p>
+          <p><strong>Fecha de ingreso:</strong> ${fechaFormateada}</p>
+          <p><strong>Personas:</strong> ${datos.personas}</p>
+        `;
+        resolve(mensaje);
+      }, 500);
+    });
+  }
+
+  function reservarConPromesas() {
+    pedirDatos()
+      .then(validarDatos)
+      .then(confirmarReserva)
+      .then(mensaje => {
+        $('#log').html(mensaje);
+      })
+      .catch(error => {
+        alert(error);
       });
+  }
+
+  // --- FUNCIONES ASYNC/AWAIT ---
+  async function reservarConAsync() {
+    try {
+      const datos = await pedirDatos();
+      await validarDatos(datos);
+      const mensaje = await confirmarReserva(datos);
+      $('#log').html(mensaje);
+    } catch (error) {
+      alert(error);
+    }
+  }
+  $('#btnCallbacks').click(function () {
+    mostrarFormulario();
+    $('#reservarBtn').off('click').on('click', function (e) {
+      e.preventDefault();
+      reservarConCallbacks();
     });
   });
-}
 
-// ----------------- VERSION PROMESAS -----------------
-
-function verificarDisponibilidad() {
-  return new Promise(resolve => {
-    setTimeout(() => {
-      log("✅ Habitación disponible");
-      resolve();
-    }, 1000);
-  });
-}
-
-function procesarPago() {
-  return new Promise(resolve => {
-    setTimeout(() => {
-      log("💳 Pago procesado");
-      resolve();
-    }, 1000);
-  });
-}
-
-function confirmarReserva() {
-  return new Promise(resolve => {
-    setTimeout(() => {
-      log("📩 Reserva confirmada");
-      resolve();
-    }, 1000);
-  });
-}
-
-function reservarConPromesas() {
-  resetLog();
-  log("🔁 Iniciando reserva con Promesas...");
-  verificarDisponibilidad()
-    .then(procesarPago)
-    .then(confirmarReserva)
-    .then(() => {
-      log("🏁 Reserva completada con Promesas");
+  $('#btnPromises').click(function () {
+    mostrarFormulario();
+    $('#reservarBtn').off('click').on('click', function (e) {
+      e.preventDefault();
+      reservarConPromesas();
     });
-}
+  });
 
-// ----------------- VERSION ASYNC/AWAIT -----------------
+  $('#btnAsync').click(function () {
+    mostrarFormulario();
+    $('#reservarBtn').off('click').on('click', function (e) {
+      e.preventDefault();
+      reservarConAsync();
+    });
+  });
 
-async function reservarConAsync() {
-  resetLog();
-  log("🔁 Iniciando reserva con Async/Await...");
-  await verificarDisponibilidad();
-  await procesarPago();
-  await confirmarReserva();
-  log("🏁 Reserva completada con Async/Await");
-}
-
-// ----------------- EVENTOS -----------------
-
-document.getElementById("btnCallbacks").addEventListener("click", reservarConCallbacks);
-document.getElementById("btnPromises").addEventListener("click", reservarConPromesas);
-document.getElementById("btnAsync").addEventListener("click", reservarConAsync);
-
-// ----------- 🔹 FUNCIONES DE POKÉMON (con jQuery) -----------
+});
+// ----------- 🔹 FUNCIONES DE POKÉMON  -----------
 function showLoader(target) {
   $(target).html('<div class="loader"></div>');
 }
@@ -128,14 +181,20 @@ $(document).ready(function () {
       })
       .then(data => {
         const nombre = data.name;
-        const imagen = data.sprites.front_default;
+        const id = data.id;
+        const svgUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${id}.svg`;
+        const fallbackUrl = data.sprites.front_default;
         const habilidades = data.abilities.map(h => h.ability.name).join(', ');
 
-        $('#pokemonCard').hide().html(`
-          <h2>${nombre.toUpperCase()}</h2>
-          <img src="${imagen}" alt="${nombre}" />
-          <p><strong>Habilidades:</strong> ${habilidades}</p>
-        `).fadeIn();
+        // Intentar cargar el sprite SVG, con fallback si no existe
+        const img = new Image();
+        img.onload = function () {
+          mostrarPokemon(nombre, img.src, habilidades);
+        };
+        img.onerror = function () {
+          mostrarPokemon(nombre, fallbackUrl, habilidades);
+        };
+        img.src = svgUrl;
       })
       .catch(error => {
         $('#pokemonCard').hide().html(`<p style="color: red;">❌ ${error.message}</p>`).fadeIn();
@@ -143,44 +202,18 @@ $(document).ready(function () {
       .finally(() => {
         $('#buscarBtn').prop('disabled', false);
       });
-  });
 
-  $('#mostrarTopBtn').click(function () {
-    const $btn = $(this);
-    const $grid = $('#topPokemonList');
-    $btn.prop('disabled', true);
-    $grid.empty();
-    showLoader($grid);
-
-    const promises = [];
-
-    for (let i = 1; i <= 50; i++) {
-      const p = fetch(`https://pokeapi.co/api/v2/pokemon/${i}`)
-        .then(res => res.json())
-        .then(pokemon => {
-          return `
-            <div class="pokemon-item">
-              <img src="${pokemon.sprites.front_default}" alt="${pokemon.name}" />
-              <p>${pokemon.name}</p>
-            </div>
-          `;
-        });
-      promises.push(p);
+    function mostrarPokemon(nombre, imagenUrl, habilidades) {
+      $('#pokemonCard').hide().html(`
+        <h2>${nombre.toUpperCase()}</h2>
+        <img src="${imagenUrl}" alt="${nombre}" />
+        <p><strong>Habilidades:</strong> ${habilidades}</p>
+      `).fadeIn();
     }
-
-    Promise.all(promises)
-      .then(cards => {
-        $grid.hide().html(cards.join('')).fadeIn(500);
-      })
-      .catch(() => {
-        $grid.hide().html('<p style="color:red">❌ Error al cargar la lista de Pokémon.</p>').fadeIn(500);
-      })
-      .finally(() => {
-        $btn.prop('disabled', false);
-      });
   });
 
-  // 🔹 Rick & Morty - carga de personajes con delegación
+
+  // Rick & Morty - carga de personajes
   const apiUrl = 'https://rickandmortyapi.com/api/character';
   fetch(apiUrl)
     .then(res => res.json())
@@ -248,7 +281,7 @@ $(document).ready(function () {
         const card = (poke) => `
           <div class="poke-card">
             <h3>${poke.name}</h3>
-            <img src="${poke.sprites.front_default}" alt="${poke.name}" />
+            <img src="${poke.sprites.other['official-artwork'].front_default}" alt="${poke.name}" style="width: 200px;" />
             <p><strong>HP:</strong> ${poke.stats.find(s => s.stat.name === 'hp').base_stat}</p>
             <p><strong>Tipos:</strong> ${poke.types.map(t => t.type.name).join(', ')}</p>
             <p><strong>Habilidades:</strong></p>
