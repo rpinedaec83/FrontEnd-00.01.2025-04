@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Comparador de Pokémones + Mi Colección</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #e7bad3;
+      padding: 4rem;
+      text-align: center;
+    }
+
+    input, button {
+      padding: 0.5rem;
+      margin: 0.5rem;
+      font-size: 1rem;
+    }
+
+    #comparison, #collection {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background: rgb(228, 137, 187);
+      border-radius: 10px;
+      padding: 1rem;
+      width: 250px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .card img {
+      max-width: 150px;
+    }
+
+    .label {
+      font-weight: bold;
+      color: #080808;
+    }
+
+    #error {
+      color: red;
+      margin-top: 1rem;
+    }
+
+    .fav-btn, .remove-btn {
+      margin-top: 0.5rem;
+      padding: 0.3rem 0.6rem;
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+
+    h2, h3 {
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Comparador de Pokémons</h1>
+
+  <input type="text" id="pokemon1" placeholder="Nombre del primer Pokémon">
+  <input type="text" id="pokemon2" placeholder="Nombre del segundo Pokémon">
+  <button id="compare-btn">Comparar</button>
+
+  <div id="error"></div>
+
+  <div id="comparison"></div>
+
+  <h2>⭐⭐⭐Mi colección⭐⭐⭐</h2>
+  <div id="collection"></div>
+
+  <script src="js/coleccion.js"></script>
+  <script src="js/comparador.js"></script>
+</body>
+</html>
