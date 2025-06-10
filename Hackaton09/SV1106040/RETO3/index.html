@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Galería Interactiva </title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 2rem;
+      background-color: #6e6a6a;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+    .card {
+      background: rgb(228, 137, 187);
+      border-radius: 10px;
+      padding: 1rem;
+      width: 200px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      text-align: center;
+    }
+    .card img {
+      width: 100%;
+      border-radius: 8px;
+    }
+    .card button {
+      margin-top: 0.5rem;
+      padding: 0.3rem 0.6rem;
+      cursor: pointer;
+      border-radius: 10px;
+      background: rgba(141, 108, 233, 0.726);
+
+    }
+    .details {
+      margin-top: 0.5rem;
+      text-align: left;
+      font-size: 0.9em;
+    }
+    h1{
+      text-align: center;
+      color: azure;
+      }
+  </style>
+</head>
+<body>
+
+  <h1>🧪 Galería Interactiva - Rick & Morty</h1>
+  <div class="gallery" id="gallery"></div>
+
+  <script src="js/galeriaIntera.js"></script>
+</body>
+</html>

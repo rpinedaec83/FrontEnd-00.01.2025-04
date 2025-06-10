@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>⚔️ Comparador de Pokémons</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #9e9d9e;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    input, button {
+      border: 2px solid black;
+      padding: 0.5rem;
+      margin: 0.5rem;
+      font-size: 1rem;
+    }
+
+    #comparison {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+    }
+
+  .card {
+  background: rgb(228, 7, 248);
+  border: 4px solid black; /* borde negro y más grueso */
+  border-radius: 10px;
+  padding: 1rem;
+  width: 250px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+   }
+
+    .card img {
+      max-width: 150px;
+    }
+
+    .label {
+      font-weight: bold;
+      color: #160101;
+    }
+
+    #error {
+      color: red;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>⚔️ Comparador de Pokémons</h1>
+
+  <input type="text" id="pokemon1" placeholder="Nombre del primer Pokemon">
+  <input type="text" id="pokemon2" placeholder="Nombre del segundo Pokemon">
+  <button id="compare-btn">Comparar</button>
+
+  <div id="error"></div>
+
+  <div id="comparison"></div>
+
+  <script src="js/Comparaciones2pokemons.js"></script>
+</body>
+</html>
