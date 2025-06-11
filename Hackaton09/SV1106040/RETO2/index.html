@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Buscador de Pokemones</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      padding: 2rem;
+      background: #a5a2a3;
+
+    }
+    #pokemon-card {
+      border: 4px solid black; /* Borde más grueso y visible */
+      margin-top: 2rem;
+      display: none;
+      border-radius: 10px;
+      padding: 1.5rem;
+      max-width: 300px;
+      margin-left: auto;
+      margin-right: auto;
+      background-color: #e966aa;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+    #pokemon-card img {
+      max-width: 150px;
+    }
+    #error {
+      color: red;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>🔍 Buscador de Pokémons</h1>
+  <input type="text" id="pokemon-input" placeholder="Escribe un nombre (ej. pikachu)">
+  <button id="search-btn">Buscar</button>
+
+  <div id="error"></div>
+
+  <div id="pokemon-card">
+    <h2 id="poke-name"></h2>
+    <img id="poke-img" src="" alt="Imagen del Pokémon">
+    <h4>Habilidades:</h4>
+    <ul id="poke-abilities"></ul>
+  </div>
+
+  <script src="js/pokemonSearch.js"></script>
+</body>
+</html>
+

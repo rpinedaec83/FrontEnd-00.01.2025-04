@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Callback Hell Hotel</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    input, button {
+      margin: 5px 0;
+      padding: 8px;
+    }
+    #salida {
+      margin-top: 20px;
+      background: #f0f0f0;
+      padding: 10px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🏨 Callback Hell Hotel</h1>
+
+  <label for="cliente">Nombre del cliente:</label>
+  <input type="text" id="cliente" placeholder="Ej. Juan Pérez" />
+
+  <br><br>
+  <button onclick="iniciarConCallbacks()">Iniciar con Callbacks</button>
+  <button onclick="iniciarConPromesas()">Iniciar con Promesas</button>
+  <button onclick="iniciarConAsyncAwait()">Iniciar con Async/Await</button>
+
+  <div id="salida"></div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
