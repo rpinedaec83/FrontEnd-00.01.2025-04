@@ -1,0 +1,67 @@
+body {
+  font-family: sans-serif;
+  background: #f4f4f4;
+  margin: 0;
+  padding: 0 1rem;
+}
+
+h1 {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  overflow: hidden;
+  padding: 10px;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+button.ver-mas {
+  margin-top: 0.5rem;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.details {
+  text-align: left;
+  margin-top: 0.5rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.loader {
+  border: 8px solid #eee;
+  border-top: 8px solid #3b82f6;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  margin: 2rem auto;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

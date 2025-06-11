@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semana 09 Sesion 02</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="jumbotron">
+                    <h2>
+                        Hello, Cliente!
+                        <p id="pEmpresa"></p>
+                        <p id="pCiudad"></p>
+
+                        <h1 class="clsH1"></h1>
+                    </h2>
+                    <p>
+                        This is a template for a simple marketing or informational website. It includes a large callout
+                        called the hero unit and three supporting pieces of content. Use it as a starting point to
+                        create something more unique.
+                    </p>
+                    <p>
+                        <a class="btn btn-primary btn-large" href="https://www.x-codec.net"
+                            id="btnReservar">Reservar</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+         <div class="container reservacion">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home"
+                        type="button" role="tab" aria-controls="home" aria-selected="true">Vuelo de Ida</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile"
+                        type="button" role="tab" aria-controls="profile" aria-selected="false">Vuelo de Regreso</button>
+                </li>
+            </ul>
+
+            <div class="tab-content mt-3" id="myTabContent">
+                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                    <h2 class="mb-3">Datos</h2>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Dato</th>
+                                <th scope="col">Valor</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row"><label for="">Nombres</label></th>
+                                <td><input type="text" name="" id="idanombre" disabled></td>
+
+                            </tr>
+                            <tr>
+                                <th scope="row"><label for="">Apellidos</label></th>
+                                <td><input type="text" name="" id="idaapellidos" disabled></td>
+
+                            </tr>
+                            <tr>
+                                <th scope="row"><label for="">Fecha de Ida</label></th>
+                                <td><input type="text" name="" id="idafecha" disabled></td>
+
+                            </tr>
+                            <tr>
+                                <th scope="row"><label for="">Vuelo</label></th>
+                                <td><input type="text" name="" id="idaVuelo" disabled></td>
+
+                            </tr>
+                            <tr>
+                                <th scope="row"><label for="">Origen</label></th>
+                                <td><input type="text" name="" id="idaOrigen" disabled></td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                    <h2 class="mb-3">Datos</h2>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Dato</th>
+                                <th scope="col">Valor</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row"><label for="">Nombres</label></th>
+                                <td><input type="text" name="" id="retnombre" disabled></td>
+
+                            </tr>
+                            <tr>
+                                <th scope="row"><label for="">Apellidos</label></th>
+                                <td><input type="text" name="" id="retapellidos" disabled></td>
+
+                            </tr>
+                            <tr>
+                                <th scope="row"><label for="">Fecha de Retorno</label></th>
+                                <td><input type="text" name="" id="retfecha" disabled></td>
+
+                            </tr>
+                            <tr>
+                                <th scope="row"><label for="">Vuelo</label></th>
+                                <td><input type="text" name="" id="retVuelo" disabled></td>
+
+                            </tr>
+                            <tr>
+                                <th scope="row"><label for="">Destino</label></th>
+                                <td><input type="text" name="" id="retDestino" disabled></td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div> 
+    </div>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.min.js"
+        integrity="sha384-RuyvpeZCxMJCqVUGFI0Do1mQrods/hhxYlcVfGPOfQtPJh0JCw12tUAZ/Mv10S7D"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/script.js"></script>
+    <script>
+        let objParametros = {
+            empresa: "Avianca",
+            ciudad: "Lima"
+        }
+        const objReserva = Reserva.init(objParametros);
+    </script>
+</body>
+
+</html>

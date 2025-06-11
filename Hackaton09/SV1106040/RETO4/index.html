@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title> UX Ninja</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      padding: 2rem;
+      background-color: #dad3d6;
+    }
+
+    input, button {
+      padding: 0.5rem;
+      font-size: 1rem;
+      margin: 0.5rem;
+    }
+
+    #loader {
+      display: none;
+      margin-top: 1rem;
+      font-style: italic;
+      color: #f8a2e5;
+    }
+
+    #error {
+      color: red;
+      margin-top: 1rem;
+    }
+
+    #pokemon-card {
+      margin-top: 2rem;
+      display: none;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 1.5rem;
+      max-width: 300px;
+      margin-left: auto;
+      margin-right: auto;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    #pokemon-card img {
+      max-width: 150px;
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🔍 Buscador de Pokemones, AQUI:)</h1>
+
+  <input type="text" id="pokemon-input" placeholder="Escribe un nombre (ejemplo. pikachu)">
+  <button id="search-btn">Buscar</button>
+
+  <div id="loader">🔄 Buscando...</div>
+  <div id="error"></div>
+
+  <div id="pokemon-card">
+    <h2 id="poke-name"></h2>
+    <img id="poke-img" src="" alt="Imagen del Pokémon">
+    <h4>Habilidades:</h4>
+    <ul id="poke-abilities"></ul>
+  </div>
+
+  <script src="JS/pokemonSearch.js"></script>
+</body>
+</html>
