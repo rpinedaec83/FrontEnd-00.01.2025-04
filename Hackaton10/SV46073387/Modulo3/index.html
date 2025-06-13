@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contactos Inteligentes</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+  <header>
+    <h1>📇 Contactos </h1>
+    <button id="toggleModo">🌓 Modo Oscuro</button>
+  </header>
+
+  <section class="acciones">
+    <input type="text" id="filtro" placeholder="Buscar contacto..." />
+    <button id="btnNuevo">➕ Nuevo</button>
+    <button id="btnOrdenar">🔠 Ordenar</button>
+    <button id="btnExportar">📤 Exportar</button>
+    <input type="file" id="importarArchivo" accept=".json" hidden />
+    <button id="btnImportar">📥 Importar</button>
+  </section>
+
+  <main>
+    <table id="tablaContactos">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Email</th>
+          <th>Teléfono</th>
+          <th>Modificado</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </main>
+
+  <!-- Formulario oculto por si se usa sin SweetAlert -->
+  <form id="formContacto" style="display:none;">
+    <input type="text" id="nombre" placeholder="Nombre" />
+    <input type="email" id="email" placeholder="Email" />
+    <input type="tel" id="telefono" placeholder="Teléfono" />
+    <button type="submit">Guardar</button>
+  </form>
+
+  <footer>
+    <p>s 2025</p>
+  </footer>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
