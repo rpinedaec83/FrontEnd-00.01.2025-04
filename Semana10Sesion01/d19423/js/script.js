@@ -57,10 +57,10 @@ class Gundam {
 let arrKits = [];
 const $table = $('#table');
 
-$( document ).ready(function() {
-  if(localStorage.getItem("kits") === null){
+$(document).ready(function () {
+  if (localStorage.getItem("kits") === null) {
     arrKits = []
-  }else{
+  } else {
     arrKits = JSON.parse(localStorage.getItem("kits"))
     $table.bootstrapTable();
     $table.bootstrapTable('load', arrKits);
@@ -113,7 +113,7 @@ const agregarNuevo = async (e) => {
         descripcion: $("#descripcion").val(),
         imagen: $("#imagen").val(),
         escala: $("#escala").val(),
-        isCustom: $("#isCustom").val(),
+        isCustom: $("#custom").val() === "" ? "off" : $("#isCustom").val(),
         custom: $("#custom").val()
       }
     }
@@ -128,7 +128,7 @@ const agregarNuevo = async (e) => {
   }
 }
 
-function borrarTodo(){
+function borrarTodo() {
   arrKits = [];
   localStorage.removeItem("kits");
 }
@@ -137,30 +137,30 @@ $("#btnAgregar").on("click", agregarNuevo);
 $("#btnBorrarTodo").on("click", borrarTodo);
 
 function cambio(checkbox) {
-    if (checkbox.checked) {
-      console.log("El checkbox está marcado (checked).");
-      $("#checkedCustom").css('display', 'block');
-    } else {
-      $("#checkedCustom").css('display', 'none');
-    }
+  if (checkbox.checked) {
+    console.log("El checkbox está marcado (checked).");
+    $("#checkedCustom").css('display', 'block');
+  } else {
+    $("#checkedCustom").css('display', 'none');
   }
+}
 
-function detailFormatter(index, row){
+function detailFormatter(index, row) {
   console.log(row);
   let html = [];
-  $.each(row, function(key, value){
+  $.each(row, function (key, value) {
     switch (key) {
       case "imagen":
-          html.push(`<img src="img/${value}" width="300px"><br>`)
+        html.push(`<img src="img/${value}" width="300px"><br>`)
         break;
       case "isCustom":
-        if(value==="on"){
+        if (value === "on") {
           let arrCustom = row.custom.split(",")
           let htmlstr = "<b>Modificacion</b><ul>";
           arrCustom.forEach(element => {
-            htmlstr+=`<li>${element}</li>`
+            htmlstr += `<li>${element}</li>`
           });
-          htmlstr+="</ul>";
+          htmlstr += "</ul>";
           html.push(htmlstr)
         }
         break;
@@ -171,7 +171,7 @@ function detailFormatter(index, row){
   return html.join('');
 }
 
-function accionFormatter(value, row, index){
+function accionFormatter(value, row, index) {
   return [
     '<a class="edit" href="javascript:void(0)" title="Edit">',
     '<i class="fas fa-edit"></i>',
@@ -183,17 +183,31 @@ function accionFormatter(value, row, index){
 }
 
 window.accionEvents = {
-  'click .edit':function(e,value,row,index){
-editarKit(row);
+  'click .edit': function (e, value, row, index) {
+    editarKit(row);
 
   },
-  'click .remove':function(e,value,row,index){
-    console.log(row)
+  'click .remove': function (e, value, row, index) {
+    borrarKit(row);
   }
 }
 
-async function editarKit(row){
+function borrarKit(row) {
+  let index = arrKits.indexOf(row);
+  if (index > -1) {
+    arrKits.splice(index, 1);
+  }
+  $table.bootstrapTable('load', arrKits);
+  localStorage.setItem("kits", JSON.stringify(arrKits))
+}
+
+async function editarKit(row) {
   const index = arrKits.indexOf(row);
+  let checked = arrKits[index].isCustom == 'on' ? 'checked' : "";
+  let display = 'style="display: none;"';
+  if (arrKits[index].isCustom == "on") {
+    display = 'style="display: block;"';
+  }
   const { value: formValues } = await Swal.fire({
     title: "Ingresa los datos para Editar del Kit",
     icon: "info",
@@ -220,14 +234,14 @@ async function editarKit(row){
   <legend>Es Custom??:</legend>
 
   <div>
-    <input type="checkbox"  id="isCustom" onchange="cambio(this)" name="scales" />
+    <input type="checkbox"  id="isCustom" onchange="cambio(this)" name="scales" ${checked} />
     <label for="scales">SI</label>
   </div>
 
  
 </fieldset>
     </div>
-    <div class="form-group" id="checkedCustom">
+    <div class="form-group" id="checkedCustom" ${display}>
         <input type="text" id="custom" class="form-control input-md" placeholder="Describe el Custom" value="${row.custom}">
     </div>
       `,
@@ -237,7 +251,7 @@ async function editarKit(row){
         descripcion: $("#descripcion").val(),
         imagen: $("#imagen").val(),
         escala: $("#escala").val(),
-        isCustom: $("#isCustom").val(),
+        isCustom: $("#custom").val() === "" ? "off" : $("#isCustom").val(),
         custom: $("#custom").val()
       }
     }
@@ -254,3 +268,45 @@ async function editarKit(row){
     localStorage.setItem("kits", JSON.stringify(arrKits))
   }
 }
+
+$table.on('click-row.bs.table', function (e, row, $element, field) {
+  console.log('Fila clickeada:', row);
+  console.log('Elemento:', $element);
+  console.log('Campo:', field);
+  $("#detalleKit").css('display', 'block');
+
+  $.each(row, function (key, value) {
+    switch (key) {
+      case "imagen":
+        $("#ddImagen").html(`<img src="img/${value}" width="300px"><br>`)
+        break;
+      case "isCustom":
+        if (value === "on") {
+          let arrCustom = row.custom.split(",")
+          let htmlstr = "<ul>";
+          arrCustom.forEach(element => {
+            htmlstr += `<li>${element}</li>`
+          });
+          htmlstr += "</ul>";
+          $("#ddCustom").html(htmlstr);
+          $("#divIsCustom").css('display', 'block');
+        }
+        else {
+          $("#divIsCustom").css('display', 'none');
+        }
+        break;
+      case "nombre":
+        $("#ddNombre").text(value);
+        break;
+      case "descripcion":
+        $("#ddDescripcion").text(value);
+        break;
+      case "escala":
+        $("#ddEscala").text(value);
+        break;
+      default:
+
+        break;
+    }
+  })
+});
