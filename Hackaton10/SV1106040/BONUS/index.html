@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Tareas AvanzadaSSSSS</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body { font-family: sans-serif; margin: 2rem; }
+    table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+    th, td { border: 1px solid #ccc; padding: 8px; }
+    .completada { text-decoration: line-through; color: gray; }
+    #estadoConexion { margin-top: 10px; font-weight: bold; }
+    #selectorIdioma { margin-left: 10px; }
+  </style>
+</head>
+<body>
+  <h2>Lista de Tareas</h2>
+
+  <div>
+    <input type="text" id="nuevaTarea" placeholder="Escribe una tarea">
+    <button id="btnAgregar">Agregar</button>
+  </div>
+
+  <label>
+    <input type="checkbox" id="filtroCompletadas">
+    Mostrar solo completadas
+  </label>
+
+  <select id="selectorIdioma">
+    <option value="es">Español</option>
+    <option value="en">English</option>
+  </select>
+
+  <div id="estadoConexion">🟢 Conectado</div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Tarea</th>
+        <th>Completada</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody id="listaTareas"></tbody>
+  </table>
+
+  <script src="js/contactManager.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/storage.js"></script>
+</body>
+</html>

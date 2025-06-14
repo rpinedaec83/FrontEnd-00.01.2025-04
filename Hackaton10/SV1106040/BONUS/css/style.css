@@ -1,0 +1,134 @@
+/* Estilo general */
+body {
+  font-family: "Segoe UI", sans-serif;
+  margin: 2rem;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+input[type="text"] {
+  padding: 0.5rem;
+  width: 250px;
+  max-width: 100%;
+  margin-right: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+label {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+#selectorIdioma {
+  margin-left: 1rem;
+  padding: 0.4rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+#estadoConexion {
+  margin-top: 1rem;
+  font-weight: bold;
+  color: green;
+}
+
+/* Tabla de tareas */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.5rem;
+  background-color: white;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 0.75rem;
+  text-align: left;
+}
+
+th {
+  background-color: #f0f0f0;
+}
+
+input[type="checkbox"] {
+  transform: scale(1.2);
+}
+
+/* Botones en la tabla */
+td button {
+  margin-right: 0.5rem;
+  font-size: 1rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+td button:hover {
+  transform: scale(1.2);
+}
+
+/* Tarea completada */
+.completada {
+  text-decoration: line-through;
+  color: gray;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  input[type="text"] {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  button {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+
+  th, td {
+    padding: 0.5rem;
+    text-align: right;
+    position: relative;
+  }
+
+  th::before, td::before {
+    position: absolute;
+    left: 0;
+    white-space: nowrap;
+    text-align: left;
+    font-weight: bold;
+  }
+
+  thead {
+    display: none;
+  }
+
+  td:nth-of-type(1)::before { content: "ID"; }
+  td:nth-of-type(2)::before { content: "Tarea"; }
+  td:nth-of-type(3)::before { content: "Completada"; }
+  td:nth-of-type(4)::before { content: "Acciones"; }
+}

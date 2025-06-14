@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Tareas Avanzada</title>
+  <style>
+    body { font-family: sans-serif; margin: 2rem; }
+    table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+    th, td { border: 1px solid #ccc; padding: 8px; }
+    .completada { text-decoration: line-through; color: gray; }
+  </style>
+</head>
+<body>
+  <h2>Lista de Tareas</h2>
+
+  <input type="text" id="nuevaTarea" placeholder="Escribe una tarea">
+  <button id="btnAgregar">Agregar</button>
+
+  <label>
+    <input type="checkbox" id="filtroCompletadas">
+    Mostrar solo completadas
+  </label>
+
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Tarea</th>
+        <th>Completada</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody id="listaTareas"></tbody>
+  </table>
+
+  <script src="js/storage.js"></script>
+  <script src="js/taskManager.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
