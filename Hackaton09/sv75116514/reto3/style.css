@@ -1,0 +1,40 @@
+body{
+    font-family:Arial, Helvetica, sans-serif ;
+    text-align: center;
+    background-color:azure;
+}
+#gallery{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    max-width: 1000px; /* o el ancho fijo que desees */
+    margin: 0 auto; /* centrar en la pantalla */
+    gap: 20px;
+    padding: 20px;
+}
+.card {
+    
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 0px 20px 20px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+  }
+  .card button{
+    width: 100px;
+    padding: 6px;
+    border-radius: 10px gray;
+    cursor: pointer;
+  }
+  .card img {
+    width: 150px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+  }
+  .details{
+    display: none;
+    margin-top: 10px;
+    text-align: left;
+  }
