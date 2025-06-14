@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestor de Contactos</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Gestor de Contactos</h1>
+    <button id="toggleDarkMode">🌙 Modo Oscuro</button>
+  </header>
+
+  <section id="formSection">
+    <h2>Nuevo Contacto</h2>
+    <form id="contactForm">
+      <input type="hidden" id="contactId">
+      
+      <label>Nombre:</label>
+      <input type="text" id="nombre" required>
+
+      <label>Email:</label>
+      <input type="email" id="email" required>
+
+      <label>Teléfono:</label>
+      <input type="tel" id="telefono" required>
+
+      <button type="submit">Guardar</button>
+    </form>
+  </section>
+
+  <section id="buscarSection">
+    <input type="text" id="buscarInput" placeholder="🔍 Buscar contacto...">
+    <button id="exportarBtn">📤 Exportar</button>
+    <input type="file" id="importarInput" accept=".json">
+    <label for="importarInput" class="btnImportar">📥 Importar</label>
+  </section>
+
+  <section id="listaSection">
+    <h2>Contactos</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Email</th>
+          <th>Teléfono</th>
+          <th>Creado</th>
+          <th>Modificado</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody id="listaContactos"></tbody>
+    </table>
+  </section>
+
+  <div id="toast" class="toast"></div>
+
+  <script src="js/contactManager.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/storage.js"></script>
+</body>
+</html>
