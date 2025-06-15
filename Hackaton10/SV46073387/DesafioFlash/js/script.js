@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("formPersona");
-  const info = document.getElementById("infoGuardada");
+  const info = document.getElementById("Guarda");
 
   // Mostrar info guardada al cargar
   const personaGuardada = localStorage.getItem("persona");

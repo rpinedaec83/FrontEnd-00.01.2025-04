@@ -1,27 +1,49 @@
-// js/storage.js actualizado para corregir el error "Storage.guardar is not a function"
-
-export function guardar(clave, datos) {
-  try {
-    localStorage.setItem(clave, JSON.stringify(datos));
-  } catch (error) {
-    console.error("Error al guardar en localStorage", error);
+export class Storage {
+  obtenerContactos() {
+    return JSON.parse(localStorage.getItem('contactos') || '[]');
   }
-}
 
-export function leer(clave) {
-  try {
-    const datos = localStorage.getItem(clave);
-    return datos ? JSON.parse(datos) : [];
-  } catch (error) {
-    console.error("Error al leer de localStorage", error);
-    return [];
+  guardarContactos(contactos) {
+    localStorage.setItem('contactos', JSON.stringify(contactos));
   }
-}
 
-export function borrar(clave) {
-  try {
-    localStorage.removeItem(clave);
-  } catch (error) {
-    console.error("Error al borrar de localStorage", error);
+  agregarContacto(contacto) {
+    const contactos = this.obtenerContactos();
+    const ahora = new Date().toLocaleString();
+    contacto.id = crypto.randomUUID();
+    contacto.modificado = ahora;
+    contacto.creado = ahora;
+    contactos.push(contacto);
+    this.guardarContactos(contactos);
+  }
+
+  actualizarContacto(id, nuevosDatos) {
+    const contactos = this.obtenerContactos();
+    const ahora = new Date().toLocaleString();
+    const index = contactos.findIndex(c => c.id === id);
+    if (index !== -1) {
+      contactos[index] = { ...contactos[index], ...nuevosDatos, modificado: ahora };
+      this.guardarContactos(contactos);
+    }
+  }
+
+  eliminarContacto(id) {
+    const contactos = this.obtenerContactos().filter(c => c.id !== id);
+    this.guardarContactos(contactos);
+  }
+
+  obtenerContacto(id) {
+    return this.obtenerContactos().find(c => c.id === id);
+  }
+
+  importarContactos(contactosImportados) {
+    const actuales = this.obtenerContactos();
+    const nuevos = contactosImportados.map(c => ({
+      ...c,
+      id: crypto.randomUUID(),
+      modificado: new Date().toLocaleString(),
+      creado: new Date().toLocaleString()
+    }));
+    this.guardarContactos([...actuales, ...nuevos]);
   }
 }

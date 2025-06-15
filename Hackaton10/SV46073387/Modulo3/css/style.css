@@ -6,7 +6,7 @@
   --border-color: #dddddd;
 }
 
-body.dark-mode {
+body.oscuro {
   --bg-color: #1e1e1e;
   --text-color: #e0e0e0;
   --accent-color: #f44336;

@@ -1,79 +1,93 @@
-import * as Manager from './contactManager.js';
-import * as UI from './ui.js';
+import { UI } from './ui.js';
+import { ContactManager } from './contactManager.js';
+import { Storage } from './storage.js';
 
-document.addEventListener("DOMContentLoaded", () => {
-  inicializar();
-});
+const ui = new UI();
+const manager = new ContactManager();
+const storage = new Storage();
 
-function inicializar() {
-  Manager.cargarContactos();
-  UI.renderizarContactos(Manager.obtenerContactos());
-  asignarEventos();
+function actualizarVista() {
+  const contactos = storage.obtenerContactos();
+  const filtro = document.getElementById('filtro').value.toLowerCase();
+  const ordenados = manager.ordenarContactos(contactos);
+  const filtrados = ordenados.filter(c => c.nombre.toLowerCase().includes(filtro));
+  ui.renderTabla(filtrados);
 }
 
-function asignarEventos() {
-  document.getElementById("btnNuevo").addEventListener("click", UI.mostrarFormulario);
-  document.getElementById("formContacto").addEventListener("submit", manejarEnvioFormulario);
-  document.getElementById("filtro").addEventListener("input", filtrarContactos);
-  document.getElementById("btnExportar").addEventListener("click", exportarContactos);
-  document.getElementById("btnImportar").addEventListener("click", () =>
-    document.getElementById("importarArchivo").click()
-  );
-  document.getElementById("importarArchivo").addEventListener("change", importarContactos);
-  document.getElementById("toggleModo").addEventListener("click", UI.toggleModoOscuro);
-  document.getElementById("btnOrdenar").addEventListener("click", () => {
-    const ordenados = Manager.ordenarPorNombre();
-    UI.renderizarContactos(ordenados);
+document.addEventListener('DOMContentLoaded', () => {
+  actualizarVista();
+
+  document.getElementById('btnNuevo').addEventListener('click', async () => {
+    const datos = await ui.mostrarFormulario();
+    if (datos) {
+      storage.agregarContacto(datos);
+      actualizarVista();
+      ui.toast('Contacto agregado');
+    }
   });
-}
 
-function manejarEnvioFormulario(e) {
-  e.preventDefault();
-  const datos = UI.obtenerDatosFormulario();
+  document.getElementById('filtro').addEventListener('input', actualizarVista);
 
-  try {
-    if (datos.id) {
-      Manager.editarContacto(datos);
-      UI.mostrarToast("Contacto actualizado ✅");
-    } else {
-      Manager.agregarContacto(datos);
-      UI.mostrarToast("Contacto agregado ✅");
+  document.getElementById('btnOrdenar').addEventListener('click', () => {
+    manager.toggleOrden();
+    actualizarVista();
+  });
+
+  document.getElementById('btnExportar').addEventListener('click', () => {
+    const dataStr = JSON.stringify(storage.obtenerContactos(), null, 2);
+    const blob = new Blob([dataStr], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'contactos.json';
+    a.click();
+    URL.revokeObjectURL(url);
+  });
+
+  document.getElementById('btnImportar').addEventListener('click', () => {
+    document.getElementById('importarArchivo').click();
+  });
+
+  document.getElementById('importarArchivo').addEventListener('change', (e) => {
+    const archivo = e.target.files[0];
+    if (archivo) {
+      const reader = new FileReader();
+      reader.onload = () => {
+        try {
+          const datos = JSON.parse(reader.result);
+          storage.importarContactos(datos);
+          actualizarVista();
+          ui.toast('Contactos importados');
+        } catch {
+          ui.toast('Archivo inválido');
+        }
+      };
+      reader.readAsText(archivo);
     }
-    UI.resetFormulario();
-    UI.renderizarContactos(Manager.obtenerContactos());
-  } catch (error) {
-    UI.mostrarToast(error.message, true);
-  }
-}
+  });
 
-function filtrarContactos(e) {
-  const texto = e.target.value;
-  const resultados = Manager.filtrarContactos(texto);
-  UI.renderizarContactos(resultados);
-}
+  document.getElementById('toggleModo').addEventListener('click', () => {
+    document.body.classList.toggle('oscuro');
+  });
 
-function exportarContactos() {
-  const datos = Manager.exportarJSON();
-  const blob = new Blob([datos], { type: 'application/json' });
-  const enlace = document.createElement('a');
-  enlace.href = URL.createObjectURL(blob);
-  enlace.download = "contactos.json";
-  enlace.click();
-}
-
-function importarContactos(e) {
-  const archivo = e.target.files[0];
-  if (!archivo) return;
-
-  const lector = new FileReader();
-  lector.onload = function (event) {
-    try {
-      Manager.importarJSON(event.target.result);
-      UI.mostrarToast("Contactos importados correctamente 🥳");
-      UI.renderizarContactos(Manager.obtenerContactos());
-    } catch (err) {
-      UI.mostrarToast("Error al importar: " + err.message, true);
+  document.getElementById('tablaContactos').addEventListener('click', async (e) => {
+    const id = e.target.dataset.id;
+    if (e.target.classList.contains('editar')) {
+      const contacto = storage.obtenerContacto(id);
+      const nuevos = await ui.mostrarFormulario(contacto);
+      if (nuevos) {
+        storage.actualizarContacto(id, nuevos);
+        actualizarVista();
+        ui.toast('Contacto actualizado');
+      }
     }
-  };
-  lector.readAsText(archivo);
-}
+    if (e.target.classList.contains('eliminar')) {
+      const confirmado = await ui.confirmar('¿Eliminar contacto?');
+      if (confirmado) {
+        storage.eliminarContacto(id);
+        actualizarVista();
+        ui.toast('Contacto eliminado');
+      }
+    }
+  });
+});
