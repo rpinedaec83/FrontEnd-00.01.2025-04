@@ -1,0 +1,75 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f2f2f2;
+  color: #333;
+  margin: 0;
+  padding: 20px;
+  transition: background 0.3s, color 0.3s;
+}
+
+body.dark {
+  background: #121212;
+  color: #f9f9f9;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+}
+
+form, .acciones {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+input, button {
+  padding: 10px;
+  font-size: 16px;
+}
+
+#importar {
+  display: none;
+}
+
+label.importar {
+  background: #007bff;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  padding: 10px;
+  background: white;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  position: relative;
+}
+
+li.dark {
+  background: #2a2a2a;
+  border-color: #555;
+}
+
+li button {
+  margin-left: 10px;
+}
+
+.toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #333;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 5px;
+  display: none;
+  z-index: 1000;
+}

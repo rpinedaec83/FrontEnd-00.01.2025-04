@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROYECTO 04</title>
+    <link rel="stylesheet" href="css/style.css">
+<body>
+    
+    <div class="container">
+    <h1>Contactos</h1>
+
+    <button id="modoOscuroBtn">🌙 Modo Oscuro</button>
+
+    <form id="formulario">
+      <input type="text" id="nombre" placeholder="Nombre" required />
+      <input type="email" id="email" placeholder="Correo" required />
+      <input type="tel" id="telefono" placeholder="Teléfono" required />
+      <button type="submit">Guardar</button>
+    </form>
+
+    <input type="text" id="busqueda" placeholder="Buscar contacto..." />
+
+    <div class="acciones">
+      <button onclick="exportarContactos()">Exportar</button>
+      <label class="importar">
+        Importar
+        <input type="file" id="importar" hidden />
+      </label>
+    </div>
+
+    <ul id="listaContactos"></ul>
+  </div>
+
+  <div id="toast" class="toast"></div>
+  <script src="js/script.js"></script>
+
+</body>
+</html>
