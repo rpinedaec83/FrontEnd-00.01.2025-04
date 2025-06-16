@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Contactos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gestión de Contactos</h1>
+        <button id="toggleTheme">Modo Oscuro</button>
+
+        <form id="contactForm">
+            <input type="text" id="name" placeholder="Nombre" required>
+            <input type="email" id="email" placeholder="Correo Electrónico" required>
+            <input type="tel" id="phone" placeholder="Teléfono" required>
+            <button type="submit">Guardar Contacto</button>
+        </form>
+
+        <input type="text" id="searchInput" placeholder="Buscar contactos...">
+
+        <ul id="contactList"></ul>
+
+        <button id="exportBtn">Exportar a JSON</button>
+        <input type="file" id="importInput" style="display: none;">
+
+        <div id="toast" class="toast"></div>
+    </div>
+
+    <script src="js/storage.js"></script>
+    <script src="js/contactManager.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
