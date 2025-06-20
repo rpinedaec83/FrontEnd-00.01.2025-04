@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gestor de Contactos</title>
+  <!-- Enlazo el CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <h1>📇 Gestor de Contactos</h1>
+
+    <!-- Acciones principales: modo oscuro, exportar e importar -->
+    <div class="top-actions">
+      <button id="toggle-theme">🌙 Modo Oscuro</button>
+      <button id="export-btn">📤 Exportar JSON</button>
+      <!-- El label hace de botón visible para el input oculto -->
+      <label for="import-file" class="import-label">📥 Importar JSON</label>
+      <input type="file" id="import-file" accept="application/json" hidden />
+    </div>
+
+    <!-- Formulario para crear o editar contactos -->
+    <form id="contact-form">
+      <input type="text" id="name" placeholder="Nombre completo" required />
+      <input type="email" id="email" placeholder="Correo electrónico" required />
+      <input type="tel" id="phone" placeholder="Teléfono" required />
+      <button type="submit">Guardar Contacto</button>
+    </form>
+
+    <!-- Input para buscar entre los contactos -->
+    <input type="text" id="search" placeholder="Buscar contacto..." />
+
+    <!-- Lista donde se mostrarán los contactos -->
+    <ul id="contact-list"></ul>
+  </div>
+
+  <!-- Contenedor para mostrar notificaciones tipo toast -->
+  <div id="toast"></div>
+
+  <!-- Lógica principal del proyecto en JS -->
+  <script type="module" src="js/main.js"></script>
+</body>
+
+</html>
