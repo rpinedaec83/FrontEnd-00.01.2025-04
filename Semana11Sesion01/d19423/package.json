@@ -18,6 +18,10 @@
     "nodemon": "^3.1.10"
   },
   "dependencies": {
+<<<<<<< HEAD
+=======
+    "axios": "^1.10.0",
+>>>>>>> fuentes/main
     "body-parser": "^2.2.0",
     "express": "^5.1.0"
   }
