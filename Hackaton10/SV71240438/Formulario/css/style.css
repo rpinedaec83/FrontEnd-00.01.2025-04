@@ -1,0 +1,24 @@
+.body {
+  height: 50vh;
+  background-color: beige;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  padding: 8% 0 0 0;
+}
+
+.form {
+  background-color: white;
+  border-radius: 2%;
+}
+
+#formulario {
+  align-items: center;
+}
+
+.form h1,
+.form h2 {
+  text-align: center;
+}

@@ -38,8 +38,7 @@ Tres versiones funcionales con los mismos resultados: callbacks, promesas y asyn
 Tarjeta dinámica con datos del Pokémon buscado.
 
 ---
-
-### 🔹 Hora 3: Reto 3 – Eventos jQuery + DOM dinámico
+ 
 
 **Reto 3: "Galería Interactiva"**
 
