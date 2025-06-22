@@ -1,0 +1,87 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #fff8e1, #ffe0b2); 
+  min-height: 100vh;
+  padding: 50px 20px;
+  text-align: center;
+  color: #4e342e; 
+}
+
+h1 {
+  font-size: 25px;
+  margin-bottom: 10px;
+  color: #6d4c41; 
+}
+
+h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #6d4c41;
+}
+
+button {
+  background-color: #fbc02d; 
+  color: #4e342e;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 20px;
+  margin: 0 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #f9a825; 
+}
+
+
+#listaTareas {
+  list-style: none;
+  margin-top: 20px;
+  padding: 0;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+#listaTareas li {
+  background-color: #fff3e0; 
+  border: 1px solid #ffcc80;
+  border-radius: 10px;
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+
+.tarea-texto {
+  flex: 1;
+  text-align: left;
+  font-size: 16px;
+  color: #5d4037; 
+}
+
+
+.tarea-botones button {
+  margin-left: 8px;
+  background-color: #a1887f; 
+  color: white;
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 6px;
+}
+
+.tarea-botones button:hover {
+  background-color: #8d6e63;
+}

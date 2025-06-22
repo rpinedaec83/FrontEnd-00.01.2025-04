@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Usuario</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Formulario de Usuario</h1>
+        
+        <form id="userForm">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="age">Edad:</label>
+            <input type="number" id="age" name="age" required>
+            <button type="submit">Guardar Información</button>
+        </form>
+
+        <div id="userInfo" class="user-info">
+            <h2>Información guardada:</h2>
+            <p id="savedName">Nombre: </p>
+            <p id="savedAge">Edad: </p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

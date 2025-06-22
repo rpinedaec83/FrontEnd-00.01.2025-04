@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Buscador Pokémon</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>PokéBuscador</h1>
+        <input type="text" id="pokemonInput" placeholder="Escribe un nombre (ej. pikachu)">
+        <button id="buscarBtn">Buscar</button>
+
+        <div id="resultado" class="oculto">
+            <h2 id="nombrePokemon"></h2>
+            <img id="imagenPokemon" alt="Imagen del Pokémon">
+            <h3>Habilidades:</h3>
+            <ul id="habilidades"></ul>
+        </div>
+
+        <p id="error" class="oculto"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
