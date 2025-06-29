@@ -57,24 +57,7 @@ function Header() {
 
 ## 🔗 01:30 - 02:30 | Props
 
-### Teoría breve
-
-```jsx
-function Saludo({ nombre }) {
-  return <p>Hola, {nombre}!</p>;
-}
-```
-
-### Ejercicio 2: Componente de perfil
-
-Crear un componente `Perfil.jsx` que reciba:
-
-- `nombre`
-- `rol`
-- `imagen`
-
-### Mini desafío
-Renderizar una lista de perfiles (mínimo 3) con `.map()` usando props.
+### npm
 
 ---
 
