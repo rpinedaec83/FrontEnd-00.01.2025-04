@@ -1,0 +1,85 @@
+/* Estilos generales */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f6f8;
+  color: #333;
+}
+
+/* Encabezado y pie */
+h1 {
+  background-color: #2c3e50;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+  margin: 0;
+}
+
+footer {
+  background-color: #2c3e50;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+/* Tarjetas y secciones */
+.card,
+.perfil,
+.producto-card {
+  background-color: #fff;
+  border: 1px solid #e1e4e8;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  padding: 1rem;
+  margin: 1rem;
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+.card:hover,
+.perfil:hover,
+.producto-card:hover {
+  transform: translateY(-5px);
+}
+
+img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-bottom: 0.5rem;
+}
+
+/* Listas flexibles */
+.lista-perfiles,
+.catalogo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+/* Títulos de sección */
+h2 {
+  text-align: center;
+  margin-top: 2rem;
+  color: #34495e;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .perfil,
+  .producto-card {
+    width: 90%;
+  }
+}
+
+@media (min-width: 769px) {
+  .perfil,
+  .producto-card {
+    width: 250px;
+  }
+}
