@@ -5,6 +5,7 @@ import './App.css'
 import Formulario from './components/Formulario'
 import Toggle from './components/Toggle'
 import Lista from './components/Lista'
+import PerfilUsuario from './components/PerfilUsuario'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -36,6 +37,7 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+      <PerfilUsuario/>
     </>
   )
 }
