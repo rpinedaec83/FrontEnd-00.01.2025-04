@@ -4,14 +4,14 @@ function Toggle(){
     const [activo, setActivo]=useState(false);
 
     useEffect(()=>{
-        
+        if(activo){
             fetch('https://jsonplaceholder.typicode.com/users')
             .then(res=>res.json())
             .then(data=>{
                 console.log(data);
             })
-      //  }
-    },[]);
+        }
+    },[activo]);
 
     return(
         <button
