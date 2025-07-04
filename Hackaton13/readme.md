@@ -112,9 +112,9 @@ Cada grupo/participante debe:
 
 | Criterio                        | Puntos |
 |-------------------------------|--------|
-| Navegación funcional           | 20     |
-| Uso correcto de Hooks         | 20     |
-| Renderizado condicional       | 20     |
-| UI responsive con Bootstrap   | 20     |
-| Creatividad y originalidad    | 20     |
-| **Total**                      | **100**|
+| Navegación funcional           | 4     |
+| Uso correcto de Hooks         | 4     |
+| Renderizado condicional       |4     |
+| UI responsive con Bootstrap   | 4     |
+| Creatividad y originalidad    | 4     |
+| **Total**                      | **20**|
