@@ -1,6 +1,13 @@
+import Navbar from "../../atoms/navbar/Navbar";
+
 function Index(){
     return(
-        <h1>Este es el Index</h1>
+        <>
+             <Navbar/>
+             <h1>Este es el Index</h1>
+        </>
+       
+        
     )
 }
 
