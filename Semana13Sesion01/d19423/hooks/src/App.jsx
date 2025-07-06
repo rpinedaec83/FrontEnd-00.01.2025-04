@@ -4,7 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Formulario from './components/Formulario'
 import Toggle from './components/Toggle'
-import Lista from './components/Lista'
+import Lista from './components/Lista'                                                                                                                                                                                                                                                                                                                                                                                          
 import PerfilUsuario from './components/PerfilUsuario'
 
 function App() {
