@@ -1,5 +1,5 @@
 import Form from 'react-bootstrap/Form';
-export default function Search({label, onClick}){
+export default function SearchInput({label, onClick}){
     
     return( 
     <>

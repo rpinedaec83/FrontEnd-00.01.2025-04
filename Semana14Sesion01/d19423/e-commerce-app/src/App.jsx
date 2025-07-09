@@ -1,5 +1,5 @@
-import Button from "./components/Button";
-import Search from "./components/Search";
+import SearchBar from "./components/molecules/SearchBar"
+
 
 export default function App() {
   
@@ -15,10 +15,7 @@ const busqueda = (e)=>{
 }
   return (
     <>
-     <Button label="Alertar" onClick={handleSubmit} btnStyle="btn btn-danger" />
-     <Button label="Llamar" onClick={call} btnStyle="btn btn-success" btnstate />
-     <br />
-     <Search label="Que buscamos hoy" onClick={busqueda}/>
+     <SearchBar></SearchBar>
    </>
   )
 }
