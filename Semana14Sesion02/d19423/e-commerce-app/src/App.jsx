@@ -1,4 +1,6 @@
 import ProductList from "./components/molecules/ProductList"
+import ProductTable from "./components/molecules/ProductTable"
+import ProductTableAdvance from "./components/molecules/ProductTableAdvance"
 import SearchBar from "./components/molecules/SearchBar"
 
 
@@ -17,7 +19,9 @@ const busqueda = (e)=>{
   return (
     <>
      <SearchBar></SearchBar>
-     <ProductList/>
+     
+      <ProductTableAdvance/>
+
    </>
   )
 }
