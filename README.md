@@ -11,7 +11,7 @@ git fetch fuentes
 
 git merge fuentes/main main
 
-
+npm create vite@latest e-commerce-app -- --template react
 
 ## Docente:
 ### Roberto Pineda

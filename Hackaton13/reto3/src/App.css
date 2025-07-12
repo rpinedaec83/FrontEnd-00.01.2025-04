@@ -1,0 +1,41 @@
+/* App.css - Colores personalizados */
+body {
+  background-color: #f3f4f6; /* gris claro */
+  color: #1f2937; /* texto gris oscuro */
+  font-family: "Segoe UI", sans-serif;
+}
+
+.navbar {
+  background-color: #532b3c !important; /* azul violeta */
+  border-bottom: 2px solid #4338ca;
+}
+
+.navbar .nav-link {
+  color: white !important;
+}
+
+.navbar .nav-link.active {
+  font-weight: bold;
+  color: #facc15 !important; /* amarillo */
+}
+
+.card {
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary {
+  background-color: #b93598;
+  border-color: #059669;
+}
+
+.btn-primary:hover {
+  background-color: #059669;
+  border-color: #047857;
+}
