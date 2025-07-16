@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from 'axios';
 
-export default function ProductTable(){
+export default function ProductTable() {
     const [products, setProducts] = useState([]);
     const [error, setError] = useState(null);
     const [loading, setLoading] = useState(true);
@@ -17,13 +17,13 @@ export default function ProductTable(){
                 setError("Error en cargar los productos")
                 setLoading(false)
 
-    })
+            })
     }, [])
 
-    if(error) return <p>{error}</p>
-    if(loading) return <p>Cargando productos...</p>
+    if (error) return <p>{error}</p>
+    if (loading) return <p>Cargando productos...</p>
 
-    return(
+    return (
         <div className="container mt-4">
             <h2>Tabla de Productos</h2>
             <table className="table table-striped table-bordered">
@@ -38,7 +38,7 @@ export default function ProductTable(){
                 </thead>
                 <tbody>
                     {
-                         products.map(product => (
+                        products.map(product => (
                             <tr key={product.id}>
                                 <td>{product.id}</td>
                                 <td><img src={product.image} alt={product.title} height={50} /></td>
@@ -46,7 +46,7 @@ export default function ProductTable(){
                                 <td>S./ {product.price}</td>
                                 <td>{product.category}</td>
                             </tr>
-                         ))
+                        ))
                     }
                 </tbody>
             </table>

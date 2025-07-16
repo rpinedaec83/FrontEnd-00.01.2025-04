@@ -1,18 +1,18 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import BootstrapTable from 'react-bootstrap-table-next'
 import paginationFactory from 'react-bootstrap-table2-paginator'
-import filterFactory,{ textFilter, selectFilter} from 'react-bootstrap-table2-filter'
-import ToolkitProvider,{ Search, CSVExport} from 'react-bootstrap-table2-toolkit'
+import filterFactory, { textFilter, selectFilter } from 'react-bootstrap-table2-filter'
+import ToolkitProvider, { Search, CSVExport } from 'react-bootstrap-table2-toolkit'
 import axios from "axios";
 
 
-export default function ProductTableAdvance(){
+export default function ProductTableAdvance() {
 
     const [products, setProducts] = useState([]);
     const [error, setError] = useState(null);
     const [loading, setLoading] = useState(true);
-    const {SearchBar} = Search;
-    const {ExportCSVButton} = CSVExport;
+    const { SearchBar } = Search;
+    const { ExportCSVButton } = CSVExport;
 
     useEffect(() => {
         axios.get('https://fakestoreapi.com/products')
@@ -25,16 +25,16 @@ export default function ProductTableAdvance(){
                 setError("Error en cargar los productos")
                 setLoading(false)
 
-    })
+            })
     }, [])
 
-    if(error) return <p>{error}</p>
-    if(loading) return <p>Cargando productos...</p>
+    if (error) return <p>{error}</p>
+    if (loading) return <p>Cargando productos...</p>
 
     const categoryOptions = {};
-    products.forEach((p)=>{
-        if(!categoryOptions[p.category]){
-            categoryOptions[p.category]=p.category;
+    products.forEach((p) => {
+        if (!categoryOptions[p.category]) {
+            categoryOptions[p.category] = p.category;
         }
     })
 
@@ -47,21 +47,21 @@ export default function ProductTableAdvance(){
         {
             dataField: 'image',
             text: "Imagen",
-            formatter: (img)=>{
-                <img src={img} alt="img" height={50} style={{objectFit:'contain'}}/>
+            formatter: (image) => {
+                <img src={image} alt="img" height={50} style={{ objectFit: 'contain' }} />
             }
         },
         {
             dataField: 'title',
             text: "Producto",
             sort: true,
-            filter: textFilter({placeholder:"Buscar por nombre"})
+            filter: textFilter({ placeholder: "Buscar por nombre" })
         },
         {
             dataField: 'price',
             text: "Precio",
             sort: true,
-            formatter: (price)=>`$${price.toFixed(2)}`
+            formatter: (price) => `$${price.toFixed(2)}`
         },
         {
             dataField: 'category',
@@ -74,7 +74,7 @@ export default function ProductTableAdvance(){
         }
     ];
 
-    return(
+    return (
         <div className="container mt-4">
             <h2 className="mb-3">Tabla Avanzada de Productos</h2>
             <ToolkitProvider
@@ -82,18 +82,18 @@ export default function ProductTableAdvance(){
                 data={products}
                 columns={columns}
                 search
-                exportCSV={{ onlyExportFiltered:true, exportAll:false}}
+                exportCSV={{ onlyExportFiltered: true, exportAll: false }}
             >
                 {
-                    (props)=>(
+                    (props) => (
                         <>
                             <div className="d-flex justify-content-between mb-3">
-                                <SearchBar 
+                                <SearchBar
                                     {...props.searchProps}
                                     className="form-control w-50"
                                     placeholder="Buscar Global..."
                                 />
-                                <ExportCSVButton 
+                                <ExportCSVButton
                                     {...props.csvProps}
                                     className="btn btn-success"
                                 >
