@@ -1,0 +1,142 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f9;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 380px;
+    text-align: center;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: inherit;
+}
+
+input, button {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button.delete {
+    background-color: #e74c3c;
+}
+
+button.delete:hover {
+    background-color: #c0392b;
+}
+
+#searchInput {
+    width: calc(100% - 24px);
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+li {
+    background-color: #f9f9f9;
+    margin: 10px 0;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 6px;
+    box-sizing: border-box;
+    transition: background-color 0.3s;
+}
+
+.toast {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border-radius: 6px;
+    display: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode {
+    background-color: #333;
+    color: #f4f4f9;
+}
+
+.dark-mode .container {
+    background-color: #444;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+}
+
+.dark-mode input, .dark-mode button {
+    background-color: #555;
+    color: white;
+    border: 1px solid #666;
+}
+
+.dark-mode input::placeholder, .dark-mode button {
+    color: #ddd;
+}
+
+.dark-mode button:hover {
+    background-color: #3e8e41;
+}
+
+.dark-mode .delete {
+    background-color: #e74c3c;
+}
+
+.dark-mode .delete:hover {
+    background-color: #c0392b;
+}
+
+.dark-mode li {
+    background-color: #666;
+}
+
+.dark-mode li:hover {
+    background-color: #555;
+}
+
+.dark-mode button, .dark-mode input, .dark-mode ul li {
+    transition: all 0.3s ease-in-out;
+}

@@ -1,0 +1,16 @@
+.hero__title {
+  font-size: 3rem;
+  font-weight: bold;
+}
+.hero__subtitle {
+  font-size: 1.25rem;
+}
+
+.card--moment {
+  transition: transform 0.3s ease;
+}
+.card--moment:hover {
+  transform: scale(1.05);
+}
+
+/*# sourceMappingURL=main.css.map */

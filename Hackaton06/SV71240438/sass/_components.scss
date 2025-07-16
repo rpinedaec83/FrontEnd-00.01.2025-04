@@ -1,0 +1,19 @@
+@use "variables" as *;
+.service-card {
+  padding: $padding-base;
+  border: 1px solid #ddd;
+  border-radius: $border-radius;
+  max-width: 300px;
+  background-color: $bg-color;
+
+  &__title {
+    font-size: 1.2rem;
+    color: $primary-color;
+    margin: 10px 0;
+  }
+
+  &__description {
+    color: $text-color;
+    font-size: 0.95rem;
+  }
+}

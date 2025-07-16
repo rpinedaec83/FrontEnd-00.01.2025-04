@@ -1,0 +1,24 @@
+@import 'variables';
+
+body {
+  font-family: $font-principal;
+  background-color: $color-fondo;
+  color: $color-texto;
+  line-height: 1.6;
+}
+
+a {
+  color: $color-primario;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+
