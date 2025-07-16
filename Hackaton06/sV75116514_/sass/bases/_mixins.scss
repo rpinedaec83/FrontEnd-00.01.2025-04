@@ -1,0 +1,83 @@
+@use '../bases/variables' as vars;
+
+// REUTILIZAR BOTON DE CTA PARA EL FORM
+@mixin cta-btn {
+    background-color: vars.$color-primary;
+    color: white;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    margin-top: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.1s all;
+  
+    &:hover {
+      background-color: vars.$color-dark;
+      color: vars.$color-letter;
+    }
+  }
+  
+
+@mixin tarjeta-producto {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+  
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease; // animación suave
+    }
+  
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5); // capa oscura
+      z-index: 1;
+      transition: background-color 0.3s ease;
+    }
+  
+    .producto-texto {
+      position: absolute;
+      top: 85%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: vars.$font-base-size;
+      font-weight: 700;
+      font-style: italic;
+      text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+      z-index: 2;
+      pointer-events: none;
+    }
+  
+    // Efecto hover (zoom y oscurecimiento )
+    &:hover img {
+      transform: scale(1.1);
+    }
+  
+    &:hover::after {
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+  }
+
+  @mixin campo-formulario {
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+  
+    &:focus {
+      border-color: #007bff;
+      outline: none;
+      box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    }
+  }

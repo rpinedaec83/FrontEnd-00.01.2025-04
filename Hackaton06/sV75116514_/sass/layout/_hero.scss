@@ -1,0 +1,48 @@
+@use '../bases/variables' as vars;
+@use '../bases/mixins' as mixins;
+
+
+.hero-section {
+  background-image: url(../img/hover.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+}
+
+.container {
+  font-family: vars.$font;
+  padding: 5rem 3rem;
+  
+  h1 {
+    font-size: vars.$font-title-size;
+    color: vars.$color-letter;
+    font-style: italic;
+
+  }
+
+  p {
+    font-size: vars.$font-subtitle-size;
+    color: vars.$color-secondary;
+  }
+}
+
+.cta-btn{
+    @include mixins.cta-btn;
+}
+@media (min-width: 768px){
+    .container h1{
+        font-size: vars.$font-title-size * 1.2;
+    }
+    .container p{
+        font-size: vars.$font-subtitle-size;
+    }
+}
+@media (min-width: 1024px){
+    .container h1{
+        font-size: vars.$font-title-size * 1.5;
+    }
+    .container p{
+        font-size: vars.$font-subtitle-size * 1.2;
+    }
+}

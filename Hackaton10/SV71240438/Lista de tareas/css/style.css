@@ -1,0 +1,19 @@
+html {
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  padding: 10px;
+  background-color: rgb(12, 42, 66);
+  color: aliceblue;
+}
+
+#input-tarea {
+  display: flex;
+  justify-content: space-between;
+  background-color: #ffffff;
+  padding: 10px;
+  margin: 10px 2px;
+}

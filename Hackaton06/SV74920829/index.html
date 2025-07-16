@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel International - Tu agencia de viajes</title>
+
+    <!-- Bootstrap 5 + Fuente personalizada -->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/main.css" /> <!-- Archivo CSS generado desde SASS -->
+</head>
+
+<body>
+
+    <!-- Componente: Navbar (Bootstrap) -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Travel Int.</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMain">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#hero">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#destinos">Destinos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section (Requisito obligatorio) -->
+    <section id="hero" class="hero text-center text-white d-flex align-items-center">
+        <div class="container">
+            <h1>Explora el mundo con nosotros</h1>
+            <p>Viajes inolvidables a los mejores destinos</p>
+            <a href="#contacto" class="btn btn-primary">Reserva ahora</a> <!-- CTA -->
+        </div>
+    </section>
+
+    <!-- Componente: Carrusel (Bootstrap) como parte de Destacados -->
+    <section class="container my-5">
+        <h2 class="text-center mb-4">Destinos Populares</h2>
+        <div id="carouselDestinos" class="carousel slide" data-bs-ride="carousel">
+
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselDestinos" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#carouselDestinos" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carouselDestinos" data-bs-slide-to="2"></button>
+            </div>
+
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://media.timeout.com/images/100446977/image.jpg" class="d-block w-100" alt="New York">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://content.r9cdn.net/rimg/dimg/ea/d1/34822ae1-city-21033-1647f45cd43.jpg" class="d-block w-100" alt="Tokyo">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://th.bing.com/th/id/R.5c957cb0090733d503381213c368763f?rik=YjvzwCzKZSStiQ&pid=ImgRaw&r=0" class="d-block w-100" alt="Paris">
+                </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselDestinos" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselDestinos" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- Sección de productos/destacados con Cards (Bootstrap) -->
+    <section id="destinos" class="features container my-5">
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card feature-card">
+                    <img src="https://th.bing.com/th/id/R.f5e24ade248e549527f4c20e1ab5245e?rik=Ocwf%2biPh9KGQSg&pid=ImgRaw&r=0" class="card-img-top" alt="Destino 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Nueva York</h5>
+                        <p class="card-text">La ciudad que nunca duerme te espera con sus luces y rascacielos.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card feature-card">
+                    <img src="https://th.bing.com/th/id/R.21d7c2c0bf57e51d74f6a58a2c8a0b94?rik=TEObky5Utlvbzg&pid=ImgRaw&r=0" class="card-img-top" alt="Destino 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Tokio</h5>
+                        <p class="card-text">Una mezcla de tradición y tecnología en cada rincón.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card feature-card">
+                    <img src="https://www.connollycove.com/wp-content/uploads/2023/10/paris-tourism-statistics_-130680810.jpg" class="card-img-top" alt="Destino 3">
+                    <div class="card-body">
+                        <h5 class="card-title">París</h5>
+                        <p class="card-text">La ciudad del amor, cultura, moda y gastronomía.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulario con validación visual (Bootstrap + clases de validación) -->
+    <section id="contacto" class="container my-5">
+        <h2 class="text-center mb-4">Contáctanos</h2>
+        <form class="needs-validation" novalidate>
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre" required>
+                <div class="invalid-feedback">Campo obligatorio.</div>
+            </div>
+            <div class="mb-3">
+                <label for="correo" class="form-label">Correo</label>
+                <input type="email" class="form-control" id="correo" required>
+                <div class="invalid-feedback">Ingresa un correo válido.</div>
+            </div>
+            <div class="mb-3">
+                <label for="mensaje" class="form-label">Mensaje</label>
+                <textarea class="form-control" id="mensaje" rows="4" required></textarea>
+                <div class="invalid-feedback">Este campo es obligatorio.</div>
+            </div>
+            <button type="submit" class="btn btn-success">Enviar</button> <!-- Componente: Botón -->
+        </form>
+    </section>
+
+    <!-- Sección de Testimonios (Requisito obligatorio) -->
+    <section class="container my-5">
+        <h2 class="text-center mb-4">Testimonios</h2>
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <div class="card bg-light p-3">
+                    <p>“Una experiencia increíble de principio a fin. 100% recomendado.”</p>
+                    <footer class="text-muted">— Ana G.</footer>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card bg-light p-3">
+                    <p>“Profesionales, atentos y con los mejores precios.”</p>
+                    <footer class="text-muted">— Luis M.</footer>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card bg-light p-3">
+                    <p>“Mi luna de miel fue perfecta gracias a ellos.”</p>
+                    <footer class="text-muted">— Carla y Tomás</footer>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer con redes sociales y navegación (Requisito obligatorio) -->
+    <footer class="bg-dark text-white text-center p-4">
+        <p>© 2025 Travel International. Todos los derechos reservados.</p>
+        <div>
+            <a href="#" class="text-white mx-2">Facebook</a>
+            <a href="#" class="text-white mx-2">Instagram</a>
+            <a href="#" class="text-white mx-2">Twitter</a>
+        </div>
+    </footer>
+
+    <!-- Script para funcionalidad Bootstrap (carrusel) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

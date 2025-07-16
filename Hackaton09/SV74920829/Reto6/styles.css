@@ -1,0 +1,202 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Fredoka', sans-serif;
+  background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+header {
+  text-align: center;
+  padding: 40px 20px 20px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.search-box {
+  background-color: #fff;
+  padding: 20px 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.search-box input {
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  flex: 1;
+}
+
+.search-box button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #ff6b81;
+  color: white;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.search-box button:hover {
+  background-color: #ff4757;
+}
+
+.comparison-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  max-width: 900px;
+  padding: 0 20px;
+  margin-bottom: 40px;
+}
+
+.pokemon-card {
+  background-color: white;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  animation: fadeIn 0.4s ease-in-out;
+  width: 250px;
+  position: relative;
+}
+
+.pokemon-card img {
+  width: 120px;
+  height: auto;
+}
+
+.pokemon-card h2 {
+  margin-top: 15px;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.pokemon-card p {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #666;
+}
+
+.pokemon-card button.fav-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #ff6b81;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition: background 0.3s ease;
+}
+
+.pokemon-card button.fav-btn:hover {
+  background-color: #ff4757;
+}
+
+.error {
+  color: red;
+  text-align: center;
+  font-weight: bold;
+}
+
+.coleccion-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  max-width: 900px;
+  padding: 0 20px 40px;
+}
+
+.coleccion-card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  width: 150px;
+  text-align: center;
+  padding: 10px;
+  position: relative;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.coleccion-card img {
+  width: 100px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.coleccion-card h3 {
+  margin: 0 0 10px;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.coleccion-card button.remove-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: #ff4757;
+  border: none;
+  color: white;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  font-weight: bold;
+  line-height: 1;
+  font-size: 1rem;
+  padding: 0;
+  transition: background 0.3s ease;
+}
+
+.coleccion-card button.remove-btn:hover {
+  background-color: #e03e48;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+#coleccion-section {
+  width: 100%;
+  max-width: 960px;
+  background-color: #fff;
+  padding: 30px 20px 50px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  margin-bottom: 40px;
+}
+
+#coleccion-section h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #333;
+}

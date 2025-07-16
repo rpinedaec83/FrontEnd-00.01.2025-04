@@ -1,0 +1,28 @@
+@use '../bases/variables' as vars;
+@use '../bases/mixins' as mixins;
+
+
+.formulario {
+    max-width: 550px;
+    margin: 3rem auto;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+    label {
+      display: block;
+      margin-bottom: 0.4rem;
+      font-weight: 600;
+    }
+    input,
+    textarea {
+      @include mixins.campo-formulario;
+    }
+  }
+  .btn-form {
+    @include mixins.cta-btn;
+  }
