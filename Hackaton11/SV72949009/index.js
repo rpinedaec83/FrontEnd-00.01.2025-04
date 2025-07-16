@@ -18,6 +18,7 @@ app.use(cors(corsOptions));
 let arrProducts = [];
 
 // --- POST: agregar producto desde Postman ---
+
 app.post('/products', (req, res) => {
     const producto = req.body;
     if (!producto.name) {
@@ -35,12 +36,16 @@ app.post('/products', (req, res) => {
     res.status(201).json({ mensaje: "Producto creado", producto: newProduct });
 });
 
+
 // --- GET: obtener todos los productos ---
+
 app.get('/products', (req, res) => {
     res.status(200).send(arrProducts);
 });
 
+
 // --- GET: obtener producto por ID ---
+
 app.get('/products/:id', (req, res) => {
     const id = parseInt(req.params.id);
     const producto = arrProducts.find(p => p.id === id);
@@ -71,7 +76,9 @@ app.put('/products/:id', (req, res) => {
     res.status(200).json({ mensaje: "Producto actualizado", producto: arrProducts[index] });
 });
 
+
 // --- DELETE: eliminar un producto ---
+
 app.delete('/products/:id', (req, res) => {
     const id = parseInt(req.params.id);
     const index = arrProducts.findIndex(p => p.id === id);
@@ -82,12 +89,16 @@ app.delete('/products/:id', (req, res) => {
     res.status(200).json({ mensaje: "Producto eliminado", producto: eliminado[0] });
 });
 
+
 // --- Ruta no encontrada ---
+
 app.use((req, res) => {
     res.status(404).json({ error: "Ruta no encontrada" });
 });
 
+
 // --- Error interno general ---
+
 app.use((err, req, res, next) => {
     console.error("Error interno:", err);
     res.status(500).json({ error: "Error interno del servidor" });
