@@ -12,11 +12,11 @@ function cartReducer(state, action) {
             if (exist) {
                 return {
                     ...state,
-                    cart: state.cart.map(item => {
+                    cart: state.cart.map(item => 
                         item.id === action.payload.id
                             ? { ...item, quantity: item.quantity + 1 }
                             : item
-                    })
+                    )
                 }
             }
             return {

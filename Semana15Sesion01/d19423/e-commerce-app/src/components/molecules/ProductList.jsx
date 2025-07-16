@@ -19,18 +19,18 @@ export default function ProductList() {
                 setError("Error en cargar los productos")
                 setLoading(false)
 
-    })
+            })
     }, [])
 
-    if(error) return <p>{error}</p>
-    if(loading) return <p>Cargando productos...</p>
+    if (error) return <p>{error}</p>
+    if (loading) return <p>Cargando productos...</p>
     return (
         <div className='container'>
             <h2>Lista de Productos</h2>
             <div className='row'>
                 {
                     products.map(product => (
-                      <ProductCard product={product}/>
+                        <ProductCard product={product} />
                     ))
                 }
             </div>
