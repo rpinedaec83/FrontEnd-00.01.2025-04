@@ -8,6 +8,10 @@ import {useContext} from 'react';
 import { CartProvider } from "./context/CartContext"
 import ProductList2 from "./components/molecules/ProductList2"
 import Cart from "./components/atoms/Cart"
+import ButtonV2 from "./components/atoms/ButtonV2"
+import InputData from "./components/atoms/InputData"
+import FormData from "./components/atoms/FormData"
+import HoverData from "./components/atoms/HoverData"
 
 export default function App() {
   
@@ -37,17 +41,26 @@ const busqueda = (e)=>{
   //       <Hijo/>
   //   </MyContext.Provider>
   // )
-return(
-  <CartProvider>
-    <div style={{padding:'20px', maxWidth:'900px',margin:'0 auto'}}>
-      <h1>Tiendita de barrio</h1>
-      <ProductList2/>
-      <hr />
-      <Cart/>
-    </div>
-  </CartProvider>
-)
+// return(
+//   <CartProvider>
+//     <div style={{padding:'20px', maxWidth:'900px',margin:'0 auto'}}>
+//       <h1>Tiendita de barrio</h1>
+//       <ProductList2/>
+//       <hr />
+//       <Cart/>
+//     </div>
+//   </CartProvider>
+// )
+// return(
+//   <ButtonV2 />
+// )
 
+// return (
+//   <InputData/>
+// )
+return(
+    <HoverData/>
+)
 }
 
 // function Hijo(){
