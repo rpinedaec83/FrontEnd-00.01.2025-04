@@ -1,0 +1,50 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f7f7f7;
+  border-bottom: 1px solid #ddd;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.header a {
+  text-decoration: none;
+  color: #6b46c1;
+  font-weight: 600;
+  margin: 0 10px;
+}
+
+.header-logo {
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #6b46c1;
+}
+
+.header-icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 18px;
+}
+
+.header-icons span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.header-icons a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  transition: color 0.2s ease-in-out;
+}
+
+.header-icons a:hover {
+  color: #6b46c1;
+}
