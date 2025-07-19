@@ -57,7 +57,6 @@ function Header() {
 
 ## 🔗 01:30 - 02:30 | Props
 
-
 ### npm
 
 ---
@@ -159,6 +158,7 @@ function Header() {
 ## 🔗 01:30 - 02:30 | Props
 
 
+
 ### Teoría breve
 
 ```jsx
@@ -216,4 +216,12 @@ Crear una vista que muestre un conjunto de tarjetas de perfil usando props y com
 - Buenas prácticas de código y estructura
 - Creatividad y diseño
 
+
+---ejerccio 1 y 2 ir --------
+http://localhost:5173/scd
+
+
+---ejerccio perfiles --------
+
+http://localhost:5173/scd
 
