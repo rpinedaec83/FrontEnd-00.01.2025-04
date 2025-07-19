@@ -1,0 +1,20 @@
+{
+  "name": "frontend-00.01.2025-04",
+  "version": "1.0.0",
+  "description": "Repositorio del grupo de FrontEnd 2025-04",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rpinedaec83/FrontEnd-00.01.2025-04.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rpinedaec83/FrontEnd-00.01.2025-04/issues"
+  },
+  "homepage": "https://github.com/rpinedaec83/FrontEnd-00.01.2025-04#readme"
+}

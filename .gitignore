@@ -288,6 +288,7 @@ FakesAssemblies/
 .ntvs_analysis.dat
 node_modules
 
+
 # Visual Studio 6 build log
 *.plg
 
@@ -399,5 +400,4 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
-Semana11Sesion02/d19423/.env
-Hackaton11/SV72949009/.env
+

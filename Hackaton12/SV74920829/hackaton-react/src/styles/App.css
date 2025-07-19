@@ -1,0 +1,89 @@
+/* Estilos generales para el cuerpo de la página */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+  margin: 0; 
+  padding: 0; 
+  background-color: #f4f6f8;
+  color: #333; 
+}
+
+/* Encabezado principal */
+h1 {
+  background-color: #2c3e50; 
+  color: #fff; 
+  padding: 1rem; 
+  text-align: center; 
+  margin: 0; 
+}
+
+/* Pie de página */
+footer {
+  background-color: #2c3e50; 
+  color: #fff;
+  padding: 1rem; 
+  text-align: center; 
+  margin-top: 2rem; 
+}
+
+/* Estilo para tarjetas reutilizables */
+.card,
+.perfil,
+.producto-card {
+  background-color: #fff; 
+  border: 1px solid #e1e4e8; 
+  border-radius: 8px; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* Sombra suave */
+  padding: 1rem; 
+  margin: 1rem; 
+  text-align: center; 
+  transition: transform 0.2s ease-in-out; /* Suaviza la animación al pasar el cursor */
+}
+
+/* Efecto al pasar el cursor: se eleva levemente */
+.card:hover,
+.perfil:hover,
+.producto-card:hover {
+  transform: translateY(-5px); 
+}
+
+/* Estilo para imágenes de perfil o productos */
+img {
+  border-radius: 50%; 
+  width: 100px;
+  height: 100px;
+  object-fit: cover; 
+  margin-bottom: 0.5rem; 
+}
+
+/* Contenedores de perfiles y productos con diseño flexible */
+.lista-perfiles,
+.catalogo {
+  display: flex; 
+  flex-wrap: wrap; 
+  justify-content: center; 
+  gap: 1rem; 
+  padding: 1rem; 
+}
+
+/* Subtítulos o secciones */
+h2 {
+  text-align: center;
+  margin-top: 2rem;
+  color: #34495e; 
+}
+
+/* Estilos responsivos para pantallas pequeñas */
+@media (max-width: 768px) {
+  .perfil,
+  .producto-card {
+    width: 90%; 
+  }
+}
+
+/* Estilos para pantallas grandes */
+@media (min-width: 769px) {
+  .perfil,
+  .producto-card {
+    width: 250px; 
+  }
+}
