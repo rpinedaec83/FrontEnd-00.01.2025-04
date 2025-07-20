@@ -1,0 +1,27 @@
+{
+  "name": "tienda-online",
+  "version": "1.0.0",
+  "description": "A simple online store with a shopping cart using React and Context API.",
+  "main": "src/main.jsx",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-router-dom": "^6.0.0"
+  },
+  "devDependencies": {
+    "vite": "^3.0.0"
+  },
+  "keywords": [
+    "react",
+    "context-api",
+    "shopping-cart",
+    "online-store"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}
