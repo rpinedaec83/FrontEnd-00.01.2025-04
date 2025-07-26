@@ -1,0 +1,25 @@
+.crear-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.titulo {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #cc0000;
+}
+
+.crear-box {
+  background-color: #f8f8f8;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.imagen-crear {
+  margin-top: 1rem;
+  max-width: 100%;
+  border-radius: 10px;
+}

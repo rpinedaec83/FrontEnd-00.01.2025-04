@@ -1,0 +1,34 @@
+.explorar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.titulo {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+.grid-imagenes {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 16px;
+}
+
+.imagen-item {
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.imagen-hover {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.imagen-hover:hover {
+  transform: scale(1.05);
+}
